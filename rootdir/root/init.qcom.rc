@@ -671,3 +671,6 @@ service time_daemon /system/bin/time_daemon
     class main
     user root
     group root
+
+on property:dev.bootcomplete=1
+    setprop sys.io.scheduler "bfq"
