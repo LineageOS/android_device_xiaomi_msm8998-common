@@ -33,8 +33,7 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
+    # Support legacy path
     symlink /sdcard /storage/sdcard0
 
 on post-fs
