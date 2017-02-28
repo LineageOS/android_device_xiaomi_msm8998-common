@@ -79,6 +79,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=196610 \
+    vendor.display.disable_partial_split=1 \
     vendor.display.disable_skip_validate=1 \
     vendor.display.enable_default_color_mode=1 \
     vendor.display.perf_hint_window=50 \
