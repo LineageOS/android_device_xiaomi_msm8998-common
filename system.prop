@@ -41,6 +41,7 @@ qcom.bluetooth.soc=cherokee
 ro.bluetooth.hfp.ver=1.6
 
 # Camera
+persist.camera.HAL3.enabled=1
 persist.camera.set.afd=4
 persist.camera.xm.green.b=0.96
 persist.camera.xm.green.r=0.97
