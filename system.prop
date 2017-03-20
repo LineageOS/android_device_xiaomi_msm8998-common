@@ -164,9 +164,6 @@ persist.sys.perf.debug=true
 ro.sys.fw.bg_apps_limit=60
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Sdcardfs
-ro.sys.sdcardfs=1
-
 # Sensors
 persist.sys.sensors.cfos=false
 persist.sys.sensors.pug=false
