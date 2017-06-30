@@ -179,6 +179,9 @@ ro.vendor.sensors.multishake=true
 ro.vendor.sensors.pmd=false
 ro.vendor.sensors.sta_detect=true
 
+# Time services
+persist.delta_time.enable=true
+
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
