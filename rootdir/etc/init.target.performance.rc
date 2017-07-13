@@ -5,6 +5,11 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     oneshot
 
 on init
+    # Disable UFS clk scaling
+    write /sys/devices/soc/1da4000.ufshc/clkscale_enable 0
+    write /sys/devices/soc/1da4000.ufshc/clkgate_enable 0
+    write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 0
+
     # Set up schedtune
     write /dev/stune/background/schedtune.colocate 0
     write /dev/stune/foreground/schedtune.colocate 0
@@ -71,6 +76,11 @@ on late-fs
     setprop sys.io.scheduler "cfq"
 
 on property:sys.boot_completed=1
+    # Enable UFS clk scaling
+    write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
+    write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
+    write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 1
+
     # end boot time fs tune
     write /sys/block/sda/queue/iostats 1
     write /sys/block/sda/queue/nr_requests 128
