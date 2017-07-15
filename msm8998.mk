@@ -283,11 +283,8 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.nxp.nfc.nq \
-    nfc_nci.nqx.default \
-    NQNfcNci \
-    nqnfcee_access.xml \
-    nqnfcse_access.xml \
+    nfc_nci.msm8998 \
+    NfcNci \
     Tag
 
 PRODUCT_PACKAGES += \
