@@ -146,3 +146,7 @@
 /sys/devices/soc/soc:fingerprint_fpc*        device_prepare     0700  system system
 /sys/devices/soc/soc:fingerprint_fpc*        vendor             0700  system system
 /dev/goodix_fp            0660   system     system
+
+# /dev/sensors only supports an ioctl to get the current SLPI timestamp
+# allow the sensors daemon to perform this as non-root
+/dev/sensors              0660   root       system
