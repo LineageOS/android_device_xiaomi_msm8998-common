@@ -130,8 +130,8 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "interactive"
 
     # Set min freqs
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 518400
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 806400
 
 
     # Configure governor settings for little cluster
