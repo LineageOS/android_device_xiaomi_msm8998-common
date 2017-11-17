@@ -18,6 +18,10 @@ on init
     chmod 0660 /dev/cpuset/camera-daemon/tasks
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
 
+    chmod 0664 /sys/devices/virtual/graphics/fb0/idle_time
+    chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
+    write /sys/devices/virtual/graphics/fb0/idle_time 100
+
 on boot
     # set default schedtune value for foreground/top-app (only affects EAS)
     write /dev/stune/foreground/schedtune.prefer_idle 1
