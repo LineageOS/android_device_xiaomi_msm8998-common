@@ -64,7 +64,7 @@ persist.dualcam.lpm.enable=1
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,org.lineageos.snap
 
 # FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
+ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
 # Display
 debug.gralloc.enable_fb_ubwc=1
