@@ -5,6 +5,7 @@ type goodix_fpd_device, file_type;
 type dsp_file, fs_type, contextmount_type;
 type debugfs_msm_core, debugfs_type, fs_type;
 type debugfs_rmts, debugfs_type, fs_type;
+type debugfs_wlan, debugfs_type, fs_type;
 type peel_ir_device, file_type;
 type sysfs_cnss_common, sysfs_type, fs_type;
 type sysfs_fpc, sysfs_type, fs_type;
