@@ -46,3 +46,5 @@ do
 done
 
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
+
+setprop sys.post_boot.parsed 1
