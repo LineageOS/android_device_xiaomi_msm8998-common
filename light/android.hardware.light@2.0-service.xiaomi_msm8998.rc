@@ -20,6 +20,7 @@ on boot
     chown system system /sys/class/leds/button-backlight1/brightness
 
 service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.xiaomi_msm8998
+    interface android.hardware.light@2.0::ILight default
     class hal
     user system
     group system
