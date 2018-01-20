@@ -241,7 +241,7 @@ service qvrd /system/bin/qvrservice
     socket qvrservice stream 0666 system system
     capabilities SYS_NICE
 
-service readmac /system/bin/readmac
+service readmac /system/vendor/bin/readmac
     class main
     user root
     group oem_2950
