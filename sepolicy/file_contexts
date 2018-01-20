@@ -1,5 +1,5 @@
 # executables
-/system/bin/readmac                   u:object_r:readmac_exec:s0
+/(vendor|system/vendor)/bin/readmac   u:object_r:readmac_exec:s0
 
 # Devices
 /dev/elliptic(.*)?                    u:object_r:sound_device:s0
