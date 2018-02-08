@@ -77,4 +77,10 @@ for HIDL_MANAGER_LIB in $(grep -lr "android\.hidl\.@1\.0\.so" $COMMON_BLOB_ROOT)
     patchelf --remove-needed android.hidl.manager@1.0.so "$HIDL_MANAGER_LIB" || true
 done
 
+#
+# Load camera configs from vendor
+#
+CAMERA2_SENSOR_MODULES="$COMMON_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
+sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
+
 "$MY_DIR"/setup-makefiles.sh
