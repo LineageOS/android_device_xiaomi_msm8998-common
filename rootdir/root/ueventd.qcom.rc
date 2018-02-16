@@ -136,14 +136,6 @@
 /dev/adsprpc-smd          0664   system     system
 /dev/system_health_monitor 0644  radio      system
 /dev/mdss_rotator         0664   system     system
-# wlan
-/dev/wcnss_wlan           0660   system     system
-/dev/wcnss_ctrl           0660   system     system
-/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
-/sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
-/sys/devices/soc/18800000.qcom,icnss/net/wlan0/queues/rx-* rps_cpus   0660   system     system
-/sys/devices/soc/18800000.qcom,icnss/net/p2p0/queues/rx-* rps_cpus    0660   system     system
-/sys/devices/soc/18800000.qcom,icnss/net/softap0/queues/rx-* rps_cpus 0660   system     system
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
@@ -254,6 +246,11 @@
 /dev/wcnss_ctrl           0660   system     system
 /sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0/queues/rx-* rps_cpus 0660 system system
 /sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/p2p0/queues/rx-* rps_cpus 0660 system system
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
+/sys/devices/soc/18800000.qcom,icnss/net/wlan0/queues/rx-* rps_cpus   0660   system     system
+/sys/devices/soc/18800000.qcom,icnss/net/p2p0/queues/rx-* rps_cpus    0660   system     system
+/sys/devices/soc/18800000.qcom,icnss/net/softap0/queues/rx-* rps_cpus 0660   system     system
 
 # wigig
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/wil6210/fst_link_loss 0660 wifi wifi
