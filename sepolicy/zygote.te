@@ -1,0 +1,3 @@
+#============= zygote ==============
+allow zygote input_device:dir { read open };
+allow zygote input_device:chr_file { ioctl open read write };
