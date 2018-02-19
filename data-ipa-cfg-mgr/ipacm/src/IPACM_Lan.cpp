@@ -79,6 +79,10 @@ IPACM_Lan::IPACM_Lan(int iface_index) : IPACM_Iface(iface_index)
 	is_active = true;
 	modem_ul_v4_set = false;
 	modem_ul_v6_set = false;
+
+	sta_ul_v4_set = false;
+	sta_ul_v6_set = false;
+
 	is_mode_switch = false;
 	if_ipv4_subnet =0;
 	each_client_rt_rule_count[IPA_IP_v4] = 0;
@@ -898,6 +902,12 @@ int IPACM_Lan::handle_wan_down(bool is_sta_mode)
 
 		memset(&flt_index, 0, sizeof(flt_index));
 		flt_index.source_pipe_index = ioctl(fd, IPA_IOC_QUERY_EP_MAPPING, rx_prop->rx[0].src_pipe);
+		if (flt_index.source_pipe_index == -1)
+		{
+			IPACMERR("Error Query src pipe idx, aborting...\n");
+			close(fd);
+			return IPACM_FAILURE;
+		}
 		flt_index.install_status = IPA_QMI_RESULT_SUCCESS_V01;
 #ifndef FEATURE_IPA_V3
 		flt_index.filter_index_list_len = 0;
@@ -907,6 +917,12 @@ int IPACM_Lan::handle_wan_down(bool is_sta_mode)
 #endif
 		flt_index.embedded_pipe_index_valid = 1;
 		flt_index.embedded_pipe_index = ioctl(fd, IPA_IOC_QUERY_EP_MAPPING, IPA_CLIENT_APPS_LAN_WAN_PROD);
+		if (flt_index.embedded_pipe_index == -1)
+		{
+			IPACMERR("Error Query emb pipe idx, aborting...\n");
+			close(fd);
+			return IPACM_FAILURE;
+		}
 		flt_index.retain_header_valid = 1;
 		flt_index.retain_header = 0;
 		flt_index.embedded_call_mux_id_valid = 1;
@@ -928,6 +944,7 @@ int IPACM_Lan::handle_wan_down(bool is_sta_mode)
 			return IPACM_FAILURE;
 		}
 		IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v4, 1);
+		sta_ul_v4_set = false;
 	}
 
 	close(fd);
@@ -1222,6 +1239,11 @@ int IPACM_Lan::handle_wan_up(ipa_ip_type ip_type)
 
 	if(ip_type == IPA_IP_v4)
 	{
+		if(sta_ul_v4_set == true)
+		{
+			IPACMDBG_H("Filetring rule for IPV4 of STA mode is already configured, sta_ul_v4_set: %d\n",sta_ul_v4_set);
+			return IPACM_FAILURE;
+		}
 		len = sizeof(struct ipa_ioc_add_flt_rule) + (1 * sizeof(struct ipa_flt_rule_add));
 		m_pFilteringTable = (struct ipa_ioc_add_flt_rule *)calloc(1, len);
 		if (m_pFilteringTable == NULL)
@@ -1288,13 +1310,18 @@ int IPACM_Lan::handle_wan_up(ipa_ip_type ip_type)
 							 m_pFilteringTable->rules[0].status);
 		}
 
-
+		sta_ul_v4_set = true;
 		/* copy filter hdls  */
 		lan_wan_fl_rule_hdl[0] = m_pFilteringTable->rules[0].flt_rule_hdl;
 		free(m_pFilteringTable);
 	}
 	else if(ip_type == IPA_IP_v6)
 	{
+		if(sta_ul_v6_set == true)
+		{
+			IPACMDBG_H("Filetring rule for IPV6 of STA mode is already configured, sta_ul_v6_set: %d\n",sta_ul_v6_set);
+			return IPACM_FAILURE;
+		}
 		/* add default v6 filter rule */
 		m_pFilteringTable = (struct ipa_ioc_add_flt_rule *)
 			 calloc(1, sizeof(struct ipa_ioc_add_flt_rule) +
@@ -1357,6 +1384,7 @@ int IPACM_Lan::handle_wan_up(ipa_ip_type ip_type)
 			IPACMDBG_H("flt rule hdl0=0x%x, status=0x%x\n", m_pFilteringTable->rules[0].flt_rule_hdl, m_pFilteringTable->rules[0].status);
 		}
 
+		sta_ul_v6_set = true;
 		/* copy filter hdls */
 		dft_v6fl_rule_hdl[IPV6_DEFAULT_FILTERTING_RULES] = m_pFilteringTable->rules[0].flt_rule_hdl;
 		free(m_pFilteringTable);
@@ -2528,12 +2556,20 @@ int IPACM_Lan::handle_down_evt()
 	{
 		IPACMDBG_H("LAN IF goes down, backhaul type %d\n", IPACM_Wan::backhaul_is_sta_mode);
 		handle_wan_down(IPACM_Wan::backhaul_is_sta_mode);
+#ifdef FEATURE_IPA_ANDROID
+		/* Clean-up tethered-iface list */
+		IPACM_Wan::delete_tether_iface(IPA_IP_v4, ipa_if_num);
+#endif
 	}
 
 	if (IPACM_Wan::isWanUP_V6(ipa_if_num) && rx_prop != NULL)
 	{
 		IPACMDBG_H("LAN IF goes down, backhaul type %d\n", IPACM_Wan::backhaul_is_sta_mode);
 		handle_wan_down_v6(IPACM_Wan::backhaul_is_sta_mode);
+#ifdef FEATURE_IPA_ANDROID
+		/* Clean-up tethered-iface list */
+		IPACM_Wan::delete_tether_iface(IPA_IP_v6, ipa_if_num);
+#endif
 	}
 
 	/* delete default filter rules */
@@ -2547,13 +2583,17 @@ int IPACM_Lan::handle_down_evt()
 		}
 		IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v4, NUM_IPV4_ICMP_FLT_RULE);
 
-		if (m_filtering.DeleteFilteringHdls(dft_v4fl_rule_hdl, IPA_IP_v4, IPV4_DEFAULT_FILTERTING_RULES) == false)
+		if(dft_v4fl_rule_hdl[0] != 0)
 		{
-			IPACMERR("Error Deleting Filtering Rule, aborting...\n");
-			res = IPACM_FAILURE;
-			goto fail;
+				if (m_filtering.DeleteFilteringHdls(dft_v4fl_rule_hdl, IPA_IP_v4,
+						IPV4_DEFAULT_FILTERTING_RULES) == false)
+				{
+					IPACMERR("Error Deleting Filtering Rule, aborting...\n");
+					res = IPACM_FAILURE;
+					goto fail;
+				}
+				IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v4, IPV4_DEFAULT_FILTERTING_RULES);
 		}
-		IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v4, IPV4_DEFAULT_FILTERTING_RULES);
 
 		/* free private-subnet ipv4 filter rules */
 		if (IPACM_Iface::ipacmcfg->ipa_num_private_subnet > IPA_PRIV_SUBNET_FILTER_RULE_HANDLES)
@@ -2594,13 +2634,16 @@ int IPACM_Lan::handle_down_evt()
 		}
 		IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v6, NUM_IPV6_ICMP_FLT_RULE);
 
-		if (m_filtering.DeleteFilteringHdls(dft_v6fl_rule_hdl, IPA_IP_v6, IPV6_DEFAULT_FILTERTING_RULES) == false)
+		if (dft_v6fl_rule_hdl[0] != 0)
 		{
-			IPACMERR("Error Adding RuleTable(1) to Filtering, aborting...\n");
-			res = IPACM_FAILURE;
-			goto fail;
+			if (m_filtering.DeleteFilteringHdls(dft_v6fl_rule_hdl, IPA_IP_v6, IPV6_DEFAULT_FILTERTING_RULES) == false)
+			{
+				IPACMERR("Error Adding RuleTable(1) to Filtering, aborting...\n");
+				res = IPACM_FAILURE;
+				goto fail;
+			}
+				IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v6, IPV6_DEFAULT_FILTERTING_RULES);
 		}
-		IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v6, IPV6_DEFAULT_FILTERTING_RULES);
 	}
 	IPACMDBG_H("Finished delete default iface ipv6 filtering rules \n ");
 
@@ -2801,6 +2844,13 @@ int IPACM_Lan::handle_uplink_filter_rule(ipacm_ext_prop *prop, ipa_ip_type iptyp
 
 	memset(&flt_index, 0, sizeof(flt_index));
 	flt_index.source_pipe_index = ioctl(fd, IPA_IOC_QUERY_EP_MAPPING, rx_prop->rx[0].src_pipe);
+	if (flt_index.source_pipe_index == -1)
+	{
+		IPACMERR("Error Query src pipe idx, aborting...\n");
+		close(fd);
+		return IPACM_FAILURE;
+	}
+
 	flt_index.install_status = IPA_QMI_RESULT_SUCCESS_V01;
 #ifndef FEATURE_IPA_V3
 	flt_index.filter_index_list_len = prop->num_ext_props;
@@ -2810,6 +2860,13 @@ int IPACM_Lan::handle_uplink_filter_rule(ipacm_ext_prop *prop, ipa_ip_type iptyp
 #endif
 	flt_index.embedded_pipe_index_valid = 1;
 	flt_index.embedded_pipe_index = ioctl(fd, IPA_IOC_QUERY_EP_MAPPING, IPA_CLIENT_APPS_LAN_WAN_PROD);
+	if (flt_index.embedded_pipe_index == -1)
+	{
+		IPACMERR("Error Query emb pipe idx, aborting...\n");
+		close(fd);
+		return IPACM_FAILURE;
+	}
+
 	flt_index.retain_header_valid = 1;
 	flt_index.retain_header = 0;
 	flt_index.embedded_call_mux_id_valid = 1;
@@ -3006,6 +3063,12 @@ int IPACM_Lan::handle_wan_down_v6(bool is_sta_mode)
 
 		memset(&flt_index, 0, sizeof(flt_index));
 		flt_index.source_pipe_index = ioctl(fd, IPA_IOC_QUERY_EP_MAPPING, rx_prop->rx[0].src_pipe);
+		if (flt_index.source_pipe_index == -1)
+		{
+			IPACMERR("Error Query src pipe idx, aborting...\n");
+			close(fd);
+			return IPACM_FAILURE;
+		}
 		flt_index.install_status = IPA_QMI_RESULT_SUCCESS_V01;
 #ifndef FEATURE_IPA_V3
 		flt_index.filter_index_list_len = 0;
@@ -3015,6 +3078,13 @@ int IPACM_Lan::handle_wan_down_v6(bool is_sta_mode)
 #endif
 		flt_index.embedded_pipe_index_valid = 1;
 		flt_index.embedded_pipe_index = ioctl(fd, IPA_IOC_QUERY_EP_MAPPING, IPA_CLIENT_APPS_LAN_WAN_PROD);
+		if (flt_index.embedded_pipe_index == -1)
+		{
+			IPACMERR("Error Query emb pipe idx, aborting...\n");
+			close(fd);
+			return IPACM_FAILURE;
+		}
+
 		flt_index.retain_header_valid = 1;
 		flt_index.retain_header = 0;
 		flt_index.embedded_call_mux_id_valid = 1;
@@ -3036,6 +3106,7 @@ int IPACM_Lan::handle_wan_down_v6(bool is_sta_mode)
 			return IPACM_FAILURE;
 		}
 		IPACM_Iface::ipacmcfg->decreaseFltRuleCount(rx_prop->rx[0].src_pipe, IPA_IP_v6, 1);
+		sta_ul_v6_set = false;
 	}
 	close(fd);
 	return IPACM_SUCCESS;
