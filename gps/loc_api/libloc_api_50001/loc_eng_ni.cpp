@@ -155,11 +155,6 @@ void loc_eng_ni_request_handler(loc_eng_data_s_type &loc_eng_data,
         /* Fill in notification */
         ((LocGpsNiNotification*)notif)->notification_id = pSession->reqID;
 
-        if (notif->notify_flags == LOC_GPS_NI_PRIVACY_OVERRIDE)
-        {
-            loc_eng_mute_one_session(loc_eng_data);
-        }
-
         /* Log requestor ID and text for debugging */
         LOC_LOGI("Notification: notif_type: %d, timeout: %d, default_resp: %d", notif->ni_type, notif->timeout, notif->default_response);
         LOC_LOGI("              requestor_id: %s (encoding: %d)", notif->requestor_id, notif->requestor_id_encoding);

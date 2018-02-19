@@ -115,9 +115,6 @@ typedef struct loc_eng_data_s
     // Aiding data information to be deleted, aiding data can only be deleted when GPS engine is off
     LocGpsAidingData               aiding_data_for_deletion;
 
-    // For muting session broadcast
-    loc_mute_session_e_type        mute_session_state;
-
     // For nmea generation
     boolean generateNmea;
     uint32_t gps_used_mask;
@@ -164,7 +161,6 @@ const void* loc_eng_get_extension(loc_eng_data_s_type &loc_eng_data,
                                   const char* name);
 int  loc_eng_set_server_proxy(loc_eng_data_s_type &loc_eng_data,
                               LocServerType type, const char *hostname, int port);
-void loc_eng_mute_one_session(loc_eng_data_s_type &loc_eng_data);
 int loc_eng_read_config(void);
 
 //loc_eng_agps functions
@@ -203,19 +199,6 @@ void loc_eng_configuration_update (loc_eng_data_s_type &loc_eng_data,
 int loc_eng_gps_measurement_init(loc_eng_data_s_type &loc_eng_data,
                                  LocGpsMeasurementCallbacks* callbacks);
 void loc_eng_gps_measurement_close(loc_eng_data_s_type &loc_eng_data);
-
-/* Constructs for interaction with loc_net_iface library */
-typedef void (*LocAgpsOpenResultCb)(
-        bool isSuccess, AGpsExtType agpsType, const char* apn,
-        AGpsBearerType bearerType, void* userDataPtr);
-
-typedef void (*LocAgpsCloseResultCb)(
-        bool isSuccess, AGpsExtType agpsType, void* userDataPtr);
-
-/* Method to fetch status cb from loc_net_iface library */
-typedef agps_status_extended (*LocAgpsGetStatusCb)(
-        LocAgpsOpenResultCb openResultCb,
-        LocAgpsCloseResultCb closeResultCb, void* userDataPtr);
 
 #ifdef __cplusplus
 }
