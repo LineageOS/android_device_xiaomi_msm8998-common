@@ -321,15 +321,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
-    init.qcom.sh \
-    init.qcom.sensors.sh \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/bin/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
+PRODUCT_PACKAGES += \
+    init.qcom.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh \
+    init.qti.qseecomd.sh \
 
 # RCS
 PRODUCT_PACKAGES += \
