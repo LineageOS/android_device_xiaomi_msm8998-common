@@ -398,6 +398,12 @@ service btsnoop /system/bin/btsnoop
     disabled
     oneshot
 
+service port-bridge /system/vendor/bin/port-bridge
+    class main
+    user radio system
+    group radio system inet
+    oneshot
+
 service netmgrd /system/vendor/bin/netmgrd
     class main
 
