@@ -163,11 +163,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
-    rild.libpath=/vendor/lib64/libril-wrapper.so \
     ro.telephony.default_cdma_sub=0 \
     ro.telephony.default_network=22,22 \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1 \
+    vendor.rild.libpath=/vendor/lib64/libril-wrapper.so \
     vendor.voice.path.for.pcm.voip=true
 
 # Sensors
