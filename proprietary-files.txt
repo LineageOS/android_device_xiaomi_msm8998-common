@@ -352,7 +352,7 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
 # DRM and SEE
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
-vendor/lib/mediadrm/libwvdrmengine.so|8d8f13b2b20db3fdeeca94fa03063d0bf5597718
+vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel_svc.so
