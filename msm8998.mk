@@ -260,8 +260,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service
 
 # LiveDisplay jni
-PRODUCT_PACKAGES += \
-    libjni_livedisplay
+# PRODUCT_PACKAGES += \
+#     libjni_livedisplay
 
 # Media
 PRODUCT_COPY_FILES += \
