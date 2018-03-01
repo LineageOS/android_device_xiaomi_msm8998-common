@@ -370,12 +370,6 @@ vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 
-# Fingerprint
-vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so
-vendor/lib64/hw/fingerprint.goodix.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
-
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/gatekeeper.msm8998.so
