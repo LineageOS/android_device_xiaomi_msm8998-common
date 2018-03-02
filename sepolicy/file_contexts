@@ -1,39 +1,26 @@
-# executables
-/(vendor|system/vendor)/bin/readmac   u:object_r:readmac_exec:s0
+# Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service.xiaomi_msm8998 u:object_r:hal_fingerprint_default_exec:s0
+/dev/goodix_fp                                                u:object_r:fingerprint_device:s0
+/data/vendor/fpc(/.*)?                                        u:object_r:fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?                                     u:object_r:fingerprint_data_file:s0
+/data/misc/gf_data(/.*)?                                      u:object_r:fingerprint_data_file:s0
+/data/misc/goodix(/.*)?                                       u:object_r:fingerprint_data_file:s0
+/persist/fpc(/.*)?                                            u:object_r:fingerprint_persist_file:s0
+/sys/devices/soc/soc:fingerprint_fpc(/.*)?                    u:object_r:fingerprint_sysfs:s0
 
-# Devices
-/dev/elliptic(.*)?                    u:object_r:sound_device:s0
-/dev/pn553                            u:object_r:nfc_device:s0
-/dev/sysmatdrv                        u:object_r:sysmatdrv_device:s0
+# HVDCP
+/sys/devices(/platform)?/soc/[a-z0-9]+.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/[a-z0-9]+.i2c:qcom,[a-z0-9]+@[a-z0-9]:qcom,smb[a-z0-9]+-parallel-slave@[0-9]+/power_supply/parallel(/.*)? u:object_r:sysfs_usb_supply:s0
 
-# Goodix
-/dev/goodix_fp*                                                       u:object_r:goodix_fpd_device:s0
+# Readmac
+/(vendor|system/vendor)/bin/readmac                           u:object_r:readmac_exec:s0
 
-# Peel IR
-/dev/peel_ir                          u:object_r:peel_ir_device:s0
+# Remote storage
+/sys/kernel/debug/rmt_storage/rmts                            u:object_r:debugfs_rmts:s0
 
-# Persist
-/persist/fpc(/.*)?                      u:object_r:fpc_persist_file:s0
+# Sensors
+/(vendor|system/vendor)/bin/init\.panel_info\.sh              u:object_r:qti_init_shell_exec:s0
 /persist/PRSensorData.txt                                     u:object_r:sensors_persist_file:s0
-/persist/rfs/msm/mpss/server_check.txt				u:object_r:tftp_server_check_file:s0
 
-# Sys files
-/sys/devices/soc/soc:fingerprint_fpc/irq                                            u:object_r:sysfs_fpc:s0
-/sys/devices/soc/soc:fingerprint_fpc/enable_key_events                              u:object_r:sysfs_fpc_keyevents:s0
-/sys/devices/soc/soc:fingerprint_fpc/enable_wakeup                                  u:object_r:sysfs_fpc_wakeup:s0
-/sys/devices/soc/soc:fingerprint_fpc/proximity_state                                u:object_r:sysfs_fpc_proximity:s0
-
-/sys/module/cnss_common/parameters/bdwlan_file                                  u:object_r:sysfs_cnss_common:s0
-
-/sys/kernel/debug/msm_core(/.*)?                                u:object_r:debugfs_msm_core:s0
-/sys/kernel/debug/rmt_storage/rmts                              u:object_r:debugfs_rmts:s0
-
-/sys/devices(/platform)?/soc/[a-z0-9]+.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/[a-z0-9]+.i2c:qcom,[a-z0-9]+@[a-z0-9]:qcom,smb[a-z0-9]+-parallel-slave@[0-9]+/power_supply/parallel(/.*)?    u:object_r:sysfs_usb_supply:s0
-
-# Data files
-/data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
-/data/decrypt\.txt                    u:object_r:thermal_data_file:s0
-/data/misc/netmgr(/.*)?               u:object_r:netmgr_data_file:s0
-/data/misc/goodix(/.*)?               u:object_r:goodix_data_file:s0
-/data/thermal(/.*)?                   u:object_r:thermal_dump_file:s0
+# Thermal engine
+/data/decrypt.txt                                             u:object_r:thermal_decrypt_file:s0
+/data/thermal(/.*)?                                           u:object_r:thermal_data_file:s0
