@@ -1,1 +1,1 @@
-get_prop(sensors, system_panel_prop)
+get_prop(sensors, sensors_panel_prop);
