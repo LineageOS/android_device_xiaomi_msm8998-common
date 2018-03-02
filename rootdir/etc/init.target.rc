@@ -151,6 +151,8 @@ on post-fs
 
     wait_for_prop sys.listeners.registered true
 
+    rm /cache/logcat.txt
+
 on post-fs-data
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
@@ -167,6 +169,11 @@ on post-fs-data
     # sde stores /system
     write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/read_ahead_kb 2048
+
+service logcat_debug /system/bin/logcat -b all -f /cache/logcat.txt -v threadtime
+    class main
+    user root
+    group system
 
 on boot
     start rmt_storage
