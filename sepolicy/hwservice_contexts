@@ -1,0 +1,6 @@
+vendor.goodix.hardware.fingerprintextension::IGoodixBiometricsFingerprint u:object_r:hal_fingerprint_hwservice:s0
+com.fingerprints.extension::IFingerprintEngineering           u:object_r:hal_fingerprint_hwservice:s0
+com.fingerprints.extension::IFingerprintSensorTest            u:object_r:hal_fingerprint_hwservice:s0
+com.fingerprints.extension::IFingerprintNavigation            u:object_r:hal_fingerprint_hwservice:s0
+com.fingerprints.extension::IFingerprintCalibration           u:object_r:hal_fingerprint_hwservice:s0
+com.fingerprints.extension::IFingerprintSenseTouch            u:object_r:hal_fingerprint_hwservice:s0
