@@ -1,2 +1,8 @@
+# Fingerprint
+type fingerprint_device, dev_type;
+
+# IR
+type ir_device, dev_type;
+
+# Sound
 type sound_device, dev_type;
-type sysmatdrv_device, dev_type;
