@@ -1,2 +1,2 @@
-allow tee goodix_data_file:dir rw_dir_perms;
-allow tee goodix_data_file:file { open read write create setattr unlink };
+allow tee fingerprint_data_file:dir rw_dir_perms;
+allow tee fingerprint_data_file:file create_file_perms;
