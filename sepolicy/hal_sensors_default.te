@@ -1,0 +1,1 @@
+allow hal_sensors_default sound_device:chr_file { ioctl read open };
