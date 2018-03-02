@@ -1,1 +1,1 @@
-allow rmt_storage debugfs_rmts:file { open write };
+allow rmt_storage debugfs_rmts:file rw_file_perms;
