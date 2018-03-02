@@ -54,9 +54,6 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-    write /sys/kernel/boot_adsp/boot 1
-    write /sys/kernel/boot_slpi/boot 1
-
     chown system graphics /sys/class/graphics/fb0/idle_time
     chown system graphics /sys/class/graphics/fb0/dyn_pu
     chown system graphics /sys/class/graphics/fb0/modes
