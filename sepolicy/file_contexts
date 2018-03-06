@@ -4,7 +4,6 @@
 # Devices
 /dev/elliptic(.*)?                    u:object_r:sound_device:s0
 /dev/pn553                            u:object_r:nfc_device:s0
-/dev/sysmatdrv                        u:object_r:sysmatdrv_device:s0
 
 # Goodix
 /dev/goodix_fp*                                                       u:object_r:goodix_fpd_device:s0
