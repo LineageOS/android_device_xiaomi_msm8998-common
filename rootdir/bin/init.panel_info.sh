@@ -26,88 +26,24 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Update the panel color property and Leds brightness 
-for i in $(seq 5); do
-    if [ -f /sys/bus/i2c/devices/5-0049/panel_color ]; then
-	# St
-	color=`cat /sys/bus/i2c/devices/5-0049/panel_color`
-	if [ -n "$color" ]; then
-	    /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 5-0049 $color
-	    break
-	else
-	    /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
-	    sleep 1
-	    continue
-	fi
-	#Synaptics
-    elif [ -f /sys/bus/i2c/devices/5-0020/panel_color ]; then
-	color=`cat /sys/bus/i2c/devices/5-0020/panel_color`
-	if [ -n "$color" ]; then
-	    /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 5-0020 $color
-	    break
-	else
-	    /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
-	    sleep 1
-	    continue
-	fi
-	#Focal
-    elif [ -f /sys/bus/i2c/devices/5-0038/panel_color ]; then
-	color=`cat /sys/bus/i2c/devices/5-0038/panel_color`
-	if [ -n "$color" ]; then
-	    /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 5-0038 $color
-	    break
-	else
-	    /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
-	    sleep 1
-	    continue
-	fi
-    else
-	color="0"
-	/system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
-	sleep 1
-    fi
-done
+# Set panel color and vendor
+if [ -f /sys/bus/i2c/devices/5-0049/panel_color ]; then
+    # St
+    color=`cat /sys/bus/i2c/devices/5-0049/panel_color`
+    panel_vendor=`cat /sys/bus/i2c/devices/5-0049/panel_vendor`
+elif [ -f /sys/bus/i2c/devices/5-0020/panel_color ]; then
+    # Synaptics
+    color=`cat /sys/bus/i2c/devices/5-0020/panel_color`
+    panel_vendor=`cat /sys/bus/i2c/devices/5-0020/panel_vendor`
+elif [ -f /sys/bus/i2c/devices/5-0038/panel_color ]; then
+    # Focal
+    color=`cat /sys/bus/i2c/devices/5-0038/panel_color`
+    panel_vendor=`cat /sys/bus/i2c/devices/5-0038/panel_vendor`
+else
+    color="0"
+    panel_vendor="0"
+fi
 
-for i in $(seq 5); do
-    if [ -f /sys/bus/i2c/devices/5-0049/panel_vendor ]; then
-	# St
-	panel_vendor=`cat /sys/bus/i2c/devices/5-0049/panel_vendor`
-	if [ -n "$panel_vendor" ]; then
-	    /system/bin/log -p i -t panel-info-sh Get panel_vendor successfully from 5-0049 $panel_vendor
-	    break
-	else
-	    /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
-	    sleep 1
-	    continue
-	fi
-	#Synaptics
-    elif [ -f /sys/bus/i2c/devices/5-0020/panel_vendor ]; then
-	panel_vendor=`cat /sys/bus/i2c/devices/5-0020/panel_vendor`
-	if [ -n "$panel_vendor" ]; then
-	    /system/bin/log -p i -t panel-info-sh Get panel_vendor successfully from 5-0020 $panel_vendor
-	    break
-	else
-	    /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
-	    sleep 1
-	    continue
-	fi
-	#Focal
-    elif [ -f /sys/bus/i2c/devices/5-0038/panel_vendor ]; then
-	panel_vendor=`cat /sys/bus/i2c/devices/5-0038/panel_vendor`
-	if [ -n "$panel_vendor" ]; then
-	    /system/bin/log -p i -t panel-info-sh Get panel_vendor successfully from 5-0038 $panel_vendor
-	    break
-	else
-	    /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
-	    sleep 1
-	    continue
-	fi
-    else
-	panel_vendor="0"
-	/system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
-	sleep 1
-    fi
-done
 case "$color" in
     "1")
         setprop sys.panel.color WHITE
@@ -149,6 +85,7 @@ case "$color" in
         setprop sys.panel.color UNKNOWN
         ;;
 esac
+
 case "$panel_vendor" in
     "1")
         setprop sys.panel.vendor BIELTPB
@@ -176,7 +113,7 @@ case "$panel_vendor" in
         ;;
     "9")
         setprop sys.panel.vendor JDI
-		;;
+        ;;
     "@")
         setprop sys.panel.vendor EELY
         ;;
