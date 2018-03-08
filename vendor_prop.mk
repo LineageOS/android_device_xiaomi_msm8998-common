@@ -134,6 +134,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.dynamic_sar=false \
     persist.radio.multisim.config=dsds \
     persist.rmnet.data.enable=true \
+    persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.rat_on=combine \
