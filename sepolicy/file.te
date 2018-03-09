@@ -11,7 +11,6 @@ type sysfs_fpc, sysfs_type, fs_type;
 type sysfs_fpc_keyevents, sysfs_type, fs_type;
 type sysfs_fpc_wakeup, sysfs_type, fs_type;
 type sysfs_fpc_proximity, sysfs_type, fs_type;
-type tftp_server_check_file, file_type;
 type thermal_data_file, file_type;
 type thermal_dump_file, file_type;
 type netmgr_data_file, file_type;
