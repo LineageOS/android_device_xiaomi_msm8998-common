@@ -79,7 +79,7 @@ on post-fs-data
     mkdir /data/vendor/ipa 0770 radio radio
 
     # Create the directories used by CnE subsystem
-    mkdir /data/connectivity 0771 system system
+    mkdir /data/vendor/connectivity 0771 radio radio
 
     # Create the directories used by DPM subsystem
     mkdir /data/dpm 0771 system system
