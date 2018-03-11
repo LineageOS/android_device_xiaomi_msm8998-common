@@ -1,4 +1,7 @@
 # Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
 af.fast_track_multiplier=2
 audio.adm.buffering.ms=6
 audio.deep_buffer.media=true
