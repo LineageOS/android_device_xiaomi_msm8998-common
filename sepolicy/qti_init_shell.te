@@ -11,3 +11,5 @@ allow qti_init_shell persist_file:file { relabelfrom relabelto };
 allow qti_init_shell sensors_data_file:dir setattr;
 
 qmux_socket(qti_init_shell)
+
+set_prop(qti_init_shell, post_boot_prop)

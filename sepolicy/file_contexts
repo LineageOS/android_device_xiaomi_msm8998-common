@@ -1,9 +1,12 @@
 # executables
 /system/bin/readmac                   u:object_r:readmac_exec:s0
+/(vendor|system/vendor)/bin/perfd                                             u:object_r:perfd_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service.xiaomi_msm8998     u:object_r:hal_power_default_exec:s0
 
 # Devices
 /dev/elliptic(.*)?                    u:object_r:sound_device:s0
 /dev/pn553                            u:object_r:nfc_device:s0
+/dev/socket/perfd                                             u:object_r:perfd_socket:s0
 
 # Goodix
 /dev/goodix_fp*                                                       u:object_r:goodix_fpd_device:s0
