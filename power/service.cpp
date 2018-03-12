@@ -38,7 +38,7 @@ int main() {
     status_t status;
     android::sp<IPower> service = nullptr;
 
-    ALOGI("Power HAL Service 1.1 for Mata is starting.");
+    ALOGI("Power HAL Service 1.1 is starting.");
 
     service = new Power();
     if (service == nullptr) {
