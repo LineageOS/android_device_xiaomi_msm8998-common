@@ -41,7 +41,6 @@ on init
     # Disable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 0
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 0
-    write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 0
 
     # Set up schedtune
     write /dev/stune/background/schedtune.colocate 0
@@ -197,7 +196,6 @@ on property:sys.boot_completed=1
     # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
-    write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 1
 
     # Post-boot fs tuning
     write /sys/block/sda/queue/iostats 1
@@ -245,7 +243,6 @@ on charger
     # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
-    write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 1
 
     start vendor.hvdcp_opti
     start vendor.thermal-engine
