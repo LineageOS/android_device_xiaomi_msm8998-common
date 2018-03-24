@@ -54,6 +54,9 @@ on post-fs-data
     mkdir /data/misc/camera 0770 camera camera
     setprop persist.camera.stats.test 5
 
+    # Create folder of camera
+    mkdir /data/vendor/camera 0770 camera camera
+
     # Create directories for tombstones
     mkdir /data/tombstones/modem 0771 system system
     mkdir /data/tombstones/lpass 0771 system system
