@@ -157,8 +157,6 @@ ro.se.type=eSE,HCE,UICC
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.qti.core_ctl_max_cpu=4
-ro.vendor.qti.core_ctl_min_cpu=2
 ro.vendor.qti.sys.fw.bg_apps_limit=60
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
