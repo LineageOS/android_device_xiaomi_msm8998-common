@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c61845fd_0ee89b06",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-01T14:15:58Z",
+      "side": 0,
+      "message": "../../../hardware/qcom/audio-caf/msm8998/mm-audio/Android.mk\n1:ifeq ($(strip $(TARGET_USES_QCOM_MM_AUDIO)),true)",
+      "range": {
+        "startLine": 115,
+        "startChar": 0,
+        "endLine": 115,
+        "endChar": 33
+      },
+      "revId": "fcc16ebf600673c13e26d0978cb57e15c37bd514",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
