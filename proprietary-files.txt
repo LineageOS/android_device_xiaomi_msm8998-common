@@ -402,7 +402,6 @@ vendor/lib64/libdrplugin_client.so
 vendor/lib64/libevent_observer.so
 vendor/lib64/libflp.so
 vendor/lib64/libgeofence.so
-vendor/lib64/libgnsspps.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
