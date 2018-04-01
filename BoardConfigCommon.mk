@@ -186,10 +186,6 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Lineage Hardware
-BOARD_HARDWARE_CLASS += \
-    hardware/lineage/lineagehw
-
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
