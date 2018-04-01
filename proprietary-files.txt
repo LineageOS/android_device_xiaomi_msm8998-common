@@ -349,6 +349,15 @@ vendor/lib64/vendor.display.color@1.0_vendor.so
 vendor/lib64/vendor.display.postproc@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
 
+# DPM
+lib/com.qualcomm.qti.dpm.api@1.0.so
+lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/bin/dpmQmiMgr
+vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib/libdpmqmihal.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib64/libdpmqmihal.so
+
 # DRM and SEE
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
