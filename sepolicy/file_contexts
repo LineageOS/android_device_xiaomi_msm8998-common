@@ -1,5 +1,6 @@
 # executables
 /(vendor|system/vendor)/bin/readmac   u:object_r:readmac_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service.xiaomi_msm8998 u:object_r:hal_fingerprint_default_exec:s0
 
 # Devices
 /dev/elliptic(.*)?                    u:object_r:sound_device:s0
