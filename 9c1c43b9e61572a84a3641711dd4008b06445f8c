@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b6b65ff9_9836f788",
+        "filename": "manifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2018-04-03T08:03:10Z",
+      "side": 1,
+      "message": "remove that space.",
+      "range": {
+        "startLine": 441,
+        "startChar": 8,
+        "endLine": 441,
+        "endChar": 9
+      },
+      "revId": "9c1c43b9e61572a84a3641711dd4008b06445f8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
