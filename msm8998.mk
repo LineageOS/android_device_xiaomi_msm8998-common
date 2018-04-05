@@ -130,8 +130,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
     camera.device@1.0-impl \
-    camera.device@3.2-impl \
-    libshim_MiCamera
+    camera.device@3.2-impl
 
 # Bluetooth
 PRODUCT_PACKAGES += \
