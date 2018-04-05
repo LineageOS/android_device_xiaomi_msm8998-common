@@ -83,7 +83,8 @@ lib/libjni_stillmore.so
 lib/libjni_trueportrait.so
 lib/libjni_truescanner_v2.so
 lib/libjni_ubifocus.so
-lib/libMiCameraHal.so|b8a1a5806b35dfbe0f7c2e990d0e76e49f447b7f
+lib/libMiCameraHal.so|49eaa8c29d4713250539d1aa9f3146fbbd701d47
+lib/libmisk.so|7679f1434e1186b62d831b74b11577a1cca8db94
 lib/libmorpho_group_portrait.so
 lib/libmorpho_memory_allocator.so
 lib/libmorpho_panorama.so
