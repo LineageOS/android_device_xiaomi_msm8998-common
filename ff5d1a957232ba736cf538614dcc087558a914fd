@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0f3ca7e_b1ce3f9c",
+        "filename": "configs/media/media_codecs.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-05T10:40:10Z",
+      "side": 1,
+      "message": "You removed all changes in this file in a previous commit...",
+      "revId": "ff5d1a957232ba736cf538614dcc087558a914fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
