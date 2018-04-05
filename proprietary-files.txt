@@ -69,6 +69,9 @@ vendor/lib64/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
+lib/libblurbuster.so
+lib/libCameraEffectJNI.so
+lib/libfiltergenerator.so
 lib/libjni_blurbuster.so
 lib/libjni_chromaflash.so
 lib/libjni_dualcamera.so
@@ -85,11 +88,14 @@ lib/libjni_truescanner_v2.so
 lib/libjni_ubifocus.so
 lib/libMiCameraHal.so|b8a1a5806b35dfbe0f7c2e990d0e76e49f447b7f
 lib/libmorpho_group_portrait.so
+lib/libmorpho_groupshot.so
 lib/libmorpho_memory_allocator.so
 lib/libmorpho_panorama.so
 lib/libmorpho_panorama_gp.so
 lib/libtrueportrait.so
 lib/libtruescanner.so
+lib64/libblurbuster.so
+lib64/libCameraEffectJNI.so
 lib64/libjni_blurbuster.so
 lib64/libjni_chromaflash.so
 lib64/libjni_clearsight.so
@@ -104,6 +110,12 @@ lib64/libjni_stillmore.so
 lib64/libjni_trueportrait.so
 lib64/libjni_truescanner_v2.so
 lib64/libjni_ubifocus.so
+lib64/libmorpho_group_portrait.so
+lib64/libmorpho_groupshot.so
+lib64/libmorpho_memory_allocator.so
+lib64/libmorpho_panorama.so
+lib64/libmorpho_panorama_gp.so
+lib64/libseestraight.so
 lib64/libtruescanner.so
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/lib_lowlight.so
@@ -207,6 +219,7 @@ vendor/lib/libStereoRectification.so
 vendor/lib/libubifocus.so
 vendor/lib/libvideobokeh.so
 vendor/lib/libXMFD_AgeGender.so
+vendor/lib64/libchromaflash.so
 vendor/lib64/libdualcameraddm.so
 vendor/lib64/libvideobokeh.so
 
