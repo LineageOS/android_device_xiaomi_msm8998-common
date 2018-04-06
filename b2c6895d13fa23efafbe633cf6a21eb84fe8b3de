@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceab69e1_b2ec4b97",
+        "filename": "configs/nfc/libnfc-brcm.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-04-06T04:40:29Z",
+      "side": 1,
+      "message": "APPL_TRACE_LEVEL\u003d0x01\nDisables logspam",
+      "revId": "b2c6895d13fa23efafbe633cf6a21eb84fe8b3de",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
