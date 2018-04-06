@@ -16,6 +16,23 @@
       "revId": "b2c6895d13fa23efafbe633cf6a21eb84fe8b3de",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ba1709e_0893dcba",
+        "filename": "configs/nfc/libnfc-brcm.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-04-06T06:06:35Z",
+      "side": 1,
+      "message": "NCI_HAL_MODULE\u003d\"nfc_nci.nqx.default\"\nThis fixes a very long running nfc",
+      "revId": "b2c6895d13fa23efafbe633cf6a21eb84fe8b3de",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
