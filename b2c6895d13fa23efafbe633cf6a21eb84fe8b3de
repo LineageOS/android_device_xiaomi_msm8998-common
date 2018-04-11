@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1ac32cd8_bd9680cf",
+        "filename": "configs/nfc/libnfc-brcm.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-11T18:52:49Z",
+      "side": 1,
+      "message": "Doesn\u0027t belong in this change",
+      "parentUuid": "ceab69e1_b2ec4b97",
+      "revId": "b2c6895d13fa23efafbe633cf6a21eb84fe8b3de",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ba1709e_0893dcba",
         "filename": "configs/nfc/libnfc-brcm.conf",
         "patchSetId": 3
