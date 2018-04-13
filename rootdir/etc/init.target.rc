@@ -52,7 +52,6 @@ on init
     write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 4
 
     # Set b.L scheduler parameters
-    write /proc/sys/kernel/sched_migration_fixup 1
     write /proc/sys/kernel/sched_upmigrate 95
     write /proc/sys/kernel/sched_downmigrate 90
     write /proc/sys/kernel/sched_group_upmigrate 100
@@ -136,8 +135,8 @@ on init
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
 on fs
-    wait /dev/block/platform/soc/1da4000.ufshc
-    symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all /vendor/etc/fstab.qcom --early
     swapon_all /vendor/etc/fstab.qcom
 
@@ -145,7 +144,6 @@ on fs
     mkdir /persist/data 0700 system system
     mkdir /persist/wlan_bt 0700 system system
     mkdir /persist/audio 0755 system system
-    mkdir /persist/subsys 0700 system system
 
     # Start HW service manager early
     start hwservicemanager
@@ -174,12 +172,10 @@ on post-fs
     wait_for_prop sys.listeners.registered true
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
-    mkdir /data/misc/qvr 0770 system system
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
 
@@ -234,25 +230,29 @@ on charger
     write /sys/class/input/input2/enabled 0
     write /sys/class/input/input3/enabled 0
     write /sys/class/input/input4/enabled 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/module/lpm_levels/system/system-pc/idle_enabled 0
+
     write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "userspace"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 300000
     write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 300000
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/devices/system/cpu/cpu4/online 0
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
-    write /sys/module/msm_thermal/parameters/enabled "N"
+    write /sys/module/msm_thermal/parameters/enabled N
+    write /sys/module/lpm_levels/parameters/sleep_disabled N
+
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "userspace"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 300000
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 300000
+
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
+
     start hvdcp_opti
-    setprop sys.usb.configfs 1
     start thermal-engine
+
+    setprop sys.usb.configfs 1
 
 service qseecomd /vendor/bin/qseecomd
     class core
@@ -325,13 +325,6 @@ service hvdcp_opti /system/vendor/bin/hvdcp_opti
     user root
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
-
-service qvrd /system/bin/qvrservice
-    class late_start
-    user system
-    group system camera graphics
-    socket qvrservice stream 0666 system system
-    capabilities SYS_NICE
 
 service readmac /system/vendor/bin/readmac
     class main
