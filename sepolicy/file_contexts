@@ -14,6 +14,9 @@
 # IR
 /dev/peel_ir					u:object_r:ir_device:s0
 
+# Power HAL
+/sys/devices/soc/c179000\.i2c/i2c-5/5-[0-9a-f]+/input/input[0-9]+/double_tap_enable		u:object_r:sysfs_touchpanel:s0
+
 # Readmac
 /(vendor|system/vendor)/bin/readmac   u:object_r:readmac_exec:s0
 
