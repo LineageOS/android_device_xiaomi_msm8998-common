@@ -52,7 +52,6 @@ on init
     write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 4
 
     # Set b.L scheduler parameters
-    write /proc/sys/kernel/sched_migration_fixup 1
     write /proc/sys/kernel/sched_upmigrate 95
     write /proc/sys/kernel/sched_downmigrate 90
     write /proc/sys/kernel/sched_group_upmigrate 100
@@ -179,7 +178,6 @@ on post-fs-data
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
-    mkdir /data/misc/qvr 0770 system system
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
 
@@ -325,13 +323,6 @@ service hvdcp_opti /system/vendor/bin/hvdcp_opti
     user root
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
-
-service qvrd /system/bin/qvrservice
-    class late_start
-    user system
-    group system camera graphics
-    socket qvrservice stream 0666 system system
-    capabilities SYS_NICE
 
 service readmac /system/vendor/bin/readmac
     class main
