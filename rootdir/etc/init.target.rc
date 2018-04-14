@@ -144,11 +144,8 @@ on fs
     restorecon_recursive /persist
     mkdir /persist/data 0700 system system
     mkdir /persist/wlan_bt 0700 system system
-
     mkdir /persist/audio 0755 system system
     mkdir /persist/subsys 0700 system system
-    chown system system /dev/tiload_node
-    chmod 660 /dev/tiload_node
 
     # Start HW service manager early
     start hwservicemanager
@@ -195,12 +192,6 @@ on post-fs-data
 
 on boot
     start rmt_storage
-
-    # Elliptic sysfs
-    chmod 0666 /dev/i2c-10
-
-    chmod 0777 /dev/elliptic0
-    chmod 0777 /dev/elliptic1
 
 on property:sys.boot_completed=1
     setprop sys.io.scheduler "bfq"
