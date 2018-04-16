@@ -344,6 +344,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libril-wrapper \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full
