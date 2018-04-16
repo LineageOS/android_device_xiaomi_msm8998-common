@@ -4,10 +4,6 @@
     "target_path": "kernel/xiaomi/msm8998"
   },
   {
-    "repository": "android_device_qcom_common",
-    "target_path": "device/qcom/common"
-  },
-  {
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
   }
