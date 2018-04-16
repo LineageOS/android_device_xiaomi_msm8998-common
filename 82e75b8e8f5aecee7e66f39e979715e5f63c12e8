@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3ca83d8_421b802f",
+        "filename": "rootdir/bin/init.qcom.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-16T16:07:31Z",
+      "side": 0,
+      "message": "You can pick: https://source.codeaurora.org/quic/la/device/qcom/common/commit/?h\u003dLA.UM.6.4.c1-12600-8x98.0\u0026id\u003d7812f5b03eec882486f18c35da6d131bdf4c9813",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 1
+      },
+      "revId": "82e75b8e8f5aecee7e66f39e979715e5f63c12e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
