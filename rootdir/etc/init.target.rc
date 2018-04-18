@@ -338,4 +338,5 @@ service readmac /system/vendor/bin/readmac
     class main
     user root
     group oem_2950 bluetooth
+    capabilities CHOWN FOWNER
     oneshot
