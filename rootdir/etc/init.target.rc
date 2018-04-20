@@ -157,7 +157,7 @@ on fs
     mkdir /mnt/vendor/persist/wlan_bt 0770 system system
 
 on post-fs
-    wait_for_prop sys.listeners.registered true
+    wait_for_prop vendor.sys.listeners.registered true
 
     write /dev/ipa 1
 
