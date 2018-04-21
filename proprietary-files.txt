@@ -537,7 +537,7 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
 # QMI
-etc/permissions/qti_libpermissions.xml
+etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
 etc/permissions/qti_permissions.xml
 lib64/libqminvapi.so
 vendor/bin/irsc_util
