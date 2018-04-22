@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f03c4b7e_46e7bbb5",
+        "filename": "light/Light.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-22T09:09:53Z",
+      "side": 1,
+      "message": "Remove 1 space",
+      "range": {
+        "startLine": 189,
+        "startChar": 11,
+        "endLine": 189,
+        "endChar": 12
+      },
+      "revId": "0f0502b9671f15f8ed9fc783c0e503fcb15c655d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
