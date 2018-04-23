@@ -43,7 +43,7 @@ on init
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
 
     # Configure core ctl
-    write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 2
+    write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 0
     write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 4
     write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 60
     write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
