@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30204a47_dde925f5",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-04-26T15:56:55Z",
+      "side": 1,
+      "message": "Need add one space",
+      "revId": "f82c3cf22a0d7087efaa458940a22f66be93cbc4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
