@@ -26,4 +26,9 @@
     <integer name="quick_settings_num_rows">2</integer>
     <integer name="quick_settings_num_rows_portrait">3</integer>
 
+    <!-- The default tiles to display in QuickSettings -->
+    <string name="quick_settings_tiles_default" translatable="false">
+        cell,wifi,bt,location,nfc,rotation,sync,flashlight,dnd,cast,ambient_display,hotspot,usb_tether
+    </string>
+
 </resources>
