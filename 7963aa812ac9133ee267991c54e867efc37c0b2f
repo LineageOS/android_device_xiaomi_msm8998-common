@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10485a15_41b676b9",
+        "filename": "rootdir/etc/init.qcom.usb.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-04-26T04:16:32Z",
+      "side": 1,
+      "message": "This we do not have.",
+      "revId": "7963aa812ac9133ee267991c54e867efc37c0b2f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
