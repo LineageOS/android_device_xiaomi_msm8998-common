@@ -180,7 +180,6 @@ on post-fs-data
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/misc/qvr 0770 system system
-    mkdir /data/nfc 0770 nfc nfc
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
 
