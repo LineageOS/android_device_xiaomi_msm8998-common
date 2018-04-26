@@ -283,6 +283,7 @@ on post-fs-data
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
 
     # Create IOP deamon related dirs
     mkdir /data/vendor/iop 0770 root system
