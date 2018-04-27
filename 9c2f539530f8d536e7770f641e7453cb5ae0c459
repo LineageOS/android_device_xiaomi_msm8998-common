@@ -22,6 +22,30 @@
       "revId": "9c2f539530f8d536e7770f641e7453cb5ae0c459",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d31a80ab_3cd3c2b5",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 4
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-04-27T07:42:37Z",
+      "side": 1,
+      "message": "mkdir /data/nfc/param 0770 nfc nfc - It is not necessary",
+      "parentUuid": "ce4bf708_56fc5a4f",
+      "range": {
+        "startLine": 284,
+        "startChar": 0,
+        "endLine": 285,
+        "endChar": 38
+      },
+      "revId": "9c2f539530f8d536e7770f641e7453cb5ae0c459",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
