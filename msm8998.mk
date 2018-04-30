@@ -373,10 +373,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
-# Weaver
-PRODUCT_PACKAGES += \
-    android.hardware.weaver@1.0
-
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.lineage
