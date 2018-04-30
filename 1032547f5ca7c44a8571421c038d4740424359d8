@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e66e4d62_b3359610",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-30T16:24:46Z",
+      "side": 0,
+      "message": "We need this for charger persist mount probably, or we need to remove persist mount in charger. Need to check if anything needs it",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 35
+      },
+      "revId": "1032547f5ca7c44a8571421c038d4740424359d8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
