@@ -597,6 +597,7 @@ framework/embmslibrary.jar
 framework/qti-telephony-common.jar
 framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
