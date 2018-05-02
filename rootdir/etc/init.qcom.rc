@@ -280,6 +280,12 @@ service port-bridge /system/vendor/bin/port-bridge
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
+service atfwd /vendor/bin/ATFWD-daemon
+    class late_start
+    user system
+    group system radio
+    writepid /dev/cpuset/system-background/tasks
+
 service netmgrd /system/vendor/bin/netmgrd
     class main
     writepid /dev/cpuset/system-background/tasks
