@@ -29,8 +29,26 @@ using ::android::hardware::Void;
 using ::android::hardware::light::V2_0::ILight;
 using ::android::hardware::light::V2_0::Flash;
 using ::android::hardware::light::V2_0::LightState;
+using ::android::hardware::light::V2_0::Brightness;
 using ::android::hardware::light::V2_0::Status;
 using ::android::hardware::light::V2_0::Type;
+
+typedef void(*LightStateHandler)(const LightState&);
+
+struct LightBackend {
+    Type type;
+    LightState state;
+    LightStateHandler handler;
+
+    LightBackend(Type type, LightStateHandler handler) :
+            type(type), handler(handler) {
+        this->state.color = 0xff000000;
+        this->state.flashMode = Flash::NONE;
+        this->state.flashOnMs = 0;
+        this->state.flashOffMs = 0;
+        this->state.brightnessMode = Brightness::USER;
+    }
+};
 
 namespace android {
 namespace hardware {
@@ -40,10 +58,12 @@ namespace implementation {
 
 class Light : public ILight {
   public:
+    Light();
     Return<Status> setLight(Type type, const LightState& state) override;
     Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
 
   private:
+    std::vector<LightBackend> backends;
     std::mutex globalLock;
 };
 
