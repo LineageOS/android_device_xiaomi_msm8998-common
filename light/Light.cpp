@@ -103,12 +103,12 @@ static inline uint32_t getScaledBrightness(const LightState& state, uint32_t max
     return scaleBrightness(getBrightness(state), maxBrightness);
 }
 
-static void handleBacklight(Type /* type */, const LightState& state) {
+static void handleBacklight(const LightState& state) {
     uint32_t brightness = getScaledBrightness(state, MAX_LCD_BRIGHTNESS);
     set(LCD_LED BRIGHTNESS, brightness);
 }
 
-static void handleButtons(Type /* type */, const LightState& state) {
+static void handleButtons(const LightState& state) {
     uint32_t brightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
     set(BUTTON_LED BRIGHTNESS, brightness);
     set(BUTTON1_LED BRIGHTNESS, brightness);
@@ -129,7 +129,7 @@ static std::string getScaledRamp(uint32_t brightness) {
     return ramp;
 }
 
-static void setNotification(const LightState& state) {
+static void handleNotification(const LightState& state) {
     uint32_t whiteBrightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
 
     /* Disable blinking */
@@ -168,36 +168,8 @@ static inline bool isLit(const LightState& state) {
     return state.color & 0x00ffffff;
 }
 
-/*
- * Keep sorted in the order of importance.
- */
-static const LightState offState = {};
-static std::vector<std::pair<Type, LightState>> notificationStates = {
-    { Type::ATTENTION, offState },
-    { Type::NOTIFICATIONS, offState },
-    { Type::BATTERY, offState },
-};
-
-static void handleNotification(Type type, const LightState& state) {
-    bool handled = false;
-
-    for (auto it : notificationStates) {
-        if (it.first == type) {
-            it.second = state;
-        }
-
-        if (!handled && isLit(it.second)) {
-            setNotification(it.second);
-            handled = true;
-        }
-    }
-
-    if (!handled) {
-        setNotification(offState);
-    }
-}
-
-static std::map<Type, std::function<void(Type, const LightState&)>> lights = {
+/* Keep sorted in the order of importance. */
+static std::vector<LightBackend> backends = {
     { Type::ATTENTION, handleNotification },
     { Type::NOTIFICATIONS, handleNotification },
     { Type::BATTERY, handleNotification },
@@ -214,18 +186,37 @@ namespace V2_0 {
 namespace implementation {
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
-    auto it = lights.find(type);
+    LightStateHandler handler;
+    bool handled = false;
 
-    if (it == lights.end()) {
+    /* Lock global mutex until light state is updated. */
+    std::lock_guard<std::mutex> lock(globalLock);
+
+    /* Update the cached state value for the current type. */
+    for (LightBackend& backend : backends) {
+        if (backend.type == type) {
+            backend.state = state;
+            handler = backend.handler;
+        }
+    }
+
+    /* Light up the type with the highest priority that matches the current handler. */
+    for (LightBackend& backend : backends) {
+        if (!handled && handler == backend.handler && isLit(backend.state)) {
+            handler(backend.state);
+            handled = true;
+        }
+    }
+
+    /* If no handler has been found, then the type is not supported. */
+    if (!handler) {
         return Status::LIGHT_NOT_SUPPORTED;
     }
 
-    /*
-     * Lock global mutex until light state is updated.
-     */
-    std::lock_guard<std::mutex> lock(globalLock);
-
-    it->second(type, state);
+    /* If no type has been lit up, then turn off the hardware. */
+    if (!handled) {
+        handler(state);
+    }
 
     return Status::SUCCESS;
 }
@@ -233,8 +224,8 @@ Return<Status> Light::setLight(Type type, const LightState& state) {
 Return<void> Light::getSupportedTypes(getSupportedTypes_cb _hidl_cb) {
     std::vector<Type> types;
 
-    for (auto const& light : lights) {
-        types.push_back(light.first);
+    for (const LightBackend& backend : backends) {
+        types.push_back(backend.type);
     }
 
     _hidl_cb(types);
