@@ -586,7 +586,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 -app/embms/embms.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/radioconfig/radioconfig.apk
-etc/modem/Diag.cfg
 etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/radioconfig.xml
