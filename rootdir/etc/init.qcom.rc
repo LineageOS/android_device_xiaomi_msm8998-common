@@ -304,7 +304,7 @@ service qti /system/vendor/bin/qti
     writepid /dev/cpuset/system-background/tasks
 
 service sensors /vendor/bin/sensors.qcom
-    class core
+    class main
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
