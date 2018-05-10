@@ -426,7 +426,6 @@ vendor/firmware/a540_zap.mdt
 
 # IMS
 -app/ims/ims.apk
--app/imssettings/imssettings.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/qti-vzw-ims-internal.xml
 lib64/libdiag_system.so
