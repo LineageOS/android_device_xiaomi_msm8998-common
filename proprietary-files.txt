@@ -573,11 +573,8 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 
 # RIL
 -app/datastatusnotification/datastatusnotification.apk
--app/embms/embms.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
-framework/embmslibrary.jar
 framework/qcrilhook.jar
 framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
