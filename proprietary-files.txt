@@ -578,8 +578,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 -app/radioconfig/radioconfig.apk
 etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
-etc/permissions/radioconfig.xml
-etc/permissions/radioconfiginterface.xml
 framework/embmslibrary.jar
 framework/qcrilhook.jar
 framework/qti-telephony-common.jar
