@@ -144,10 +144,10 @@ on fs
     mount_all /vendor/etc/fstab.qcom --early
     swapon_all /vendor/etc/fstab.qcom
 
-    restorecon_recursive /persist
-    mkdir /persist/data 0700 system system
-    mkdir /persist/wlan_bt 0770 system system
-    mkdir /persist/audio 0755 system system
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/audio 0755 system system
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/wlan_bt 0770 system system
 
 on post-fs
     wait_for_prop sys.listeners.registered true
