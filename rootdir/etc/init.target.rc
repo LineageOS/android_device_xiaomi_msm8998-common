@@ -152,6 +152,11 @@ on fs
     # Start HW service manager early
     start hwservicemanager
 
+on post-fs
+    wait_for_prop sys.listeners.registered true
+
+    write /dev/ipa 1
+
 on late-fs
     # Start devices by sysfs trigger
     write /sys/kernel/boot_adsp/boot 1
@@ -166,16 +171,13 @@ on late-fs
 
     mount_all /vendor/etc/fstab.qcom --late
 
-on post-fs
-    wait_for_prop sys.listeners.registered true
-
-    write /dev/ipa 1
-
 on post-fs-data
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
+
+    # Create directory for thermal engine
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
 
@@ -184,9 +186,6 @@ on post-fs-data
     # sde stores /system
     write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/read_ahead_kb 2048
-
-on boot
-    start rmt_storage
 
 on property:sys.boot_completed=1
     setprop sys.io.scheduler "bfq"
@@ -205,24 +204,6 @@ on property:sys.boot_completed=1
     write /sys/block/sde/queue/read_ahead_kb 512
 
     start qcom-post-boot
-
-service per_mgr /vendor/bin/pm-service
-    class core
-    user system
-    group system
-    ioprio rt 4
-
-service per_proxy /vendor/bin/pm-proxy
-    class core
-    user system
-    group system
-    disabled
-
-on property:init.svc.per_mgr=running
-    start per_proxy
-
-on property:sys.shutdown.requested=*
-    stop per_proxy
 
 on charger
     write /sys/class/input/input0/enabled 0
@@ -247,12 +228,38 @@ on charger
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 300000
 
+    wait /dev/block/bootdevice/by-name/system
+    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+
+    wait /dev/block/bootdevice/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
+
+    load_system_props
 
     start hvdcp_opti
     start thermal-engine
+    start qcom-post-boot
 
     setprop sys.usb.configfs 1
+    setprop sys.usb.config adb
+
+service per_mgr /vendor/bin/pm-service
+    class core
+    user system
+    group system
+    ioprio rt 4
+
+service per_proxy /vendor/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+
+on property:init.svc.per_mgr=running
+    start per_proxy
+
+on property:sys.shutdown.requested=*
+    stop per_proxy
 
 service qseecomd /vendor/bin/qseecomd
     class core
