@@ -134,9 +134,15 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
-on fs
+    # QSEE rpmb listener need symlink for bootdevice
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    # Start qseecomd early as we mount system/ early
+    # vold needs keymaster which needs qseecomd
+    start qseecomd
+
+on fs
     mount_all /vendor/etc/fstab.qcom --early
     swapon_all /vendor/etc/fstab.qcom
 
@@ -147,10 +153,6 @@ on fs
 
     # Start HW service manager early
     start hwservicemanager
-
-    # Start qseecomd early
-    # vold needs keymaster which needs qseecomd
-    start qseecomd
 
 on late-fs
     # Start devices by sysfs trigger
