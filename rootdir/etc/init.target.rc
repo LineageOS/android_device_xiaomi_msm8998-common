@@ -31,6 +31,14 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
+    # QSEE rpmb listener need symlink for bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    # Start qseecomd early as we mount system/ early
+    # vold needs keymaster which needs qseecomd
+    start qseecomd
+
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
     # Set up schedtune
@@ -135,8 +143,6 @@ on init
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
 on fs
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all /vendor/etc/fstab.qcom --early
     swapon_all /vendor/etc/fstab.qcom
 
@@ -147,10 +153,6 @@ on fs
 
     # Start HW service manager early
     start hwservicemanager
-
-    # Start qseecomd early
-    # vold needs keymaster which needs qseecomd
-    start qseecomd
 
 on late-fs
     # Start devices by sysfs trigger
@@ -167,9 +169,9 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
-    write /dev/ipa 1
-
     wait_for_prop sys.listeners.registered true
+
+    write /dev/ipa 1
 
 on post-fs-data
     mkdir /tombstones/modem 0771 system system
