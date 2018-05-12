@@ -266,7 +266,7 @@ service qseecomd /vendor/bin/qseecomd
     user root
     group root
 
-service thermal-engine /system/vendor/bin/thermal-engine -T
+service thermal-engine /vendor/bin/thermal-engine -T
     class main
     user root
     socket thermal-send-client stream 0666 system system
@@ -275,20 +275,20 @@ service thermal-engine /system/vendor/bin/thermal-engine -T
     socket thermal-send-rule stream 0660 system system
     group root
 
-service adsprpcd /system/vendor/bin/adsprpcd
+service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
     writepid /dev/cpuset/system-background/tasks
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
+service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
     writepid /dev/cpuset/system-background/tasks
 
-service imsdatadaemon /system/vendor/bin/imsdatadaemon
+service imsdatadaemon /vendor/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -296,20 +296,20 @@ service imsdatadaemon /system/vendor/bin/imsdatadaemon
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service pd_mapper /system/vendor/bin/pd-mapper
+service pd_mapper /vendor/bin/pd-mapper
     class core
 
 on property:vendor.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
+service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
     class main
     user system
     group radio diag inet log
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.imsrcsservice /system/vendor/bin/imsrcsd
+service vendor.imsrcsservice /vendor/bin/imsrcsd
     class main
     user system
     group radio diag inet log
@@ -320,20 +320,20 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start vendor.imsrcsservice
 
-service energy-awareness /system/vendor/bin/energy-awareness
+service energy-awareness /vendor/bin/energy-awareness
     class main
     user root
     group system
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
-service hvdcp_opti /system/vendor/bin/hvdcp_opti
+service hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service readmac /system/vendor/bin/readmac
+service readmac /vendor/bin/readmac
     class main
     user root
     group oem_2950 bluetooth
