@@ -174,9 +174,9 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
-    write /dev/ipa 1
-
     wait_for_prop sys.listeners.registered true
+
+    write /dev/ipa 1
 
 on post-fs-data
     mkdir /tombstones/modem 0771 system system
