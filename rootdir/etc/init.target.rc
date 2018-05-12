@@ -164,6 +164,13 @@ on late-fs
     start configstore-hal-1-0
     start gralloc-2-0
 
+    # Boot-time fs tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sde/queue/iostats 0
+    write /sys/block/sde/queue/nr_requests 256
+    setprop sys.io.scheduler "cfq"
+
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
@@ -179,16 +186,17 @@ on post-fs-data
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
 
-    # Set aggressive read ahead for sda and sde during boot up
-    # sda stores /userdata
-    # sde stores /system
-    write /sys/block/sda/queue/read_ahead_kb 2048
-    write /sys/block/sde/queue/read_ahead_kb 2048
-
 on boot
     start rmt_storage
 
 on property:sys.boot_completed=1
+    # Post-boot fs tuning
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/read_ahead_kb 1024
+    write /sys/block/sde/queue/iostats 1
+    write /sys/block/sde/queue/nr_requests 128
+    write /sys/block/sde/queue/read_ahead_kb 1024
     setprop sys.io.scheduler "bfq"
 
     write /dev/cpuset/top-app/cpus 0-7
@@ -197,12 +205,6 @@ on property:sys.boot_completed=1
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-3
-
-    # Reset read ahead for sda and sde to 512kb
-    # sda stores /userdata
-    # sde stores /system
-    write /sys/block/sda/queue/read_ahead_kb 512
-    write /sys/block/sde/queue/read_ahead_kb 512
 
     start qcom-post-boot
 
