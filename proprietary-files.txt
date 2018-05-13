@@ -303,7 +303,7 @@ vendor/lib64/libgeofence.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
--vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
@@ -574,9 +574,9 @@ vendor/bin/thermal-engine
 vendor/etc/thermal-engine-8998-high.conf
 vendor/etc/thermal-engine-8998-map.conf
 vendor/etc/thermal-engine.conf
--vendor/lib/libthermalclient.so
+vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
--vendor/lib64/libthermalioctl.so
+vendor/lib64/libthermalioctl.so
 
 # Time services
 -vendor/app/TimeService/TimeService.apk
