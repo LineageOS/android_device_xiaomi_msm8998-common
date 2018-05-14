@@ -53,8 +53,6 @@ vendor/lib64/soundfx/libshoebox.so
 
 # Bluetooth
 vendor/bin/wcnss_filter
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/libbtnv.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
