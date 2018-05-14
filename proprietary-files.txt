@@ -294,7 +294,6 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 
 # GPS
@@ -424,7 +423,6 @@ vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_fws.elf
 
 # Keystore
-vendor/lib/hw/keystore.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
 
 # Listen
