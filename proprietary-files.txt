@@ -231,9 +231,7 @@ vendor/bin/hvdcp_opti
 
 # CNE
 etc/cne/SwimConfig.xml
-etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
 framework/com.quicinc.cne.jar
 -priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
