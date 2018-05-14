@@ -140,7 +140,6 @@ vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_quadracfa.so
-vendor/lib/libmmcamera_quadracfa.so
 vendor/lib/libmmcamera_sac_lib.so
 vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sw2d_lib.so
@@ -181,14 +180,11 @@ etc/firmware/cpp_firmware_v1_12_0.fw
 
 # Camera ISP
 vendor/lib/libmmcamera_isp_abf48.so
-vendor/lib/libmmcamera_isp_abf48.so
 vendor/lib/libmmcamera_isp_aec_bg_stats47.so
 vendor/lib/libmmcamera_isp_bf_stats47.so
 vendor/lib/libmmcamera_isp_bg_stats46.so
 vendor/lib/libmmcamera_isp_bhist_stats44.so
 vendor/lib/libmmcamera_isp_black_level48.so
-vendor/lib/libmmcamera_isp_black_level48.so
-vendor/lib/libmmcamera_isp_bpc48.so
 vendor/lib/libmmcamera_isp_bpc48.so
 vendor/lib/libmmcamera_isp_cac47.so
 vendor/lib/libmmcamera_isp_chroma_enhan40.so
@@ -202,27 +198,21 @@ vendor/lib/libmmcamera_isp_color_xform_video46.so
 vendor/lib/libmmcamera_isp_color_xform_viewfinder46.so
 vendor/lib/libmmcamera_isp_cs_stats46.so
 vendor/lib/libmmcamera_isp_demosaic48.so
-vendor/lib/libmmcamera_isp_demosaic48.so
-vendor/lib/libmmcamera_isp_demux48.so
 vendor/lib/libmmcamera_isp_demux48.so
 vendor/lib/libmmcamera_isp_fovcrop_encoder46.so
 vendor/lib/libmmcamera_isp_fovcrop_video46.so
 vendor/lib/libmmcamera_isp_fovcrop_viewfinder46.so
 vendor/lib/libmmcamera_isp_gamma44.so
 vendor/lib/libmmcamera_isp_gic48.so
-vendor/lib/libmmcamera_isp_gic48.so
 vendor/lib/libmmcamera_isp_gtm46.so
 vendor/lib/libmmcamera_isp_hdr48.so
-vendor/lib/libmmcamera_isp_hdr48.so
 vendor/lib/libmmcamera_isp_hdr_be_stats46.so
-vendor/lib/libmmcamera_isp_hdr_bhist_stats44.so
 vendor/lib/libmmcamera_isp_hdr_bhist_stats44.so
 vendor/lib/libmmcamera_isp_ihist_stats46.so
 vendor/lib/libmmcamera_isp_linearization40.so
 vendor/lib/libmmcamera_isp_ltm47.so
 vendor/lib/libmmcamera_isp_mce40.so
 vendor/lib/libmmcamera_isp_mesh_rolloff44.so
-vendor/lib/libmmcamera_isp_pdaf48.so
 vendor/lib/libmmcamera_isp_pdaf48.so
 vendor/lib/libmmcamera_isp_pedestal_correct46.so
 vendor/lib/libmmcamera_isp_rs_stats46.so
