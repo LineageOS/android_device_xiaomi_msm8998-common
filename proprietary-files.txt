@@ -58,31 +58,9 @@ vendor/lib64/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/libblurbuster.so
-lib/libfiltergenerator.so
-lib/libjni_blurbuster.so
-lib/libjni_chromaflash.so
-lib/libjni_dualcamera.so
-lib/libjni_filtergenerator.so
-lib/libjni_hazebuster.so
-lib/libjni_makeupV2.so
-lib/libjni_optizoom.so
-lib/libjni_seestraight.so
-lib/libjni_sharpshooter.so
-lib/libjni_stillmore.so
-lib/libjni_trueportrait.so
-lib/libjni_truescanner_v2.so
-lib/libjni_ubifocus.so
 lib/libMiCameraHal.so|799fe89fabb1ebdbc18b35ed2c72effe95ca7c91
 lib/libmisk.so|7679f1434e1186b62d831b74b11577a1cca8db94
-lib/libmorpho_group_portrait.so
-lib/libmorpho_groupshot.so
-lib/libmorpho_memory_allocator.so
-lib/libmorpho_panorama.so
-lib/libmorpho_panorama_gp.so
-lib/libseestraight.so
 lib/libtrueportrait.so
-lib/libtruescanner.so
 lib64/libblurbuster.so
 lib64/libfiltergenerator.so
 lib64/libjni_blurbuster.so
@@ -113,7 +91,6 @@ vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libchromaflash.so
-vendor/lib/libdualcameraddm.so
 vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
