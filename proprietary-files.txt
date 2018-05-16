@@ -24,147 +24,56 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# Audio libraries
+# Audio
+vendor/lib/libadm.so
+vendor/lib/libhwdaphal.so
+vendor/lib/libqtigef.so
+
+# Audio - ACDB
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
-vendor/lib/libadm.so
 vendor/lib/libaudcal.so
-vendor/lib/libhwdaphal.so
-vendor/lib/libqtigef.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdirac.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 
+# Audio - Effects
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libdirac.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
+
+# Audio - Sound trigger
+vendor/lib/hw/sound_trigger.primary.msm8998.so
+vendor/lib/libsmwrapper.so
+
 # Bluetooth
 vendor/bin/wcnss_filter
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
-# Camera
+# Camera core
 bin/mm-qcamera-daemon
-lib/libMiCameraHal.so|799fe89fabb1ebdbc18b35ed2c72effe95ca7c91
-lib/libmisk.so|7679f1434e1186b62d831b74b11577a1cca8db94
-lib/libtrueportrait.so
-lib64/libblurbuster.so
-lib64/libfiltergenerator.so
-lib64/libjni_blurbuster.so
-lib64/libjni_chromaflash.so
-lib64/libjni_clearsight.so
-lib64/libjni_dualcamera.so
-lib64/libjni_filtergenerator.so
-lib64/libjni_hazebuster.so
-lib64/libjni_makeupV2.so
-lib64/libjni_optizoom.so
-lib64/libjni_seestraight.so
-lib64/libjni_sharpshooter.so
-lib64/libjni_stillmore.so
-lib64/libjni_trueportrait.so
-lib64/libjni_truescanner_v2.so
-lib64/libjni_ubifocus.so
-lib64/libseestraight.so
-lib64/libtrueportrait.so
-lib64/libtruescanner.so
 vendor/lib/hw/camera.msm8998.so|a82139eecab8cc585473e3e3f7cd347aeb68650a
-vendor/lib/lib_lowlight.so
-vendor/lib/lib_lowlight_dxo.so
-vendor/lib/libarcsoft_beauty_shot.so
-vendor/lib/libarcsoft_beautyshot.so
-vendor/lib/libarcsoft_beautyshot_image_algorithm.so
-vendor/lib/libarcsoft_beautyshot_video_algorithm.so
-vendor/lib/libarcsoft_dualcam_optical_zoom.so
-vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
-vendor/lib/libarcsoft_dualcam_refocus.so
-vendor/lib/libchromaflash.so
-vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmm-qcamera.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_mct.so
-vendor/lib/libmmcamera2_mct_shimlayer.so
-vendor/lib/libmmcamera2_pp_buf_mgr.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_lib.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmcamera_arcrtb_lib.so
-vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
-vendor/lib/libmmcamera_chromaflash_lib.so
-vendor/lib/libmmcamera_csidtg.so
-vendor/lib/libmmcamera_dbg.so
-vendor/lib/libmmcamera_dummyalgo.so
-vendor/lib/libmmcamera_eebinparse.so
-vendor/lib/libmmcamera_eeprom_util.so
-vendor/lib/libmmcamera_eztune_module.so
-vendor/lib/libmmcamera_facedetection_lib.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_faceproc2.so
-vendor/lib/libmmcamera_hdr_gb_lib.so
-vendor/lib/libmmcamera_hvx_add_constant.so
-vendor/lib/libmmcamera_hvx_grid_sum.so
-vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
-vendor/lib/libmmcamera_imglib_faceproc_adspstub2.so
-vendor/lib/libmmcamera_interface.so
-vendor/lib/libmmcamera_llvd.so
-vendor/lib/libmmcamera_optizoom_lib.so
-vendor/lib/libmmcamera_paaf_lib.so
-vendor/lib/libmmcamera_pdaf.so
-vendor/lib/libmmcamera_pdafcamif.so
-vendor/lib/libmmcamera_ppbase_module.so
-vendor/lib/libmmcamera_ppeiscore.so
-vendor/lib/libmmcamera_quadracfa.so
-vendor/lib/libmmcamera_sac_lib.so
-vendor/lib/libmmcamera_stillmore_lib.so
-vendor/lib/libmmcamera_sw2d_lib.so
-vendor/lib/libmmcamera_thread_services.so
-vendor/lib/libmmcamera_tintless_algo.so
-vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_trueportrait_lib.so
-vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
-vendor/lib/libmorpho_easy_hdr.so
-vendor/lib/libmorpho_hdr_checker.so
-vendor/lib/libmpbase.so
-vendor/lib/liboptizoom.so
 vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
-vendor/lib/libremosaic_daemon.so
-vendor/lib/libsac.so
-vendor/lib/libseemore.so
-vendor/lib/libubifocus.so
-vendor/lib/libXMFD_AgeGender.so
-vendor/lib64/libchromaflash.so
-vendor/lib64/libdualcameraddm.so
-vendor/lib64/liboptizoom.so
-vendor/lib64/libseemore.so
-vendor/lib64/libubifocus.so
 
 # Camera eeprom
 vendor/lib/libSonyIMX386PdafLibrary.so
@@ -217,25 +126,116 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
+# Camera JNI
+lib64/libblurbuster.so
+lib64/libfiltergenerator.so
+lib64/libjni_blurbuster.so
+lib64/libjni_chromaflash.so
+lib64/libjni_clearsight.so
+lib64/libjni_dualcamera.so
+lib64/libjni_filtergenerator.so
+lib64/libjni_hazebuster.so
+lib64/libjni_makeupV2.so
+lib64/libjni_optizoom.so
+lib64/libjni_seestraight.so
+lib64/libjni_sharpshooter.so
+lib64/libjni_stillmore.so
+lib64/libjni_trueportrait.so
+lib64/libjni_truescanner_v2.so
+lib64/libjni_ubifocus.so
+lib64/libseestraight.so
+lib64/libtrueportrait.so
+lib64/libtruescanner.so
+vendor/lib64/libchromaflash.so
+vendor/lib64/libdualcameraddm.so
+vendor/lib64/liboptizoom.so
+vendor/lib64/libseemore.so
+vendor/lib64/libubifocus.so
+
+# Camera MIUI
+lib/libMiCameraHal.so|799fe89fabb1ebdbc18b35ed2c72effe95ca7c91
+lib/libmisk.so|7679f1434e1186b62d831b74b11577a1cca8db94
+vendor/lib/lib_lowlight.so
+vendor/lib/lib_lowlight_dxo.so
+vendor/lib/libarcsoft_beauty_shot.so
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_beautyshot_image_algorithm.so
+vendor/lib/libarcsoft_beautyshot_video_algorithm.so
+vendor/lib/libarcsoft_dualcam_optical_zoom.so
+vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
+vendor/lib/libarcsoft_dualcam_refocus.so
+vendor/lib/libFaceGrade.so
+vendor/lib/libmorpho_easy_hdr.so
+vendor/lib/libmorpho_hdr_checker.so
+vendor/lib/libmpbase.so
+vendor/lib/libXMFD_AgeGender.so
+
+# Camera modules
+lib/libtrueportrait.so
+vendor/lib/libchromaflash.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_is.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_mct_shimlayer.so
+vendor/lib/libmmcamera2_pp_buf_mgr.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_lib.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera_arcrtb_lib.so
+vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
+vendor/lib/libmmcamera_chromaflash_lib.so
+vendor/lib/libmmcamera_csidtg.so
+vendor/lib/libmmcamera_dbg.so
+vendor/lib/libmmcamera_dummyalgo.so
+vendor/lib/libmmcamera_eebinparse.so
+vendor/lib/libmmcamera_eeprom_util.so
+vendor/lib/libmmcamera_eztune_module.so
+vendor/lib/libmmcamera_facedetection_lib.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc2.so
+vendor/lib/libmmcamera_hdr_gb_lib.so
+vendor/lib/libmmcamera_hvx_add_constant.so
+vendor/lib/libmmcamera_hvx_grid_sum.so
+vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
+vendor/lib/libmmcamera_imglib_faceproc_adspstub2.so
+vendor/lib/libmmcamera_interface.so
+vendor/lib/libmmcamera_llvd.so
+vendor/lib/libmmcamera_optizoom_lib.so
+vendor/lib/libmmcamera_paaf_lib.so
+vendor/lib/libmmcamera_pdaf.so
+vendor/lib/libmmcamera_pdafcamif.so
+vendor/lib/libmmcamera_ppbase_module.so
+vendor/lib/libmmcamera_ppeiscore.so
+vendor/lib/libmmcamera_quadracfa.so
+vendor/lib/libmmcamera_sac_lib.so
+vendor/lib/libmmcamera_stillmore_lib.so
+vendor/lib/libmmcamera_sw2d_lib.so
+vendor/lib/libmmcamera_thread_services.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_trueportrait_lib.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_tuning_lookup.so
+vendor/lib/liboptizoom.so
+vendor/lib/libremosaic_daemon.so
+vendor/lib/libsac.so
+vendor/lib/libseemore.so
+vendor/lib/libubifocus.so
+
 # Camera OIS
 vendor/lib/libois_bu63164.so
 
 # Charger
 vendor/bin/hvdcp_opti
-
-# CNE
--priv-app/CNEService/CNEService.apk
-vendor/bin/cnd
-vendor/lib64/com.quicinc.cne.api@1.0.so
-vendor/lib64/com.quicinc.cne.constants@1.0.so
-vendor/lib64/com.quicinc.cne.constants@2.0.so
-vendor/lib64/com.quicinc.cne.server@2.0.so
-vendor/lib64/libcne.so
-vendor/lib64/libcneapiclient.so
-vendor/lib64/libcneoplookup.so
-vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
-vendor/lib64/libxml.so
 
 # Display postprocessing
 -vendor/lib/libsdm-disp-vndapis.so
@@ -245,25 +245,33 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# DPM
-vendor/bin/dpmQmiMgr
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
-vendor/lib64/libdpmqmihal.so
-
-# DRM and SEE
-vendor/bin/qseecomd
+# DRM
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/librpmb.so
-vendor/lib64/libspl.so
-vendor/lib64/libssd.so
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so
+
+# Firmware - IPA
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.mdt
+vendor/firmware/ipa_fws.elf
+
+# Firmware - Graphics
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+vendor/firmware/a540_gpmu.fw2
+vendor/firmware/a540_zap.b00
+vendor/firmware/a540_zap.b01
+vendor/firmware/a540_zap.b02
+vendor/firmware/a540_zap.elf
+vendor/firmware/a540_zap.mdt
+
+# Firmware - NFC
+vendor/firmware/libpn553_fw.so
 
 # GPS
 vendor/bin/hw/vendor.qti.gnss@1.0-service
@@ -338,71 +346,8 @@ vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libRSDriver_adreno.so
 
-# Graphics firmware
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
-vendor/firmware/a540_gpmu.fw2
-vendor/firmware/a540_zap.b00
-vendor/firmware/a540_zap.b01
-vendor/firmware/a540_zap.b02
-vendor/firmware/a540_zap.elf
-vendor/firmware/a540_zap.mdt
-
-# IMS
--app/ims/ims.apk
--app/uceShimService/uceShimService.apk
-etc/permissions/qti-vzw-ims-internal.xml
-lib64/libdiag_system.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
-vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
-vendor/bin/imsqmidaemon
-vendor/bin/imsrcsd
-vendor/framework/qti-vzw-ims-internal.jar
-vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
-vendor/lib64/lib-dplmedia.so
-vendor/lib64/lib-imscmservice.so
-vendor/lib64/lib-imsdpl.so
-vendor/lib64/lib-imsqimf.so
-vendor/lib64/lib-imsrcs-v2.so
-vendor/lib64/lib-imsxml.so
-vendor/lib64/lib-rtpcommon.so
-vendor/lib64/lib-rtpcore.so
-vendor/lib64/lib-rtpdaemoninterface.so
-vendor/lib64/lib-rtpsl.so
-vendor/lib64/lib-uceservice.so
-vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
-
-# IPA
-vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
-vendor/firmware/ipa_fws.b02
-vendor/firmware/ipa_fws.b03
-vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.mdt
-vendor/firmware/ipa_fws.elf
-
 # Keystore
 vendor/lib64/hw/keystore.msm8998.so
-
-# Listen
-vendor/lib/hw/sound_trigger.primary.msm8998.so
-vendor/lib/libsmwrapper.so
-
-# Machine Learning
--vendor/etc/lm/ReferenceFeature.xml
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters.so
-vendor/lib64/libreffeature.so
 
 # Media
 -vendor/lib/libgpustats.so
@@ -412,9 +357,6 @@ vendor/lib/libvpphvx.so
 vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
 -vendor/lib64/libgpustats.so
-
-# NFC firmware
-vendor/firmware/libpn553_fw.so
 
 # Perf
 vendor/bin/energy-awareness
@@ -441,6 +383,22 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
+
+# Perf - Machine Learning
+-vendor/etc/lm/ReferenceFeature.xml
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/libreffeature.so
+
+# Perf - Thermal
+vendor/bin/msm_irqbalance
+vendor/bin/thermal-engine
+vendor/etc/thermal-engine-8998-high.conf
+vendor/etc/thermal-engine-8998-map.conf
+vendor/etc/thermal-engine.conf
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -484,7 +442,18 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
-# RIL
+# QSEE
+vendor/bin/qseecomd
+vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/librpmb.so
+vendor/lib64/libspl.so
+vendor/lib64/libssd.so
+
+# Radio
 -app/datastatusnotification/datastatusnotification.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
@@ -525,6 +494,59 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
 
+# Radio - CNE
+-priv-app/CNEService/CNEService.apk
+vendor/bin/cnd
+vendor/lib64/com.quicinc.cne.api@1.0.so
+vendor/lib64/com.quicinc.cne.constants@1.0.so
+vendor/lib64/com.quicinc.cne.constants@2.0.so
+vendor/lib64/com.quicinc.cne.server@2.0.so
+vendor/lib64/libcne.so
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneoplookup.so
+vendor/lib64/libwms.so
+vendor/lib64/libwqe.so
+vendor/lib64/libxml.so
+
+# Radio - DPM
+vendor/bin/dpmQmiMgr
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib64/libdpmqmihal.so
+
+# Radio - IMS
+-app/ims/ims.apk
+-app/uceShimService/uceShimService.apk
+etc/permissions/qti-vzw-ims-internal.xml
+lib64/libdiag_system.so
+lib64/lib-imscamera.so
+lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so
+lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so
+lib64/librcc.so
+lib64/vendor.qti.imsrtpservice@1.0.so
+vendor/bin/ims_rtp_daemon
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/imsrcsd
+vendor/framework/qti-vzw-ims-internal.jar
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
+vendor/lib64/lib-dplmedia.so
+vendor/lib64/lib-imscmservice.so
+vendor/lib64/lib-imsdpl.so
+vendor/lib64/lib-imsqimf.so
+vendor/lib64/lib-imsrcs-v2.so
+vendor/lib64/lib-imsxml.so
+vendor/lib64/lib-rtpcommon.so
+vendor/lib64/lib-rtpcore.so
+vendor/lib64/lib-rtpdaemoninterface.so
+vendor/lib64/lib-rtpsl.so
+vendor/lib64/lib-uceservice.so
+vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
+
 # Sensors
 vendor/bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8998.so
@@ -541,16 +563,6 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/sensors.ssc.so
-
-# Thermal
-vendor/bin/msm_irqbalance
-vendor/bin/thermal-engine
-vendor/etc/thermal-engine-8998-high.conf
-vendor/etc/thermal-engine-8998-map.conf
-vendor/etc/thermal-engine.conf
-vendor/lib/libthermalclient.so
-vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
 
 # Time services
 -vendor/app/TimeService/TimeService.apk
