@@ -248,7 +248,6 @@ vendor/lib64/libdpmqmihal.so
 
 # DRM and SEE
 vendor/bin/qseecomd
-vendor/lib/libQSEEComAPI.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
