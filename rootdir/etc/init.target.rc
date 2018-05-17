@@ -132,7 +132,6 @@ on init
     write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled N
-    write /sys/module/lpm_levels/parameters/sleep_disabled N
 
     # Create camera daemon cpusets
     mkdir /dev/cpuset/camera-daemon 0750 cameraserver cameraserver
@@ -224,7 +223,6 @@ on charger
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
     write /sys/module/msm_thermal/parameters/enabled N
-    write /sys/module/lpm_levels/parameters/sleep_disabled N
 
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "userspace"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 300000
