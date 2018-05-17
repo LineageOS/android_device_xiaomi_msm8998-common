@@ -39,17 +39,18 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_RAMDISK_OFFSET := 0x01000000
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8998
+
 BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8998
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
@@ -126,7 +127,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # Display
-MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
@@ -134,6 +134,7 @@ TARGET_USES_ION := true
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
+MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
@@ -166,6 +167,9 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
 
+# Properties
+TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
+
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -183,7 +187,6 @@ TARGET_RIL_VARIANT := caf
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Vendor init
@@ -203,9 +206,6 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# Properties
-TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 
 # Inherit from proprietary files
 include vendor/xiaomi/msm8998-common/BoardConfigVendor.mk
