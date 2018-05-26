@@ -380,6 +380,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.lineage
 
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk_package
+
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
