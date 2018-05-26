@@ -64,4 +64,17 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
+COMMON_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
+
+#
+# Remove deprecated HIDL libs
+#
+for HIDL_BASE_LIB in $(grep -lr "android\.hidl\.base@1\.0\.so" $COMMON_BLOB_ROOT); do
+    patchelf --remove-needed android.hidl.base@1.0.so "$HIDL_BASE_LIB" || true
+done
+
+for HIDL_MANAGER_LIB in $(grep -lr "android\.hidl\.@1\.0\.so" $COMMON_BLOB_ROOT); do
+    patchelf --remove-needed android.hidl.manager@1.0.so "$HIDL_MANAGER_LIB" || true
+done
+
 "$MY_DIR"/setup-makefiles.sh
