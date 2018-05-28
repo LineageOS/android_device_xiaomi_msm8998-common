@@ -354,11 +354,6 @@ service charger /charger
     group system graphics
     seclabel u:r:charger:s0
 
-service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
-    class core
-    user root
-    group root
-
 service time_daemon /vendor/bin/time_daemon
     class main
     user root
