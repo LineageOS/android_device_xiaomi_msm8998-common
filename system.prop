@@ -150,12 +150,6 @@ dalvik.vm.heapsize=512m
 dalvik.vm.heapstartsize=16m
 dalvik.vm.heaptargetutilization=0.75
 
-# NFC
-persist.nfc.smartcard.config=SIM1,eSE1
-ro.hardware.nfc_nci=nqx.default
-ro.nfc.port=I2C
-ro.se.type=eSE,HCE,UICC
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.qti.core_ctl_max_cpu=4
