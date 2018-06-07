@@ -320,7 +320,7 @@ service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
 service vendor.imsrcsservice /vendor/bin/imsrcsd
     class main
     user system
-    group radio diag inet log
+    group radio diag inet log wakelock
     writepid /dev/cpuset/system-background/tasks
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
