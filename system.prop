@@ -142,6 +142,9 @@ ro.vendor.sensors.sta_detect=true
 # Time services
 persist.delta_time.enable=true
 
+# Vendor security patch level
+ro.vendor.build.security_patch=2018-03-01
+
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
