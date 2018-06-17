@@ -136,6 +136,11 @@ on init
     write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled N
 
+    # Set the default IRQ affinity to the primary cluster. When a
+    # CPU is isolated/hotplugged, the IRQ affinity is adjusted
+    # to one of the CPU from the default IRQ affinity mask.
+    write /proc/irq/default_smp_affinity f
+
     # Create camera daemon cpusets
     mkdir /dev/cpuset/camera-daemon 0750 cameraserver cameraserver
     write /dev/cpuset/camera-daemon/cpus 0
