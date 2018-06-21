@@ -43,8 +43,8 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
 # Camera
-lib/libMiCameraHal.so|799fe89fabb1ebdbc18b35ed2c72effe95ca7c91
-lib/libmisk.so|7679f1434e1186b62d831b74b11577a1cca8db94
+lib/libMiCameraHal.so
+lib/libskia.so:lib/libmisk.so
 lib/libtrueportrait.so
 lib64/libblurbuster.so
 lib64/libfiltergenerator.so
@@ -65,7 +65,7 @@ lib64/libjni_ubifocus.so
 lib64/libseestraight.so
 lib64/libtrueportrait.so
 lib64/libtruescanner.so
-vendor/lib/hw/camera.msm8998.so|a82139eecab8cc585473e3e3f7cd347aeb68650a
+vendor/lib/hw/camera.msm8998.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so
 vendor/lib/libarcsoft_beauty_shot.so
