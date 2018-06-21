@@ -161,7 +161,7 @@ vendor/lib64/libubifocus.so
 vendor/lib/libSonyIMX386PdafLibrary.so
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_12_0.fw
+etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
 
 # Camera ISP
 vendor/lib/libmmcamera_isp_abf48.so
