@@ -83,4 +83,15 @@ done
 CAMERA2_SENSOR_MODULES="$COMMON_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
+#
+# Use stock libskia.so by renaming it to libmisk.so
+#
+MI_SKIA="$COMMON_BLOB_ROOT"/lib/libmisk.so
+MI_CAMERA_HAL="$COMMON_BLOB_ROOT"/lib/libMiCameraHal.so
+CAMERA_MSM8998="$COMMON_BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
+
+patchelf --set-soname libmisk.so "$MI_SKIA"
+patchelf --replace-needed libskia.so libmisk.so "$MI_CAMERA_HAL"
+patchelf --replace-needed libskia.so libmisk.so "$CAMERA_MSM8998"
+
 "$MY_DIR"/setup-makefiles.sh
