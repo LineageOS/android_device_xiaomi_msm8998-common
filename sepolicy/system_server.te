@@ -1,2 +1,1 @@
 allow system_server fingerprint_sysfs:file rw_file_perms;
-allow system_server wcnss_filter:unix_stream_socket connectto;
