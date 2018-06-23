@@ -1,6 +1,5 @@
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
-ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 include $(CLEAR_VARS)
 LOCAL_MODULE           := readmac
 LOCAL_MODULE_TAGS      := optional
@@ -10,4 +9,3 @@ LOCAL_CFLAGS           += -Wall -Werror
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_HEADER_LIBRARIES := libcutils_headers
 include $(BUILD_EXECUTABLE)
-endif
