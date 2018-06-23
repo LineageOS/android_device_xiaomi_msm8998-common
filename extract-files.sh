@@ -87,4 +87,9 @@ skia_to_misk "$MI_SKIA"
 skia_to_misk "$MI_CAMERA_HAL"
 skia_to_misk "$CAMERA_MSM8998"
 
+#
+# Load camera watermark from vendor
+#
+sed -i "s|system/etc/dualcamera.png|vendor/etc/dualcamera.png|g" "$MI_CAMERA_HAL"
+
 "$MY_DIR"/setup-makefiles.sh
