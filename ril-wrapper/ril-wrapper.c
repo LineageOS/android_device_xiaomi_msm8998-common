@@ -27,9 +27,6 @@
 #include <dlfcn.h>
 
 #define RIL_LIB_NAME "libril-qc-qmi-1.so"
-
-#define RADIO_TECH_HSPAP_STRING "15"
-#define RADIO_TECH_DC_HSPAP_STRING "20"
 #define RADIO_TECH_DC_HSPAP 20
 
 /*
