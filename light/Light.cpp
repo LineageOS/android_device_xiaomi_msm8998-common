@@ -207,9 +207,10 @@ Return<Status> Light::setLight(Type type, const LightState& state) {
 
     /* Light up the type with the highest priority that matches the current handler. */
     for (LightBackend& backend : backends) {
-        if (!handled && handler == backend.handler && isLit(backend.state)) {
+        if (handler == backend.handler && isLit(backend.state)) {
             handler(backend.state);
             handled = true;
+            break;
         }
     }
 
