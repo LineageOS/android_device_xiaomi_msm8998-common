@@ -200,17 +200,17 @@ Return<Status> Light::setLight(Type type, const LightState& state) {
         }
     }
 
+    /* If no handler has been found, then the type is not supported. */
+    if (!handler) {
+        return Status::LIGHT_NOT_SUPPORTED;
+    }
+
     /* Light up the type with the highest priority that matches the current handler. */
     for (LightBackend& backend : backends) {
         if (!handled && handler == backend.handler && isLit(backend.state)) {
             handler(backend.state);
             handled = true;
         }
-    }
-
-    /* If no handler has been found, then the type is not supported. */
-    if (!handler) {
-        return Status::LIGHT_NOT_SUPPORTED;
     }
 
     /* If no type has been lit up, then turn off the hardware. */
