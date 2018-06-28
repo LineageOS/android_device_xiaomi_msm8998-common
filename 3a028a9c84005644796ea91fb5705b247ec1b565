@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37914d67_7d0a5df0",
+        "filename": "readmac/xiaomi_readmac.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-28T15:12:34Z",
+      "side": 1,
+      "message": "You can switch to log/log.h in order to avoid the warning that cutils/log.h is deprecated.",
+      "range": {
+        "startLine": 21,
+        "startChar": 9,
+        "endLine": 21,
+        "endChar": 23
+      },
+      "revId": "3a028a9c84005644796ea91fb5705b247ec1b565",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
