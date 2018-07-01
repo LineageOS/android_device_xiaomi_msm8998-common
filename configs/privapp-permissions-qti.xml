@@ -28,27 +28,12 @@ It allows additional grants on top of privapp-permissions-platform.xml
 -->
 
 <permissions>
- <privapp-permissions package="com.quicinc.cne.CNEService">
- <permission name="android.permission.INTERACT_ACROSS_USERS"/>
- <permission name="android.permission.PACKET_KEEPALIVE_OFFLOAD"/>
- </privapp-permissions>
+    <privapp-permissions package="com.quicinc.cne.CNEService">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.PACKET_KEEPALIVE_OFFLOAD"/>
+    </privapp-permissions>
 
- <privapp-permissions package="com.qti.dpmserviceapp">
- <permission name="android.permission.INTERACT_ACROSS_USERS"/>
- </privapp-permissions>
-
- <privapp-permissions package="com.qualcomm.qcrilmsgtunnel">
- <permission name="android.permission.INTERACT_ACROSS_USERS"/>
- </privapp-permissions>
-
- <privapp-permissions package="com.qualcomm.location">
- <permission name="android.permission.CONTROL_LOCATION_UPDATES" />
- <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
- </privapp-permissions>
-
- <privapp-permissions package="com.qualcomm.location.XT">
- <permission name="android.permission.MANAGE_DEVICE_ADMINS"/>
- <permission name="android.permission.BIND_DEVICE_ADMIN"/>
- <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
- </privapp-permissions>
+    <privapp-permissions package="com.qualcomm.qcrilmsgtunnel">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
 </permissions>
