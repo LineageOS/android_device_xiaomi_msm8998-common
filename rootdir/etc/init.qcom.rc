@@ -50,12 +50,10 @@ on post-fs-data
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
 
-    # Create folder for mm-qcamera-daemon
-    mkdir /data/misc/camera 0770 camera camera
-    setprop persist.camera.stats.test 5
-
     # Create folder of camera
     mkdir /data/vendor/camera 0770 camera camera
+
+    setprop persist.camera.stats.test 5
 
     # Create directories for tombstones
     mkdir /data/tombstones/modem 0771 system system
