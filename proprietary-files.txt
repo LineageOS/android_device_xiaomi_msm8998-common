@@ -42,6 +42,10 @@ vendor/bin/wcnss_filter
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
+# Bluetooth - LDAC
+lib64/libldacBT_enc.so
+lib64/libldacBT_abr.so
+
 # Camera
 lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
 lib/libskia.so:vendor/lib/libmisk.so
