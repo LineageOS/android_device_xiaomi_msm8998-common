@@ -170,7 +170,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2018-03-01
+    ro.vendor.build.security_patch=2018-06-01
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
