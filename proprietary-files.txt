@@ -151,7 +151,6 @@ vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libsac.so
 vendor/lib/libseemore.so
-vendor/lib/libubifocus.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib64/libchromaflash.so
 vendor/lib64/libdualcameraddm.so
