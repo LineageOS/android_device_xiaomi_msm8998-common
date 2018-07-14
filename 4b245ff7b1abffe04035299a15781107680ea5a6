@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8466a65b_3f66da54",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 38
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-07-14T12:28:21Z",
+      "side": 1,
+      "message": "you surely meant \"ramp\" ^^",
+      "range": {
+        "startLine": 10,
+        "startChar": 3,
+        "endLine": 10,
+        "endChar": 6
+      },
+      "revId": "4b245ff7b1abffe04035299a15781107680ea5a6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
