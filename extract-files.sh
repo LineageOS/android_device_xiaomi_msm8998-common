@@ -73,6 +73,13 @@ CAMERA2_SENSOR_MODULES="$COMMON_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_module
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
 #
+# Replace libminikin with libcamshim to allow shimming
+# libminikin will still be loaded by libMiCameraHal
+#
+CAMERA_MSM8998="$COMMON_BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
+sed -i "s|libminikin.so|libcamshim.so|g" "$CAMERA_MSM8998"
+
+#
 # Load camera watermark from vendor
 #
 MI_CAMERA_HAL="$COMMON_BLOB_ROOT"/vendor/lib/libMiCameraHal.so
