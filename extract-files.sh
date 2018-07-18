@@ -73,23 +73,15 @@ CAMERA2_SENSOR_MODULES="$COMMON_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_module
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
 #
-# Use stock libskia.so by renaming it to libmisk.so
+# Replace libminikin.so with libcamshim.so to allow shimming
 #
-MI_SKIA="$COMMON_BLOB_ROOT"/vendor/lib/libmisk.so
-MI_CAMERA_HAL="$COMMON_BLOB_ROOT"/vendor/lib/libMiCameraHal.so
 CAMERA_MSM8998="$COMMON_BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
-
-skia_to_misk() {
-    sed -i "s|libskia.so|libmisk.so|g" "$1"
-}
-
-skia_to_misk "$MI_SKIA"
-skia_to_misk "$MI_CAMERA_HAL"
-skia_to_misk "$CAMERA_MSM8998"
+sed -i "s|libminikin.so|libcamshim.so|g" "$CAMERA_MSM8998"
 
 #
 # Load camera watermark from vendor
 #
+MI_CAMERA_HAL="$COMMON_BLOB_ROOT"/vendor/lib/libMiCameraHal.so
 sed -i "s|system/etc/dualcamera.png|vendor/etc/dualcamera.png|g" "$MI_CAMERA_HAL"
 
 #
