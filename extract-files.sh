@@ -88,6 +88,19 @@ shim_skia "$MI_CAMERA_HAL"
 shim_skia "$CAMERA_MSM8998"
 
 #
+# Use stock libminikin.so by renaming it to libmiuikin.so
+#
+MIUI_KIN="$COMMON_BLOB_ROOT"/vendor/lib/libmiuikin.so
+
+shim_minikin() {
+    sed -i "s|libminikin.so|libmiuikin.so|g" "$1"
+}
+
+shim_minikin "$MIUI_KIN"
+shim_minikin "$MI_CAMERA_HAL"
+shim_minikin "$CAMERA_MSM8998"
+
+#
 # Load camera watermark from vendor
 #
 sed -i "s|system/etc/dualcamera.png|vendor/etc/dualcamera.png|g" "$MI_CAMERA_HAL"
