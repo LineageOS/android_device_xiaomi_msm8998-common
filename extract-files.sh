@@ -91,6 +91,12 @@ QTI_VZW_IMS_INTERNAL="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti-vzw-ims-inte
 sed -i "s|/system/vendor/framework/qti-vzw-ims-internal.jar|/vendor/framework/qti-vzw-ims-internal.jar|g" "$QTI_VZW_IMS_INTERNAL"
 
 #
+# Correct qcrilhook library location
+#
+QCRILHOOK="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qcrilhook.xml
+sed -i "s|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g" "$QCRILHOOK"
+
+#
 # Correct android.hidl.manager@1.0-java jar name
 #
 QTI_LIBPERMISSIONS="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
