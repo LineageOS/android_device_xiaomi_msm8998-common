@@ -21,6 +21,15 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
+# Alarm
+etc/permissions/vendor-qti-hardware-alarm.xml:vendor/etc/permissions/vendor-qti-hardware-alarm.xml
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
 # Audio libraries
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
