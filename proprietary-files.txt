@@ -431,6 +431,15 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
+# Power-off alarm
+etc/permissions/vendor-qti-hardware-alarm.xml:vendor/etc/permissions/vendor-qti-hardware-alarm.xml
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
 # QMI
 etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
