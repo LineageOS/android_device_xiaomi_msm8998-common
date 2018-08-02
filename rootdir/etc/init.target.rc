@@ -146,7 +146,7 @@ on fs
 
     restorecon_recursive /persist
     mkdir /persist/data 0700 system system
-    mkdir /persist/wlan_bt 0700 system system
+    mkdir /persist/wlan_bt 0770 system system
     mkdir /persist/audio 0755 system system
 
     # Start HW service manager early
