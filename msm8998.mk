@@ -347,7 +347,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.lineage
+    vendor.lineage.vibrator@1.0-service
 
 # VNDK
 PRODUCT_PACKAGES += \

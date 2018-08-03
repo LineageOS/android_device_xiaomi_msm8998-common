@@ -281,7 +281,7 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.vibrator</name>
+        <name>vendor.lineage.vibrator</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
