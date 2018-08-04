@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1be138a5_aba03f09",
+        "filename": "msm8998.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-08-04T14:00:21Z",
+      "side": 0,
+      "message": "Don\u0027t remove this",
+      "range": {
+        "startLine": 122,
+        "startChar": 4,
+        "endLine": 122,
+        "endChar": 33
+      },
+      "revId": "43676657896c37933f6a9c90f42a6cb56460ece0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8857ff1_73e2da1d",
+        "filename": "msm8998.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-08-04T14:00:21Z",
+      "side": 0,
+      "message": "Don\u0027t remove this",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 126,
+        "endChar": 150
+      },
+      "revId": "43676657896c37933f6a9c90f42a6cb56460ece0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

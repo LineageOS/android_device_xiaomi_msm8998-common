@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b182ce46_734ae0b9",
+        "filename": "rootdir/etc/ueventd.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-08-04T14:00:21Z",
+      "side": 1,
+      "message": "These don\u0027t even exist",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 53
+      },
+      "revId": "de29e3761d3c4d42b0892bb467f51b14857c6431",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
