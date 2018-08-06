@@ -6,6 +6,5 @@ LOCAL_MODULE_TAGS      := optional
 LOCAL_VENDOR_MODULE    := true
 LOCAL_SRC_FILES        := xiaomi_readmac.c
 LOCAL_CFLAGS           += -Wall -Werror
-LOCAL_SHARED_LIBRARIES := liblog libcutils
-LOCAL_HEADER_LIBRARIES := libcutils_headers
+LOCAL_SHARED_LIBRARIES := liblog
 include $(BUILD_EXECUTABLE)

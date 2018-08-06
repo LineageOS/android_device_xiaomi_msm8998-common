@@ -11,11 +11,6 @@ qmux_socket(readmac)
 allow readmac persist_file:dir rw_dir_perms;
 allow readmac persist_file:file create_file_perms;
 
-# Allow readmac to write btaddr_random files
-allow readmac bluetooth_data_file:dir rw_dir_perms;
-allow readmac bluetooth_data_file:file create_file_perms;
-allow readmac self:capability { chown fowner };
-
 allow readmac self:socket create_socket_perms;
 allowxperm readmac self:socket ioctl msm_sock_ipc_ioctls;
 

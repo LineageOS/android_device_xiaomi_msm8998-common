@@ -329,5 +329,5 @@ service hvdcp_opti /vendor/bin/hvdcp_opti
 service readmac /vendor/bin/readmac
     class main
     user root
-    group oem_2950 bluetooth
+    group oem_2950
     oneshot
