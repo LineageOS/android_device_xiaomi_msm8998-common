@@ -1,6 +1,3 @@
-# Alarm
-ro.alarm_boot                                                 u:object_r:vendor_alarm_boot_prop:s0
-
 # Camera
 camera.dual.mode                                              u:object_r:camera_prop:s0
 camera.IMX298.actuator.update                                 u:object_r:camera_prop:s0
