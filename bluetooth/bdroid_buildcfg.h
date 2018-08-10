@@ -43,4 +43,5 @@ static inline const char* BtmGetDefaultName()
 #define BLE_VND_INCLUDED   TRUE
 // skips conn update at conn completion
 #define BT_CLEAN_TURN_ON_DISABLED 1
+#undef PROPERTY_VALUE_MAX
 #endif
