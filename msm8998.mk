@@ -369,13 +369,13 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml \
     libwpa_client \
     hostapd \
     readmac \
     wpa_supplicant \
     wpa_supplicant.conf
+#    ipacm \
+#    IPACM_cfg.xml \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
