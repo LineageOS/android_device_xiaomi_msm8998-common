@@ -54,9 +54,6 @@ BOARD_KERNEL_CMDLINE += swiotlb=2048
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Assert
 TARGET_BOARD_INFO_FILE := $(PLATFORM_PATH)/board-info.txt
 
