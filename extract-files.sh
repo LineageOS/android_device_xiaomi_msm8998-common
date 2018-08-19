@@ -79,6 +79,13 @@ MI_CAMERA_HAL="$COMMON_BLOB_ROOT"/vendor/lib/libMiCameraHal.so
 sed -i "s|system/etc/dualcamera.png|vendor/etc/dualcamera.png|g" "$MI_CAMERA_HAL"
 
 #
+# Load 8.0 libicuuc.so for libMiCameraHal.so
+#
+ICUUC_V27="$COMMON_BLOB_ROOT"/vendor/lib/libicuuc-v27.so
+patchelf --replace-needed libicuuc.so libicuuc-v27.so "$MI_CAMERA_HAL"
+patchelf --set-soname libicuuc-v27.so "$ICUUC_V27"
+
+#
 # Correct VZW IMS library location
 #
 QTI_VZW_IMS_INTERNAL="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti-vzw-ims-internal.xml
