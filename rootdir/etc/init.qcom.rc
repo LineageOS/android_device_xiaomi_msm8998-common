@@ -220,69 +220,69 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
-service cnd /vendor/bin/cnd
+service vendor.cnd /vendor/bin/cnd
     class main
     user system
     group system wifi inet radio wakelock net_admin
     writepid /dev/cpuset/system-background/tasks
 
-service dpmQmiMgr /vendor/bin/dpmQmiMgr
+service vendor.dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
     group system
 
-service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
+service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
-service rmt_storage /vendor/bin/rmt_storage
+service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     shutdown critical
     ioprio rt 0
 
-service tftp_server /vendor/bin/tftp_server
+service vendor.tftp_server /vendor/bin/tftp_server
     class core
     user root
 
 on property:wc_transport.start_hci=true
-    start start_hci_filter
+    start vendor.hci_filter
 
 on property:wc_transport.start_hci=false
-    stop start_hci_filter
+    stop vendor.hci_filter
 
-service start_hci_filter /vendor/bin/wcnss_filter
+service vendor.hci_filter /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system wakelock
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service atfwd /vendor/bin/ATFWD-daemon
+service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
     writepid /dev/cpuset/system-background/tasks
 
-service netmgrd /vendor/bin/netmgrd
+service vendor.netmgrd /vendor/bin/netmgrd
     class main
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm /vendor/bin/ipacm
+service vendor.ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
     writepid /dev/cpuset/system-background/tasks
 
-service qti /vendor/bin/qti
+service vendor.qti /vendor/bin/qti
     class main
     user radio
     group radio net_raw diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
-service sensors /vendor/bin/sensors.qcom
+service vendor.sensors /vendor/bin/sensors.qcom
     class main
     user root
     group root
@@ -299,7 +299,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
-service cnss-daemon /vendor/bin/cnss-daemon -n -l
+service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
@@ -307,31 +307,31 @@ service cnss-daemon /vendor/bin/cnss-daemon -n -l
     writepid /dev/cpuset/system-background/tasks
 
 on property:sys.powerctl=*
-    stop cnss-daemon
+    stop vendor.cnss-daemon
 
-service loc_launcher /vendor/bin/loc_launcher
+service vendor.loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
-service qcom-sh /vendor/bin/init.qcom.sh
+service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     oneshot
 
-service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     disabled
     oneshot
 
-service panel-info /vendor/bin/init.panel_info.sh
+service vendor.panel-info /vendor/bin/init.panel_info.sh
     class core
     user root
     oneshot
 
-service ril-daemon2 /vendor/bin/hw/rild -c 2
+service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
@@ -344,12 +344,12 @@ service charger /charger
     group system graphics
     seclabel u:r:charger:s0
 
-service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
 
-service time_daemon /vendor/bin/time_daemon
+service vendor.time_daemon /vendor/bin/time_daemon
     class main
     user root
     group root
