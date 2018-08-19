@@ -96,4 +96,15 @@ sed -i "s|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g" "$Q
 QTI_LIBPERMISSIONS="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
 sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" "$QTI_LIBPERMISSIONS"
 
+#
+# Use 8.0 libicuuc.so and libminikin.so for camera.msm8998.so
+#
+CAMERA_MSM8998="$COMMON_BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
+ICUUC_V27="$COMMON_BLOB_ROOT"/vendor/lib/libicuuc-v27.so
+MINIKIN_V27="$COMMON_BLOB_ROOT"/vendor/lib/libminikin-v27.so
+patchelf --set-soname libicuuc-v27.so "$ICUUC_V27"
+patchelf --set-soname libminikin-v27.so "$MINIKIN_V27"
+patchelf --replace-needed libicuuc.so libicuuc-v27.so "$CAMERA_MSM8998"
+patchelf --replace-needed libminikin.so libminikin-v27.so "$CAMERA_MSM8998"
+
 "$MY_DIR"/setup-makefiles.sh
