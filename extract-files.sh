@@ -102,4 +102,10 @@ sed -i "s|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g" "$Q
 QTI_LIBPERMISSIONS="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
 sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" "$QTI_LIBPERMISSIONS"
 
+#
+# Use vndk-27 android.hardware.gnss@1.0.so for old qti gnss stack
+#
+QTI_GNSS="$COMMON_BLOB_ROOT"/vendor/lib64/vendor.qti.gnss@1.0_vendor.so
+patchelf --replace-needed android.hardware.gnss@1.0.so android.hardware.gnss@1.0-v27.so "$QTI_GNSS"
+
 "$MY_DIR"/setup-makefiles.sh
