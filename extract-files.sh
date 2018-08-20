@@ -92,6 +92,7 @@ MPBASE="$COMMON_BLOB_ROOT"/vendor/lib/libmpbase.so
 SAC="$COMMON_BLOB_ROOT"/vendor/lib/libsac.so
 patchelf --remove-needed libandroid.so "$CAMERA2_STATS_MODULES"
 patchelf --remove-needed libandroid.so "$MPBASE"
+patchelf --remove-needed libandroid_runtime.so "$SAC"
 patchelf --remove-needed libcamera_client.so "$SAC"
 patchelf --remove-needed libharfbuzz_ng.so "$CAMERA_MSM8998"
 patchelf --remove-needed libicuuc.so "$CAMERA_MSM8998"
