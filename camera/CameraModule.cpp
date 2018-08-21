@@ -378,18 +378,6 @@ int CameraModule::setCallbacks(const camera_module_callbacks_t *callbacks) {
     return res;
 }
 
-bool CameraModule::isVendorTagDefined() const {
-    return mModule->get_vendor_tag_ops != NULL;
-}
-
-void CameraModule::getVendorTagOps(vendor_tag_ops_t* ops) {
-    if (mModule->get_vendor_tag_ops) {
-        ATRACE_BEGIN("camera_module->get_vendor_tag_ops");
-        mModule->get_vendor_tag_ops(ops);
-        ATRACE_END();
-    }
-}
-
 bool CameraModule::isSetTorchModeSupported() const {
     if (getModuleApiVersion() >= CAMERA_MODULE_API_VERSION_2_4) {
         if (mModule->set_torch_mode == NULL) {

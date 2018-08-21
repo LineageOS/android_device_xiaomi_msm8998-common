@@ -53,8 +53,6 @@ public:
     bool isOpenLegacyDefined() const;
     int openLegacy(const char* id, uint32_t halVersion, struct hw_device_t** device);
     int setCallbacks(const camera_module_callbacks_t *callbacks);
-    bool isVendorTagDefined() const;
-    void getVendorTagOps(vendor_tag_ops_t* ops);
     bool isSetTorchModeSupported() const;
     int setTorchMode(const char* camera_id, bool enable);
     uint16_t getModuleApiVersion() const;

@@ -29,8 +29,6 @@ namespace common {
 namespace V1_0 {
 namespace helper {
 
-class VendorTagDescriptor;
-
 /**
  * A convenience wrapper around the C-based camera_metadata_t library.
  */
@@ -189,15 +187,6 @@ class CameraMetadata {
      * each line of output.
      */
     void dump(int fd, int verbosity = 1, int indentation = 0) const;
-
-    /**
-     * Find tag id for a given tag name, also checking vendor tags if available.
-     * On success, returns OK and writes the tag id into tag.
-     *
-     * This is a slow method.
-     */
-    static status_t getTagFromName(const char *name,
-            const VendorTagDescriptor* vTags, uint32_t *tag);
 
   private:
     camera_metadata_t *mBuffer;

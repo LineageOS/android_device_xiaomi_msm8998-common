@@ -9,9 +9,7 @@ LOCAL_C_INCLUDES := \
 LOCAL_SRC_FILES := \
     CameraModule.cpp \
     CameraMetadata.cpp \
-    CameraParameters.cpp \
-    VendorTagDescriptor.cpp \
-    HandleImporter.cpp
+    CameraParameters.cpp
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := \
     liblog \
