@@ -89,6 +89,11 @@ patchelf --remove-needed libminikin.so "$CAMERA_MSM8998"
 patchelf --remove-needed libskia.so "$CAMERA_MSM8998"
 
 #
+# Replace libcamera_client with android.hardware.camera.common@1.0-helper
+#
+patchelf --replace-needed libcamera_client.so android.hardware.camera.common@1.0-helper.so "$CAMERA_MSM8998"
+
+#
 # Correct VZW IMS library location
 #
 QTI_VZW_IMS_INTERNAL="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti-vzw-ims-internal.xml
