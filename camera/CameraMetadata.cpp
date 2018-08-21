@@ -23,11 +23,6 @@
 #include "CameraMetadata.h"
 
 namespace android {
-namespace hardware {
-namespace camera {
-namespace common {
-namespace V1_0 {
-namespace helper {
 
 #define ALIGN_TO(val, alignment) \
     (((uintptr_t)(val) + ((alignment) - 1)) & ~((alignment) - 1))
@@ -464,9 +459,4 @@ void CameraMetadata::swap(CameraMetadata& other) {
     mBuffer = otherBuf;
 }
 
-} // namespace helper
-} // namespace V1_0
-} // namespace common
-} // namespace camera
-} // namespace hardware
 } // namespace android

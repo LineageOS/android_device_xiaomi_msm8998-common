@@ -25,11 +25,6 @@
 #include <system/graphics.h>
 
 namespace android {
-namespace hardware {
-namespace camera {
-namespace common {
-namespace V1_0 {
-namespace helper {
 
 // Parameter keys to communicate between camera application and driver.
 const char CameraParameters::KEY_PREVIEW_SIZE[] = "preview-size";
@@ -541,9 +536,4 @@ bool CameraParameters::isEmpty() const {
     return mMap.isEmpty();
 }
 
-};
-};
-};
-};
-};
 }; // namespace android

@@ -25,11 +25,6 @@
 #include "CameraMetadata.h"
 
 namespace android {
-namespace hardware {
-namespace camera {
-namespace common {
-namespace V1_0 {
-namespace helper {
 /**
  * A wrapper class for HAL camera module.
  *
@@ -75,11 +70,6 @@ private:
     Mutex mCameraInfoLock;
 };
 
-} // namespace helper
-} // namespace V1_0
-} // namespace common
-} // namespace camera
-} // namespace hardware
 } // namespace android
 
 #endif

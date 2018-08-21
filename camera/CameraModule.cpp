@@ -23,11 +23,6 @@
 #include "CameraModule.h"
 
 namespace android {
-namespace hardware {
-namespace camera {
-namespace common {
-namespace V1_0 {
-namespace helper {
 
 void CameraModule::deriveCameraCharacteristicsKeys(
         uint32_t deviceVersion, CameraMetadata &chars) {
@@ -433,9 +428,4 @@ void* CameraModule::getDso() {
     return mModule->common.dso;
 }
 
-} // namespace helper
-} // namespace V1_0
-} // namespace common
-} // namespace camera
-} // namespace hardware
 } // namespace android

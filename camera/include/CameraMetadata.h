@@ -23,11 +23,6 @@
 #include <utils/Vector.h>
 
 namespace android {
-namespace hardware {
-namespace camera {
-namespace common {
-namespace V1_0 {
-namespace helper {
 
 /**
  * A convenience wrapper around the C-based camera_metadata_t library.
@@ -209,11 +204,6 @@ class CameraMetadata {
 
 };
 
-} // namespace helper
-} // namespace V1_0
-} // namespace common
-} // namespace camera
-} // namespace hardware
 } // namespace android
 
 #endif
