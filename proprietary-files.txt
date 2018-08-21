@@ -420,7 +420,7 @@ vendor/lib/libvqzip.so
 -vendor/lib64/libgpustats.so
 
 # NFC firmware
-vendor/firmware/libpn553_fw.so|d032117e6645395327a5acd236bfd1bec56569c0
+vendor/lib/libpn553_fw.so|d032117e6645395327a5acd236bfd1bec56569c0
 
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
