@@ -108,4 +108,18 @@ sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-
 DPLMEDIA="$COMMON_BLOB_ROOT"/vendor/lib64/lib-dplmedia.so
 patchelf --remove-needed libmedia.so "$DPLMEDIA"
 
+#
+# Remove unused dependencies in camera stack
+#
+CAMERA2_STATS_MODULES="$COMMON_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+MPBASE="$COMMON_BLOB_ROOT"/vendor/lib/libmpbase.so
+SAC="$COMMON_BLOB_ROOT"/vendor/lib/libsac.so
+patchelf --remove-needed libandroid.so "$CAMERA2_STATS_MODULES"
+patchelf --remove-needed libandroid.so "$MPBASE"
+patchelf --remove-needed libcamera_client.so "$SAC"
+patchelf --remove-needed libharfbuzz_ng.so "$CAMERA_MSM8998"
+patchelf --remove-needed libicuuc.so "$CAMERA_MSM8998"
+patchelf --remove-needed libminikin.so "$CAMERA_MSM8998"
+patchelf --remove-needed libskia.so "$CAMERA_MSM8998"
+
 "$MY_DIR"/setup-makefiles.sh
