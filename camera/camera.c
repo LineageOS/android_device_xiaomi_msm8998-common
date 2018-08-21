@@ -14,5 +14,17 @@
  * limitations under the License.
  */
 
-extern void _ZNK8SkBitmap12unlockPixelsEv() {}
-extern void _ZNK8SkBitmap10lockPixelsEv() {}
+void _ZN7android19QCameraHalInterface11getAeParamsEv() {}
+void _ZN7android19QCameraHalInterface11setAdrcGainEf() {}
+void _ZN7android19QCameraHalInterface12onOpenCameraEv() {}
+void _ZN7android19QCameraHalInterface13onCloseCameraEv() {}
+void _ZN7android19QCameraHalInterface14onCaptureFrameEP13MiImageBufferS2_RhiRbiiiiii() {}
+void _ZN7android19QCameraHalInterface14onPreviewFrameEP13MiImageBufferiiRb() {}
+void _ZN7android19QCameraHalInterface14updateFaceInfoEP10MiFaceInfoP11camera_faceiii() {}
+void _ZN7android19QCameraHalInterface15onSetParametersEbiiiiiiiiiiiPcS1_iiiib() {}
+void _ZN7android19QCameraHalInterface16updateFaceBeautyEv() {}
+void _ZN7android19QCameraHalInterface17isInCaptureBufferEv() {}
+void _ZN7android19QCameraHalInterface18updateBeautyParamsEv() {}
+void _ZN7android19QCameraHalInterface19onCaptureEncodeJpegEP13MiImageBufferS2_iiiRb() {}
+void _ZN7android19QCameraHalInterface7setLumaEi() {}
+void _ZN7android19QCameraHalInterfaceC1Ev() {}
