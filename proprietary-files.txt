@@ -52,10 +52,12 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
-# Bluetooth ANT
--lib/libantradio.so
-lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
+# Bluetooth ANT (system) - from OnePlus5T PKQ1.180716.001
+-lib/libantradio.so|d1f41ee14d4cd7b3a306a628bca5cc9e19027201
+lib64/com.qualcomm.qti.ant@1.0.so|3a19c81d66ef1190d0b2f361420d5cbf707cc600
+-lib64/libantradio.so|456b6b2fda1450c852ad0b766143b9cf3c61cde0
+
+# Bluetooth ANT (vendor)
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 
