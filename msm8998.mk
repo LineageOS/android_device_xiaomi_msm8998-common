@@ -127,16 +127,16 @@ PRODUCT_COPY_FILES += \
 #    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
-
-PRODUCT_PACKAGES += \
-    libcamshim.vendor \
-    libicuuc.vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service
+#PRODUCT_PACKAGES += \
+#    Snap
+#
+#PRODUCT_PACKAGES += \
+#    libcamshim.vendor \
+#    libicuuc.vendor
+#
+#PRODUCT_PACKAGES += \
+#    android.hardware.camera.provider@2.4-impl \
+#    android.hardware.camera.provider@2.4-service
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -259,19 +259,19 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    nfc_nci.msm8998 \
-    NfcNci \
-    Tag
-
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl \
-    android.hardware.nfc@1.0-service
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+#PRODUCT_PACKAGES += \
+#    com.android.nfc_extras \
+#    nfc_nci.msm8998 \
+#    NfcNci \
+#    Tag
+#
+#PRODUCT_PACKAGES += \
+#    android.hardware.nfc@1.0-impl \
+#    android.hardware.nfc@1.0-service
+#
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+#    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 # OMX
 PRODUCT_PACKAGES += \
