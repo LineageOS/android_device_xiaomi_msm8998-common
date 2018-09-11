@@ -4,7 +4,7 @@
 
 /dev/block/bootdevice/by-name/boot                              /boot                  emmc    defaults                                                                                           recoveryonly
 /dev/block/bootdevice/by-name/recovery                          /recovery              emmc    defaults                                                                                           recoveryonly
-/dev/block/bootdevice/by-name/system                            /system                ext4    ro,barrier=1                                                                                       wait,recoveryonly
+/dev/block/bootdevice/by-name/system                            /                      ext4    ro,barrier=1                                                                                       wait
 /dev/block/bootdevice/by-name/cust                              /vendor                ext4    ro,barrier=1                                                                                       wait,recoveryonly
 /dev/block/bootdevice/by-name/cache                             /cache                 ext4    nosuid,nodev,noatime,barrier=1                                                                     wait,check,formattable
 /dev/block/bootdevice/by-name/userdata                          /data                  ext4    nosuid,nodev,noatime,barrier=1,noauto_da_alloc,errors=panic                                        latemount,wait,check,fileencryption=ice,quota,reservedsize=128M
