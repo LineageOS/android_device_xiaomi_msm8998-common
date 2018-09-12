@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ed5e73a6_638d32ec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-09-12T17:37:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca38e2ba_532e7bfa",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 7
+      },
+      "revId": "c862642d8de4cd3a7a9b39a75753e7e2b9c4b536",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84b86c53_2c4cbb0b",
         "filename": "recovery/Android.mk",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-09-12T12:46:47Z",
       "side": 1,
       "message": "I think this is no longer needed",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 23
+      },
+      "revId": "c862642d8de4cd3a7a9b39a75753e7e2b9c4b536",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "81b5c02a_7e075797",
+        "filename": "recovery/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-09-12T17:37:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "84b86c53_2c4cbb0b",
       "range": {
         "startLine": 5,
         "startChar": 4,
