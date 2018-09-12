@@ -16,6 +16,24 @@
       "revId": "b2378103ad3882d2f3c58c5f4e729a4614194ae2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ff35f29_ce8c2cf4",
+        "filename": "extract-files.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-09-12T15:11:46Z",
+      "side": 1,
+      "message": "I noticed when running patchelf, forgot to update patch. Thanks for the reminder.",
+      "parentUuid": "5661424c_dda7fedd",
+      "revId": "b2378103ad3882d2f3c58c5f4e729a4614194ae2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
