@@ -125,16 +125,16 @@ PRODUCT_COPY_FILES += \
 #    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
-
-PRODUCT_PACKAGES += \
-    libcamshim.vendor \
-    libicuuc.vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service
+#PRODUCT_PACKAGES += \
+#    Snap
+#
+#PRODUCT_PACKAGES += \
+#    libcamshim.vendor \
+#    libicuuc.vendor
+#
+#PRODUCT_PACKAGES += \
+#    android.hardware.camera.provider@2.4-impl \
+#    android.hardware.camera.provider@2.4-service
 
 # Bluetooth
 PRODUCT_PACKAGES += \
