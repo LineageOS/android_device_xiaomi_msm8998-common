@@ -4,7 +4,6 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := liblocation_api
 LOCAL_VENDOR_MODULE := true
-LOCAL_MODULE_OWNER := qti
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SHARED_LIBRARIES := \
@@ -24,6 +23,8 @@ LOCAL_CFLAGS += \
 LOCAL_HEADER_LIBRARIES := \
     libloc_pla_headers \
     libgps.utils_headers
+
+LOCAL_PRELINK_MODULE := false
 
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 include $(BUILD_SHARED_LIBRARY)
