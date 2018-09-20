@@ -8,6 +8,9 @@ persist.camera.                                               u:object_r:camera_
 persist.sys.fp.                                               u:object_r:fingerprint_prop:s0
 ro.boot.fp.                                                   u:object_r:fingerprint_prop:s0
 
+# Netmgrd
+persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
+
 # Radio
 sys.fake_bs_flag0                                             u:object_r:system_radio_prop:s0
 sys.fake_bs_flag1                                             u:object_r:system_radio_prop:s0
