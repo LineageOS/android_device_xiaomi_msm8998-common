@@ -23,19 +23,20 @@
 #include <dlfcn.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <time.h>
 #include <unistd.h>
 
-#define MAC_SIZE 6
-#define WLAN_MAC_FILE "/persist/wlan_mac.bin"
+const int MAC_SIZE = 6;
+const char WLAN_MAC_FILE[] = "/persist/wlan_mac.bin";
 
-#define LIB_QMINVAPI "libqminvapi.so"
+const char LIB_QMINVAPI[] = "libqminvapi.so";
 
 static const char xiaomi_mac_prefix[] = { 0x34, 0x80, 0xb3 };
 
 typedef int (*qmi_nv_read_mac_t)(char** mac);
 
-static void fill_random_mac(unsigned char mac[]) {
+static void fill_random_mac(uint8_t mac[]) {
     int i;
     memcpy(mac, xiaomi_mac_prefix, sizeof(xiaomi_mac_prefix));
 
@@ -52,7 +53,7 @@ static void fill_random_mac(unsigned char mac[]) {
     }
 }
 
-static void load_mac_with(unsigned char mac[],
+static void load_mac_with(uint8_t mac[],
         qmi_nv_read_mac_t qmi_nv_read_mac) {
     char *nv_mac = NULL;
     int i;
@@ -103,7 +104,7 @@ static int is_valid_wlan_mac_file() {
     return 1;
 }
 
-static int write_wlan_mac_file(unsigned char wlan_mac[]) {
+static int write_wlan_mac_file(uint8_t wlan_mac[]) {
     FILE *fp;
 
     fp = fopen(WLAN_MAC_FILE, "w");
@@ -114,15 +115,16 @@ static int write_wlan_mac_file(unsigned char wlan_mac[]) {
             wlan_mac[1], wlan_mac[2], wlan_mac[3], wlan_mac[4], wlan_mac[5]);
     fprintf(fp, "Intf1MacAddress=%02X%02X%02X%02X%02X%02X\n", wlan_mac[0],
             wlan_mac[1], wlan_mac[2], wlan_mac[3], wlan_mac[4],
-            (unsigned char)(wlan_mac[5] + 1));
+            wlan_mac[5] + 1);
     fprintf(fp, "END\n");
     fclose(fp);
+    chmod(WLAN_MAC_FILE, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 
     return 0;
 }
 
 static void set_wlan_mac_with(qmi_nv_read_mac_t qmi_nv_read_wlan_mac) {
-    unsigned char wlan_mac[MAC_SIZE];
+    uint8_t wlan_mac[MAC_SIZE];
     int rc;
 
     if (is_valid_wlan_mac_file()) {

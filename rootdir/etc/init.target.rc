@@ -326,6 +326,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
 
 service vendor.readmac /vendor/bin/readmac
     class main
-    user root
-    group oem_2901
+    user system
+    group system net_raw
     oneshot
