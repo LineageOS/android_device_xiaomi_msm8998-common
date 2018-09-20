@@ -27,9 +27,6 @@
 #
 #
 
-on early-init
-    symlink /data/tombstones /tombstones
-
 on init
     # QSEE rpmb listener need symlink for bootdevice
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -184,11 +181,6 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
-
     # Create directory for thermal engine
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
