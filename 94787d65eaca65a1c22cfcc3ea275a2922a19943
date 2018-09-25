@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00baf70c_6d4327c3",
+        "filename": "vendor_prop.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 17117
+      },
+      "writtenOn": "2018-09-25T05:11:09Z",
+      "side": 0,
+      "message": "I guess we should keep this\nhttps://github.com/LineageOS/android_hardware_qcom_display/blob/lineage-16.0-caf-8998/libgralloc/gpu.cpp#L314\nhttps://github.com/LineageOS/android_hardware_qcom_display/blob/lineage-16.0-caf-8998/gralloc/gralloc_priv.h#L29",
+      "range": {
+        "startLine": 77,
+        "startChar": 35,
+        "endLine": 77,
+        "endChar": 36
+      },
+      "revId": "94787d65eaca65a1c22cfcc3ea275a2922a19943",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
