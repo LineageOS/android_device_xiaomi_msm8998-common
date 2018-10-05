@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42112bcb_5b9ffbf3",
+        "filename": "msm8998.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-10-05T12:23:42Z",
+      "side": 1,
+      "message": "How do you explain this?",
+      "range": {
+        "startLine": 201,
+        "startChar": 4,
+        "endLine": 201,
+        "endChar": 18
+      },
+      "revId": "0f4bd1a554f64ae2a9395166f4f396f5e653c3f9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
