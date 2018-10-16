@@ -310,7 +310,7 @@ service vendor.time_daemon /vendor/bin/time_daemon
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service power_off_alarm /vendor/bin/power_off_alarm
+service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
     disabled
