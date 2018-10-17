@@ -66,7 +66,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.xm.green.b=0.96 \
     persist.camera.xm.green.r=0.97 \
     persist.dualcam.lpm.enable=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,org.lineageos.snap \
+    vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
     vidc.enc.dcvs.extra-buff-count=2
 
 # CNE
