@@ -1,8 +1,13 @@
 allow hal_power_default sysfs_touchpanel:file w_file_perms;
 
-allow hal_power_default sysfs_msm_subsys:dir search;
-allow hal_power_default sysfs_msm_subsys:file w_file_perms;
+allow hal_power_default sysfs_devfreq:dir search;
+allow hal_power_default sysfs_devfreq:file w_file_perms;
+allow hal_power_default sysfs_graphics:dir search;
+allow hal_power_default sysfs_graphics:file w_file_perms;
+allow hal_power_default sysfs_kgsl:dir search;
+allow hal_power_default sysfs_kgsl:lnk_file r_file_perms;
+allow hal_power_default sysfs_kgsl:file w_file_perms;
 allow hal_power_default sysfs_devices_system_cpu:file w_file_perms;
-allow hal_power_default latency_device:chr_file w_file_perms;
+allow hal_power_default device_latency:chr_file w_file_perms;
 
 r_dir_file(hal_power_default, debugfs_wlan)
