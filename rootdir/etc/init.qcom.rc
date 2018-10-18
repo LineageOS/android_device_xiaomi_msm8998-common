@@ -108,10 +108,6 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-    # Create PERFD deamon related dirs
-    mkdir /data/vendor/perfd 2770 root system
-    rm /data/vendor/perfd/default_values
-
     # NFC local data and nfcee xml storage
     mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/vendor/nfc/param 0770 nfc nfc
