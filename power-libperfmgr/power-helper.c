@@ -28,7 +28,7 @@
  */
 
 #define LOG_NIDEBUG 0
-#define LOG_TAG "android.hardware.power@1.2-service.wahoo-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.2-service.xiaomi_msm8998-libperfmgr"
 
 #include <errno.h>
 #include <inttypes.h>
