@@ -23,6 +23,7 @@
 # Power HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service.xiaomi_msm8998-libperfmgr u:object_r:hal_power_default_exec:s0
 /sys/devices/soc/c179000\.i2c/i2c-5/5-[0-9a-f]+/input/input[0-9]+/double_tap_enable u:object_r:sysfs_touchpanel:s0
+/sys/devices/virtual/graphics/fb0/idle_state                  u:object_r:sysfs_graphics:s0
 
 # Readmac
 /(vendor|system/vendor)/bin/readmac                           u:object_r:readmac_exec:s0
