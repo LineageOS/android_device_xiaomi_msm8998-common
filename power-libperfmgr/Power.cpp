@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.2-service.wahoo-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.2-service.xiaomi_msm8998-libperfmgr"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>

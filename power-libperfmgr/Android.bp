@@ -13,9 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 cc_binary {
-    name: "android.hardware.power@1.2-service.wahoo-libperfmgr",
+    name: "android.hardware.power@1.2-service.xiaomi_msm8998-libperfmgr",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.power@1.2-service.wahoo-libperfmgr.rc"],
+    init_rc: ["android.hardware.power@1.2-service.xiaomi_msm8998-libperfmgr.rc"],
     srcs: ["service.cpp", "Power.cpp", "InteractionHandler.cpp", "power-helper.c"],
     cflags: [
         "-Wall",
