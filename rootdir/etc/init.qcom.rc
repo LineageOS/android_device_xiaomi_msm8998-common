@@ -112,8 +112,8 @@ on post-fs-data
     rm /data/vendor/perfd/default_values
 
     # NFC local data and nfcee xml storage
-    mkdir /data/vendor/nfc 0770 nfc nfc
-    mkdir /data/vendor/nfc/param 0770 nfc nfc
+    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/nfc/param 0770 nfc nfc
 
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
