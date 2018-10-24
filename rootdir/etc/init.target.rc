@@ -142,9 +142,6 @@ on init
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
 on fs
-    # Start HW service manager early
-    start hwservicemanager
-
     mount_all /vendor/etc/fstab.qcom --early
     swapon_all /vendor/etc/fstab.qcom
 
