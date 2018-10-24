@@ -109,8 +109,8 @@ on post-fs-data
     rm /data/vendor/perfd/default_values
 
     # NFC local data and nfcee xml storage
-    mkdir /data/vendor/nfc 0770 nfc nfc
-    mkdir /data/vendor/nfc/param 0770 nfc nfc
+    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/nfc/param 0770 nfc nfc
 
     # Create /data/vendor/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
