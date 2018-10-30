@@ -54,9 +54,9 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
 # Bluetooth ANT
--lib/libantradio.so
+-lib/libantradio.so|92c78443d969ab30feceb049ff4aa3ccafb473cd
 lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
+-lib64/libantradio.so|f8682891b6e1a7de692ce7e031ee9d12e5c08a90
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 
