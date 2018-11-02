@@ -82,9 +82,9 @@ on post-fs-data
     mkdir /data/connectivity 0771 system system
 
     # Create directory used by audio subsystem
-    mkdir /data/vendor/misc/audio 0770 audio audio
-    mkdir /data/vendor/misc/audio/acdbdata 0770 media audio
-    mkdir /data/vendor/misc/audio/acdbdata/delta 0770 media audio
+    mkdir /data/vendor/audio 0770 audio audio
+    mkdir /data/vendor/audio/acdbdata 0770 media audio
+    mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
 
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
