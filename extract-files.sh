@@ -113,6 +113,9 @@ function blob_fixup() {
         patchelf --remove-needed "libandroid_runtime.so" "${2}"
         patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
         ;;
+    vendor/lib/libaudcal.so)
+        sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" "${2}"
+        ;;
     esac
 }
 
