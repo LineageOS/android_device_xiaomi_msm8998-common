@@ -146,7 +146,6 @@ on boot
     mkdir /dev/socket/qmux_gps 2770 gps gps
 
     mkdir /persist/misc 0770 system system
-    mkdir /persist/alarm 0770 system system
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
