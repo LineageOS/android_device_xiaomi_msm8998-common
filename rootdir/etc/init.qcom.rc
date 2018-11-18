@@ -81,10 +81,6 @@ on post-fs-data
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
 
-    # Create the directories used by DPM subsystem
-    mkdir /data/dpm 0771 system system
-    mkdir /data/dpm/nsrm 0771 system system
-
     # Create directory used by audio subsystem
     mkdir /data/vendor/misc/audio 0770 audio audio
     mkdir /data/vendor/misc/audio/acdbdata 0770 media audio
