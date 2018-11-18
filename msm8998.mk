@@ -299,8 +299,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.panel_info.sh \
-    init.qcom.sh \
-    init.qcom.post_boot.sh
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh
 
 # RCS
 PRODUCT_PACKAGES += \
