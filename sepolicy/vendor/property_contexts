@@ -1,6 +1,10 @@
 # Audio
 audio_hal.                                                    u:object_r:vendor_audio_prop:s0
 persist.audio.fluence.                                        u:object_r:vendor_audio_prop:s0
+ro.config.alarm_vol_default                                   u:object_r:exported2_config_prop:s0
+ro.config.alarm_vol_steps                                     u:object_r:exported2_config_prop:s0
+ro.config.media_vol_default                                   u:object_r:exported2_config_prop:s0
+ro.config.vc_call_vol_default                                 u:object_r:exported2_config_prop:s0
 
 # Camera
 camera.cts.                                                   u:object_r:camera_prop:s0
