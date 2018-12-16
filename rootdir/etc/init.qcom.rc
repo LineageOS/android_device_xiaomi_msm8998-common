@@ -267,7 +267,7 @@ service vendor.dataqti /vendor/bin/qti
 service vendor.sensors /vendor/bin/sensors.qcom
     class main
     user root
-    group root
+    group root system input
     writepid /dev/cpuset/system-background/tasks
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
