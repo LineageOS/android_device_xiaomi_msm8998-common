@@ -216,7 +216,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.protected_contents=true
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
+    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
