@@ -87,6 +87,12 @@ function blob_fixup() {
     vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc)
         sed -i "/ disabled/Q" "${2}"
         ;;
+    vendor/bin/mlipayd)
+        patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
+        ;;
+    vendor/lib64/libmlipay.so)
+        patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
+        ;;
 	esac
 }
 
