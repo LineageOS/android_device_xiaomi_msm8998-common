@@ -565,3 +565,50 @@ vendor/lib64/libtime_genoff.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
+
+# WFD (system) - from OnePlus5T PKQ1.180716.001
+bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
+etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+etc/wfdconfig.xml|13abdc4cbe7b856abb81cec7ed87010d8a40dfb3
+etc/wfdconfigsink.xml|7b57de947134e63ebf5441f8cd152e1e1a22d631
+-framework/WfdCommon.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016|049550a7886e01067685f4bb6280a81ca72cefc2
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib/extractors/libmmparser.so|d47fb93733359bfd8c7effd33bbd39bfef81ae1a
+lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
+lib/libOmxMux.so|fd7b1d9eab6cbdf2e659ed130ca32211969bdffe
+lib/libmmosal.so|ffc0f2d87773f0ae750ce14bafe6f1573a81952b
+lib/libmmparser_lite.so|54bdc6678775c27b57f9c4a0399927330ad9dc35
+lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
+lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
+lib/libwfdavenhancements.so|56e9d0050d3840bb3b27ce00425bfd67daac01c0
+lib/libwfdcodecv4l2.so|690b4ae2a7a01ff1e4b61f39dd3641e6aa4b6357
+lib/libwfdcommonutils.so|3d667fb1f1873934d2cffa853a9b15db79eb3a98
+lib/libwfdconfigutils.so|7edcc135961863627c7a9c27e6fab9b360f90716
+lib/libwfdmminterface.so|caf012b833585121fed196342c35d24f58940138
+lib/libwfdmmsink.so|19d324ad074801606d22fd71449071395e273bcf
+lib/libwfdmmsrc.so|81892c8a54d9b0e5933a30e5c63437135bb694a8
+lib/libwfdrtsp.so|35d56a25e9fe0ec7756c8b10183491c00cfb5879
+lib/libwfdservice.so|55459dbfe15058871070f9c47a95f1c69c25c468
+lib/libwfdsm.so|25e97499652bcf1cfb7fe25f5756844777357108
+lib/libwfduibcinterface.so|334a422ec1520da8488a9c14ae9a721142fe12c4
+lib/libwfduibcsink.so|989ed94f8c0047d85db60acc7b76eb9fb0014270
+lib/libwfduibcsinkinterface.so|f8c191d35178f865777dad9874692a26fae90851
+lib/libwfduibcsrc.so|78bc3258deb8f818c3392d5accdf8e7aac729fdc
+lib/libwfduibcsrcinterface.so|3ce31a3bde36bd5c7dac31ccc1fda8043f482f86
+lib64/libmmosal.so|3cfcbfd8caf912320d22e460ad618632acb29dc7
+lib64/libwfdclient.so|c69712162493bdaa8833b5aae342ee4f9b0c2408
+lib64/libwfdnative.so|85c0bf843189f8b1ef1c8d12867004f8f7d6ed8e
+-priv-app/WfdService/WfdService.apk|d4d1f7d9f610efeb2a61705320539012f55ec634
+
+# WFD (vendor)
+vendor/bin/wifidisplayhalservice
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-impl.so
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so
+vendor/lib/libmmosal_proprietary.so
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfdhaldsmanager.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdmmservice.so
+vendor/lib/libwfdmodulehdcpsession.so

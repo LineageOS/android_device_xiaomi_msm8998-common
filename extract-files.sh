@@ -105,6 +105,9 @@ function blob_fixup() {
             sed -i "s|$string|$newstring\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00|" "${2}"
         done
         ;;
+    vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc)
+        sed -i "/ disabled/Q" "${2}"
+        ;;
 	esac
 }
 
