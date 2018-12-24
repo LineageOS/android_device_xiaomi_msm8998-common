@@ -84,6 +84,12 @@ function blob_fixup() {
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
+    vendor/bin/mlipayd)
+        patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
+        ;;
+    vendor/lib64/libmlipay.so)
+        patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
+        ;;
 	esac
 }
 
