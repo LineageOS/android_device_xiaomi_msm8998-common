@@ -1,5 +1,6 @@
 # Fingerprint
 type fingerprint_status_prop, property_type;
+type vendor_fp_prop, property_type;
 
 # Sensors
 type sensors_panel_prop, property_type;
