@@ -14,5 +14,5 @@ allow hal_mfidoca_client hal_mfidoca_hwservice:hwservice_manager find;
 allow hal_mfidoca_default tee_device:chr_file rw_file_perms;
 allow hal_mfidoca_default ion_device:chr_file r_file_perms;
 
-get_prop(hal_mfidoca_default, fingerprint_prop)
+get_prop(hal_mfidoca_default, vendor_fp_prop)
 set_prop(hal_mfidoca_default, vendor_tee_listener_prop)
