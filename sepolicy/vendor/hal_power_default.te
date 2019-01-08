@@ -1,3 +1,4 @@
-allow hal_power_default sysfs_touchpanel:file w_file_perms;
+allow hal_power_default sysfs_sectouch:dir search;
+allow hal_power_default sysfs_sectouch:file w_file_perms;
 
 r_dir_file(hal_power_default, debugfs_wlan)
