@@ -235,6 +235,7 @@ on charger
     start vendor.hvdcp_opti
     start vendor.thermal-engine
     start vendor.qcom-post-boot
+    start vendor.power_off_alarm
 
     setprop sys.usb.configfs 1
     setprop sys.usb.config adb
