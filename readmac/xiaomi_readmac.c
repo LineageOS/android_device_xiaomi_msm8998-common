@@ -118,7 +118,7 @@ static int write_wlan_mac_file(uint8_t wlan_mac[]) {
             wlan_mac[5] + 1);
     fprintf(fp, "END\n");
     fclose(fp);
-    chmod(WLAN_MAC_FILE, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+    chmod(WLAN_MAC_FILE, 0644);
 
     return 0;
 }
