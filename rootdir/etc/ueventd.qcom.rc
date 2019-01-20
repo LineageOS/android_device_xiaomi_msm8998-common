@@ -146,3 +146,6 @@
 /sys/devices/soc/soc:fingerprint_fpc*        device_prepare     0700  system system
 /sys/devices/soc/soc:fingerprint_fpc*        vendor             0700  system system
 /dev/goodix_fp            0660   system     system
+
+# sys-fs display
+/sys/class/graphics/fb*     dynamic_fps              0664    system  graphics
