@@ -79,7 +79,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=480 \
     vendor.display.disable_partial_split=1 \
     vendor.display.disable_rotator_downscale=1 \
     vendor.display.disable_skip_validate=1 \
