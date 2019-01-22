@@ -91,8 +91,6 @@ on property:sys.boot_completed=1
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/read_ahead_kb 128
 
-    setprop sys.io.scheduler "bfq"
-
     # Configure core ctl
     write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
     write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 60
