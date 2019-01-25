@@ -184,7 +184,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RIL_VARIANT := caf
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-06-01
+VENDOR_SECURITY_PATCH := 2018-12-01
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
