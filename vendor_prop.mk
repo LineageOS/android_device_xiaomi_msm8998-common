@@ -107,7 +107,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.set.afd=4 \
     persist.vendor.dualcam.lpm.enable=1 \
-    vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
     vidc.enc.dcvs.extra-buff-count=2
 
 # CNE
