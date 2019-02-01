@@ -103,9 +103,11 @@ function blob_fixup() {
         sed -i "/ disabled/Q" "${2}"
         ;;
     vendor/bin/mlipayd)
+        patchelf --remove-needed "libandroid_runtime.so" "${2}"
         patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
         ;;
     vendor/lib64/libmlipay.so)
+        patchelf --remove-needed "libandroid_runtime.so" "${2}"
         patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
         ;;
 	esac
