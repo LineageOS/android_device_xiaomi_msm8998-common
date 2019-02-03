@@ -345,7 +345,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk_package
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
