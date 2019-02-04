@@ -84,6 +84,18 @@ function blob_fixup() {
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
+    vendor/lib/libFaceGrade.so)
+        patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
+    vendor/lib/libarcsoft_beauty_shot.so)
+        patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
+    vendor/lib/libmmcamera2_stats_modules.so)
+        patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
+    vendor/lib/libmpbase.so)
+        patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
     vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc)
         sed -i "/ disabled/Q" "${2}"
         ;;
