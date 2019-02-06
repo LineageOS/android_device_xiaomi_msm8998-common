@@ -1,5 +1,4 @@
 # Fingerprint
-type fingerprint_data_file, core_data_file_type, data_file_type, file_type;
 type fingerprint_persist_file, file_type;
 type fingerprint_sysfs, sysfs_type, fs_type;
 
