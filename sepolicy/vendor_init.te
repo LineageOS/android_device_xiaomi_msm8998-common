@@ -4,7 +4,6 @@ allow vendor_init {
     camera_data_file
 #   dpmd_data_file
     fingerprint_data_file
-    system_data_file
     thermal_data_file
     tombstone_data_file
 }:dir create_dir_perms;
