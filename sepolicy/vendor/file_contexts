@@ -24,7 +24,7 @@
 /sys/devices/soc/c179000\.i2c/i2c-5/5-[0-9a-f]+/input/input[0-9]+/double_tap_enable u:object_r:sysfs_touchpanel:s0
 
 # Readmac
-/(vendor|system/vendor)/bin/readmac                           u:object_r:readmac_exec:s0
+/(vendor|system/vendor)/bin/readmac                           u:object_r:wcnss_service_exec:s0
 
 # Remote storage
 /sys/kernel/debug/rmt_storage/rmts                            u:object_r:debugfs_rmts:s0
