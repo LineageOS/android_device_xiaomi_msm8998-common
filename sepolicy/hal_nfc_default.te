@@ -1,0 +1,1 @@
+dontaudit hal_nfc_default nxpnfc_hwservice:hwservice_manager add;
