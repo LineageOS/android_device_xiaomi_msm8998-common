@@ -53,3 +53,5 @@ do
     echo 400 > $memlat/mem_latency/ratio_ceil
 done
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
+
+setprop sys.post_boot.parsed 1
