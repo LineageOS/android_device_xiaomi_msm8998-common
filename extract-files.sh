@@ -99,6 +99,12 @@ function blob_fixup() {
     vendor/lib64/lib-dplmedia.so)
         patchelf --remove-needed "libmedia.so" "${2}"
         ;;
+    vendor/bin/tftp_server)
+        for string in `strings "${2}" | grep /mnt/vendor/persist/`; do
+            newstring=$(echo "${string}" | sed 's|/mnt/vendor/persist|/persist|g')
+            sed -i "s|$string|$newstring\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00|" "${2}"
+        done
+        ;;
 	esac
 }
 

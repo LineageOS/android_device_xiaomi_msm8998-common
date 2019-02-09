@@ -498,7 +498,7 @@ vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qti
 vendor/bin/rmt_storage
-vendor/bin/tftp_server|05a9c0e0e691e534e703bded4a99083d25a26ebb
+vendor/bin/tftp_server|05a9c0e0e691e534e703bded4a99083d25a26ebb|d69fe9ef14ef8b79eb03677c96d2e36fa65a2932
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/lib/libmdmdetect.so
