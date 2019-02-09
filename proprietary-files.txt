@@ -403,6 +403,9 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_fws.elf
 
+# IRQ balance
+vendor/bin/msm_irqbalance|117d7c8a8f6f12b3615ec8ab676231df93d277f1
+
 # Keystore
 vendor/lib64/hw/keystore.msm8998.so
 
@@ -547,7 +550,6 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal
-vendor/bin/msm_irqbalance
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine-8998-high.conf
 vendor/etc/thermal-engine-8998-map.conf
