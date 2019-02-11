@@ -229,13 +229,8 @@ on charger
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 300000
 
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-
     wait /dev/block/bootdevice/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
-
-    load_system_props
 
     start vendor.hvdcp_opti
     start vendor.thermal-engine
