@@ -1,0 +1,4 @@
+; Apps, except isolated apps, are clients of Mlipay HAL
+; Unfortunately, we can't currently express this in module policy language:
+;     typeattribute { appdomain -isolated_app } hal_mlipay_client;
+(typeattributeset hal_mlipay_client ((and (appdomain) ((not (isolated_app))))))
