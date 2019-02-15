@@ -16,3 +16,5 @@ allow hal_mlipay ion_device:chr_file r_file_perms;
 
 r_dir_file(hal_mlipay, firmware_file)
 get_prop(hal_mlipay, exported3_default_prop)
+get_prop(hal_mlipay, fingerprint_prop)
+set_prop(hal_mlipay, ifaa_prop)

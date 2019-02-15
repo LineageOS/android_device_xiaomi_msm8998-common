@@ -1,0 +1,2 @@
+get_prop({ appdomain -isolated_app }, ifaa_prop)
+get_prop({ appdomain -isolated_app }, fingerprint_prop)
