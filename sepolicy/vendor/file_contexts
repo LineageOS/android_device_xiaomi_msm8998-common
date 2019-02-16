@@ -1,5 +1,5 @@
 # CNE
-/data/connectivity(/.*)?                                      u:object_r:cnd_data_file:s0
+/data/connectivity(/.*)?                                      u:object_r:cnd_core_data_file:s0
 
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_msm8998 u:object_r:hal_fingerprint_default_exec:s0
