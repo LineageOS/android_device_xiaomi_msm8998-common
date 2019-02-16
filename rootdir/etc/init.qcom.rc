@@ -105,6 +105,11 @@ on post-fs-data
     chown system system /persist/PRSensorData.txt
     chmod 0600 /persist/PRSensorData.txt
 
+    # /dev/sensors only supports an ioctl to get the current SLPI timestamp;
+    # allow the sensors daemon to perform this as non-root
+    chown root system /dev/sensors
+    chmod 660 /dev/sensors
+
     setprop vold.post_fs_data_done 1
 
     # Create PERFD deamon related dirs
