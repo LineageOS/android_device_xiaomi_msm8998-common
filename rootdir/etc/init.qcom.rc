@@ -269,7 +269,7 @@ service vendor.qti /vendor/bin/qti
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.sensors /vendor/bin/sensors.qcom
-    class main
+    class core
     user root
     group root system input
     writepid /dev/cpuset/system-background/tasks
