@@ -420,13 +420,13 @@ vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 
 # Media
--vendor/lib/libgpustats.so
+vendor/lib/libgpustats.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
--vendor/lib64/libgpustats.so
+vendor/lib64/libgpustats.so
 
 # Mlipay
 lib64/vendor.xiaomi.hardware.mfidoca@1.0.so:vendor/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
