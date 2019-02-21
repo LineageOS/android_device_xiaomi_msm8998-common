@@ -530,7 +530,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
 
 # Sensors
-vendor/bin/sensors.qcom
+vendor/bin/sensors.qti|3d6881f1210907aaf53dcc35b8afb55945c4af69
 vendor/lib/hw/activity_recognition.msm8998.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsensor1.so

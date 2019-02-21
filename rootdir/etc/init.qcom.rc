@@ -268,7 +268,7 @@ service vendor.qti /vendor/bin/qti
     group radio net_raw diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.sensors /vendor/bin/sensors.qcom
+service vendor.sensors /vendor/bin/sensors.qti
     class main
     user root
     group root
