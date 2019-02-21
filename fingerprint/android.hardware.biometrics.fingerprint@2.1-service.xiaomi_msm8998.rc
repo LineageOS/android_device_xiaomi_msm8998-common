@@ -9,4 +9,4 @@ on post-fs-data
     chown system system /data/misc/fpc/calibration_image.pndat
     chmod 0600 /data/misc/fpc/calibration_image.pndat
     mkdir /data/misc/goodix 0770 system system
-    mkdir /persist/fpc 0770 system system
+    mkdir /mnt/vendor/persist/fpc 0770 system system
