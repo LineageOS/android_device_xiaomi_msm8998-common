@@ -99,6 +99,9 @@ function blob_fixup() {
     vendor/lib64/lib-dplmedia.so)
         patchelf --remove-needed "libmedia.so" "${2}"
         ;;
+    vendor/lib/soundfx/libdirac.so)
+        patchelf --remove-needed "libmedia.so" "${2}"
+        ;;
     vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc)
         sed -i "/ disabled/Q" "${2}"
         ;;
