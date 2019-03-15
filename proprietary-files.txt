@@ -363,20 +363,22 @@ vendor/firmware/a540_zap.b02
 vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
-# IMS
--app/uceShimService/uceShimService.apk
-etc/permissions/qti-vzw-ims-internal.xml:vendor/etc/permissions/qti-vzw-ims-internal.xml
-lib64/libdiag_system.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+# IMS (system) - from daisy PKQ1.180917.001
+-app/uceShimService/uceShimService.apk|d2ecdb607749b0496664db52b706e9340bd9b9f0
+lib64/lib-imscamera.so|92dca86c125cce65cd221bad20d2a53a791c95bc
+lib64/lib-imsvideocodec.so|fdf0c5e80744e3ce7f578ece5b7872717611aa09
+lib64/lib-imsvt.so|7dfc533fc3c439a608b219838281d6c5f605ee22
+lib64/lib-imsvtextutils.so|dc3340321ee2543bb35248d0f9dac4718116a073
+lib64/lib-imsvtutils.so|13480b644ed5290f7ddc2f7c304c0e912f416098
+lib64/libdiag_system.so|d715979a771a964ef3d0f9fe1b297259e74e4f94
+lib64/libimscamera_jni.so|133fec4e7be337eb255eb226c4ff96ae53b94be7
+lib64/libimsmedia_jni.so|577b1ed68e2a26e50e9e4dfed9fe1ca685979a56
+lib64/librcc.so|4d732d9211e3139ed17fae059edfcd71f0e13d7e
+lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
 -priv-app/ims/ims.apk|ae253323217a6e29155b502eda5d58d332546c5e
+
+# IMS (vendor)
+etc/permissions/qti-vzw-ims-internal.xml:vendor/etc/permissions/qti-vzw-ims-internal.xml
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
