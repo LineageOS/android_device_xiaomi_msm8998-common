@@ -567,7 +567,6 @@ vendor/lib64/sensors.ssc.so
 
 # Thermal
 vendor/bin/thermal-engine
-vendor/etc/thermal-engine-8998-high.conf
 vendor/etc/thermal-engine-8998-map.conf
 vendor/etc/thermal-engine.conf
 vendor/lib/libthermalclient.so
