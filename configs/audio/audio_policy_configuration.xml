@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Copyright (c) 2016-2017, The Linux Foundation. All rights reserved
+<!-- Copyright (c) 2016-2018, The Linux Foundation. All rights reserved
      Not a Contribution.
 -->
 <!-- Copyright (C) 2015 The Android Open Source Project
@@ -82,6 +82,11 @@
                         flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD|AUDIO_OUTPUT_FLAG_NON_BLOCKING">
                     <profile name="" format="dynamic"
                              samplingRates="dynamic" channelMasks="dynamic"/>
+                </mixPort>
+                <mixPort name="incall_music" role="source"
+                        flags="AUDIO_OUTPUT_FLAG_INCALL_MUSIC|AUDIO_OUTPUT_FLAG_DIRECT">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="8000,16000,48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
                 <mixPort name="direct_pcm" role="source"
                         flags="AUDIO_OUTPUT_FLAG_DIRECT">
@@ -267,6 +272,7 @@
                              samplingRates="44100,48000,64000,88200,96000,128000,176400,192000" channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
 
+                <!-- Input devices declaration, i.e. Source DEVICE PORT -->
                 <devicePort tagName="Built-In Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
