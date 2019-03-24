@@ -31,7 +31,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.voicerec=false \
     persist.vendor.audio.ras.enabled=false \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
-    ro.af.client_heap_size_kbyte=7168 \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=11 \
     ro.vendor.audio.sdk.fluencetype=fluence \
