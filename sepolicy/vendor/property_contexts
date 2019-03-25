@@ -6,12 +6,12 @@ persist.camera.                                               u:object_r:camera_
 persist.vendor.camera.                                        u:object_r:camera_prop:s0
 
 # Fingerprint
-persist.sys.fp.                                               u:object_r:fingerprint_prop:s0
+persist.vendor.sys.fp.                                        u:object_r:fingerprint_prop:s0
 ro.boot.fp.                                                   u:object_r:fingerprint_prop:s0
 ro.boot.fpsensor                                              u:object_r:fingerprint_prop:s0
 
 # Mlipay
-persist.sys.ifaa                                              u:object_r:ifaa_prop:s0
+persist.vendor.sys.pay.ifaa                                   u:object_r:ifaa_prop:s0
 
 # Netmgrd
 persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
