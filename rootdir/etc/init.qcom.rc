@@ -148,16 +148,9 @@ on boot
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
-    # KeyDisabler permissions
-    chown system system /sys/devices/soc/soc:fingerprint_fpc/enable_key_events
-    chown system system /sys/devices/soc/soc:fingerprint_goodix/enable_key_events
-    chmod 0660 /sys/devices/soc/soc:fingerprint_fpc/enable_key_events
-    chmod 0660 /sys/devices/soc/soc:fingerprint_goodix/enable_key_events
-
-    chown system system /proc/touchpanel/capacitive_keys_enable
+    # Touchscreen
     chown system system /proc/touchpanel/double_tap_enable
     chown system system /proc/touchpanel/reversed_keys_enable
-    chmod 0660 /proc/touchpanel/capacitive_keys_enable
     chmod 0660 /proc/touchpanel/double_tap_enable
     chmod 0660 /proc/touchpanel/reversed_keys_enable
 
