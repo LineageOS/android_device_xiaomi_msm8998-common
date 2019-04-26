@@ -32,6 +32,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
+#include <time.h>
 #include "log_util.h"
 #include "loc_log.h"
 #include "msg_q.h"
@@ -235,4 +236,3 @@ char * get_timestamp(char *str, unsigned long buf_size)
   snprintf(str, buf_size, "%02d:%02d:%02d.%06ld", hh, mm, ss, tv.tv_usec);
   return str;
 }
-

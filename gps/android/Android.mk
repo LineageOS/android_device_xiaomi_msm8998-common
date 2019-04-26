@@ -4,6 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.0-impl-qti
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_SRC_FILES := \
     AGnss.cpp \
     Gnss.cpp \
@@ -60,6 +61,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.0-service-qti
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_INIT_RC := android.hardware.gnss@1.0-service-qti.rc
 LOCAL_SRC_FILES := \
     service.cpp \
