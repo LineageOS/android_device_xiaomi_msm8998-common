@@ -21,9 +21,6 @@ persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_
 persist.vendor.sys.pay.soter                                  u:object_r:vendor_tee_listener_prop:s0
 persist.vendor.sys.provision.status                           u:object_r:vendor_tee_listener_prop:s0
 
-# MPCTL
-sys.post_boot.parsed                                          u:object_r:vendor_mpctl_prop:s0
-
 # Netmgrd
 persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
 
