@@ -42,12 +42,6 @@ write_headers "chiron sagit"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-cat << EOF >> "${ANDROIDMK}"
-
-\$(shell mkdir -p \$(TARGET_OUT_VENDOR)/lib/egl && pushd \$(TARGET_OUT_VENDOR)/lib > /dev/null && ln -s egl/libGLESv2_adreno.so libGLESv2_adreno.so && popd > /dev/null)
-
-EOF
-
 # Finish
 write_footers
 
