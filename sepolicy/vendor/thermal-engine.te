@@ -1,12 +1,10 @@
 typeattribute thermal-engine data_between_core_and_vendor_violators;
 
-type_transition thermal-engine system_data_file:file thermal_data_file;
 type_transition thermal-engine socket_device:sock_file thermal_socket;
 
 allow thermal-engine thermal_data_file:dir rw_dir_perms;
 allow thermal-engine thermal_data_file:file create_file_perms;
 
-allow thermal-engine system_data_file:dir w_dir_perms;
 allow thermal-engine thermal_decrypt_file:file create_file_perms;
 
 allow thermal-engine self:capability { chown fowner };
