@@ -189,8 +189,8 @@ on late-fs
 
 on post-fs-data
     # Create directory for thermal engine
-    mkdir /data/thermal 0771 system system
-    mkdir /data/thermal/config 0771 system system
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
 
 on property:sys.boot_completed=1
     # Enable UFS powersaving
