@@ -57,7 +57,10 @@ lib64/com.qualcomm.qti.ant@1.0.so:vendor/lib64/com.qualcomm.qti.ant@1.0.so
 lib64/vendor.qti.hardware.fm@1.0.so:vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera
-lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
+vendor/lib/libMiCameraHal.so|836daf4c82232ebb97556ff073b05e2038017785
+vendor/lib/libicuuc-v27.so|ee9bec9a01e97180c5262dcd5da8486e1f7944ab
+vendor/lib/libminikin-v27.so|3831e60a14f071bb0f16496e82841a672b0f8215
+vendor/lib/libskia.so|767027b1114dc875394e0541b7f50c80e75ab9ec
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so
