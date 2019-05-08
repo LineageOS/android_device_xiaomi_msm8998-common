@@ -1,6 +1,3 @@
-# CNE
-type cnd_core_data_file, file_type, core_data_file_type, data_file_type;
-
 # Fingerprint
 type fingerprint_persist_file, file_type;
 type fingerprint_sysfs, sysfs_type, fs_type;
