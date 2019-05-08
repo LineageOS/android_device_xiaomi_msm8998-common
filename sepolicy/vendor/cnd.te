@@ -1,5 +1,0 @@
-typeattribute cnd data_between_core_and_vendor_violators;
-
-# Allow cnd to access cnd_core_data_file
-allow cnd cnd_core_data_file:file create_file_perms;
-allow cnd cnd_core_data_file:sock_file { unlink create setattr };
