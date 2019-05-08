@@ -61,11 +61,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=1 \
-    persist.camera.set.afd=4 \
     persist.camera.xm.green.b=0.96 \
     persist.camera.xm.green.r=0.97 \
-    persist.dualcam.lpm.enable=1 \
+    persist.vendor.camera.HAL3.enabled=1 \
+    persist.vendor.camera.set.afd=4 \
+    persist.vendor.dualcam.lpm.enable=1 \
     vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
     vidc.enc.dcvs.extra-buff-count=2
 

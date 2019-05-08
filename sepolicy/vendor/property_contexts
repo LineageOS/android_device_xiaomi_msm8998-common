@@ -6,6 +6,7 @@ camera.dual.mode                                              u:object_r:camera_
 camera.IMX298.actuator.update                                 u:object_r:camera_prop:s0
 camera.s5k3m3.actuator.update                                 u:object_r:camera_prop:s0
 persist.camera.                                               u:object_r:camera_prop:s0
+persist.vendor.camera.                                        u:object_r:camera_prop:s0
 
 # Fingerprint
 persist.sys.fp.                                               u:object_r:fingerprint_prop:s0
