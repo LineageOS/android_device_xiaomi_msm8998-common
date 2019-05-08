@@ -40,4 +40,4 @@
 
 # Thermal engine
 /data/decrypt\.txt                                            u:object_r:thermal_decrypt_file:s0
-/data/thermal(/.*)?                                           u:object_r:thermal_data_file:s0
+/data/vendor/thermal(/.*)?                                    u:object_r:thermal_data_file:s0
