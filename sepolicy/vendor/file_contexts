@@ -27,9 +27,6 @@
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1\.1                      u:object_r:hal_mlipay_default_exec:s0
 
-# Readmac
-/(vendor|system/vendor)/bin/readmac                           u:object_r:wcnss_service_exec:s0
-
 # Remote storage
 /sys/kernel/debug/rmt_storage/rmts                            u:object_r:debugfs_rmts:s0
 
