@@ -374,7 +374,6 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libwpa_client \
     hostapd \
-    readmac \
     wpa_supplicant \
     wpa_supplicant.conf
 
