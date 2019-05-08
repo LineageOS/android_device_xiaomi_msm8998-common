@@ -1,20 +1,14 @@
 # Camera
 camera.dual.mode                                              u:object_r:camera_prop:s0
-camera.IMX298.actuator.update                                 u:object_r:camera_prop:s0
-camera.s5k3m3.actuator.update                                 u:object_r:camera_prop:s0
 persist.camera.                                               u:object_r:camera_prop:s0
 persist.vendor.camera.                                        u:object_r:camera_prop:s0
 
 # Fingerprint
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
-ro.boot.fp.                                                   u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay.ifaa                                   u:object_r:ifaa_prop:s0
-
-# Netmgrd
-persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
 
 # Radio
 ril.fake_bs_flag0                                             u:object_r:system_radio_prop:s0
@@ -22,9 +16,6 @@ ril.fake_bs_flag1                                             u:object_r:system_
 
 # Sensors
 sys.panel.                                                    u:object_r:sensors_panel_prop:s0
-
-# Qseecomd
-sys.listeners.registered                                      u:object_r:vendor_tee_listener_prop:s0
 
 # Thermal engine
 persist.sys.thermal.                                          u:object_r:thermal_prop:s0
