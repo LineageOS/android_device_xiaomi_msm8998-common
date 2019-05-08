@@ -331,9 +331,3 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     user root
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
-
-service vendor.readmac /vendor/bin/readmac
-    class main
-    user system
-    group system net_raw
-    oneshot
