@@ -1,3 +1,0 @@
-# Allow system_app to read and create files in cnd_core_data_file
-allow system_app cnd_core_data_file:dir w_dir_perms;
-allow system_app cnd_core_data_file:file create_file_perms;
