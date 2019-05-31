@@ -59,6 +59,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+    vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-service.rc)
+        sed -i '/group/ i\    user system' "${2}"
+        ;;
     vendor/etc/permissions/qti_libpermissions.xml)
         sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
         ;;
@@ -76,12 +79,6 @@ function blob_fixup() {
         ;;
     vendor/lib/libmpbase.so)
         patchelf --remove-needed "libandroid.so" "${2}"
-        ;;
-    vendor/bin/mlipayd@1.1)
-        patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
-        ;;
-    vendor/lib64/libmlipay@1.1.so)
-        patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${2}"
         ;;
     esac
 }
