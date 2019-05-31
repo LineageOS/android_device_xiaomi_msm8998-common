@@ -4,8 +4,5 @@ type fingerprint_status_prop, property_type;
 # Sensors
 type sensors_panel_prop, property_type;
 
-# Mlipay
-type ifaa_prop, property_type;
-
 # Thermal engine
 type thermal_prop, property_type;

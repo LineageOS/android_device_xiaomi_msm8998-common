@@ -257,7 +257,7 @@ fingerprint_device_t* getDeviceForVendor(const char *class_name)
 }
 
 void setFpVendorProp(const char *fp_vendor) {
-    property_set("persist.sys.fp.vendor", fp_vendor);
+    property_set("persist.vendor.sys.fp.vendor", fp_vendor);
     property_set("ro.boot.fpsensor", fp_vendor);
 }
 

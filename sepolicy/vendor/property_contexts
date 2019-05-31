@@ -8,12 +8,17 @@ camera.s5k3m3.actuator.update                                 u:object_r:camera_
 persist.camera.                                               u:object_r:camera_prop:s0
 
 # Fingerprint
-persist.sys.fp.                                               u:object_r:fingerprint_prop:s0
+persist.vendor.sys.fp.                                        u:object_r:fingerprint_prop:s0
 ro.boot.fp.                                                   u:object_r:fingerprint_prop:s0
 ro.boot.fpsensor                                              u:object_r:fingerprint_prop:s0
 
 # Mlipay
-persist.sys.ifaa                                              u:object_r:ifaa_prop:s0
+ro.boot.cpuid                                                 u:object_r:vendor_system_prop:s0
+vendor.sys.rpmb_state                                         u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.fido                                   u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.soter                                  u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.provision.status                           u:object_r:vendor_tee_listener_prop:s0
 
 # MPCTL
 sys.post_boot.parsed                                          u:object_r:vendor_mpctl_prop:s0
