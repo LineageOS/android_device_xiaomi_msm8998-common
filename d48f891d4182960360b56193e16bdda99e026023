@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a1489ac_2a0fd62f",
+        "filename": "vendor_prop.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-06-17T14:39:01Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be removed or it\u0027s still used by something?",
+      "range": {
+        "startLine": 135,
+        "startChar": 4,
+        "endLine": 135,
+        "endChar": 37
+      },
+      "revId": "d48f891d4182960360b56193e16bdda99e026023",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
