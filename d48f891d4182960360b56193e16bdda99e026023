@@ -22,6 +22,30 @@
       "revId": "d48f891d4182960360b56193e16bdda99e026023",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7bcada2_b41eed8e",
+        "filename": "vendor_prop.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 17117
+      },
+      "writtenOn": "2019-06-17T16:56:50Z",
+      "side": 1,
+      "message": "strings proprietary/vendor/lib64/libril-qc-qmi-1.so | grep apm_sim_not_pwdn\npersist.vendor.radio.apm_sim_not_pwdn\n\nOh well, that\u0027s me c:",
+      "parentUuid": "0a1489ac_2a0fd62f",
+      "range": {
+        "startLine": 135,
+        "startChar": 4,
+        "endLine": 135,
+        "endChar": 37
+      },
+      "revId": "d48f891d4182960360b56193e16bdda99e026023",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
