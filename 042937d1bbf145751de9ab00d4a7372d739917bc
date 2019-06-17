@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "873eeaed_07105e1f",
+        "filename": "manifest.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-06-17T14:55:04Z",
+      "side": 1,
+      "message": "This should remain 1.0, the default service is 1.0",
+      "range": {
+        "startLine": 68,
+        "startChar": 19,
+        "endLine": 68,
+        "endChar": 20
+      },
+      "revId": "042937d1bbf145751de9ab00d4a7372d739917bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
