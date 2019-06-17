@@ -22,6 +22,30 @@
       "revId": "eb2561a0fc4c69d50ac6480820d3da402e67b11f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d9f6d6d3_14c0d63b",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 17117
+      },
+      "writtenOn": "2019-06-17T16:58:52Z",
+      "side": 1,
+      "message": "grep -r /data/vendor/location\nBinary file proprietary/vendor/lib64/libdrplugin_client.so matches\nBinary file proprietary/vendor/lib64/libevent_observer.so matches\nBinary file proprietary/vendor/lib64/libizat_core.so matches\nBinary file proprietary/vendor/bin/xtra-daemon matches\n\nThey exist at least",
+      "parentUuid": "848d0dec_11920bef",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 47
+      },
+      "revId": "eb2561a0fc4c69d50ac6480820d3da402e67b11f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
