@@ -303,7 +303,8 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
 
 service charger /charger
     class charger
-    group system graphics
+    user system
+    group system graphics input
     seclabel u:r:healthd:s0
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
