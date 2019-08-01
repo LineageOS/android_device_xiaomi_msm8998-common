@@ -27,10 +27,15 @@ def IncrementalOTA_Assertions(info):
 
 def AddTrustZoneAssertion(info, input_zip):
   android_info = info.input_zip.read("OTA/android-info.txt")
-  m = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info)
-  if m:
-    versions = m.group(1).split('|')
-    if len(versions) and '*' not in versions:
-      cmd = 'assert(xiaomi.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1");'
+  t = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info)
+  f = re.search(r'require\s+version-firmware\s*=\s*(.+)', android_info)
+  if t and f:
+    versions_trustzone = t.group(1).split('|')
+    version_firmware = f.group(1).rstrip()
+    if ((len(versions_trustzone) and '*' not in versions_trustzone) and \
+    (len(version_firmware) and '*' not in version_firmware)):
+      cmd = 'assert(xiaomi.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions_trustzone]) + ') == "1" || \
+abort("Error: This package requires MIUI firmware version ' + version_firmware + \
+' or newer. Please upgrade firmware and retry!"););'
       info.script.AppendExtra(cmd)
   return
