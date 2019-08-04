@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b3dfd73_1806fcf0",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2019-08-04T13:45:50Z",
+      "side": 1,
+      "message": "vendor/lib/libpn553_fw.so is available at miui now aswell",
+      "revId": "a5b6ce2bd0e90c84bdd714ab540b85f4af3c89f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
