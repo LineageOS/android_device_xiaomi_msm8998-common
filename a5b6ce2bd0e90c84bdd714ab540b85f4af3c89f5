@@ -34,6 +34,24 @@
       "revId": "a5b6ce2bd0e90c84bdd714ab540b85f4af3c89f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "816394cb_a9564670",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2019-08-04T13:57:54Z",
+      "side": 1,
+      "message": "\u003e And it doesn\u0027t work\n\nat least on sagit\u0027s stable it is the same",
+      "parentUuid": "fea5ca73_0cbac540",
+      "revId": "a5b6ce2bd0e90c84bdd714ab540b85f4af3c89f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
