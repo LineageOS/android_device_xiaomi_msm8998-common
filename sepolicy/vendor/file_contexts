@@ -35,3 +35,6 @@
 # Thermal engine
 /data/decrypt\.txt                                            u:object_r:thermal_decrypt_file:s0
 /data/vendor/thermal(/.*)?                                    u:object_r:thermal_data_file:s0
+
+# WiFi
+/vendor/bin/wifi-mac-generator                                u:object_r:wifi-mac-generator_exec:s0
