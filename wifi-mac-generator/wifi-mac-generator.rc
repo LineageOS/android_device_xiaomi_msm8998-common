@@ -1,7 +1,6 @@
 service vendor.wifi-mac-generator /vendor/bin/wifi-mac-generator
     class main
-    user wifi
-    group wifi
+    user root
     oneshot
     disabled
 
