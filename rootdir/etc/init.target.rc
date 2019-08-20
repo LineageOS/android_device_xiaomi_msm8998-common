@@ -118,7 +118,7 @@ on init
 
     # Enable input boost configuration
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 100
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # Disable retention
     write /sys/module/lpm_levels/system/pwr/cpu0/ret/idle_enabled N
