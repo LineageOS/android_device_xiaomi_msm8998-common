@@ -1,7 +1,7 @@
 service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8998
     class late_start
     user system
-    group system input
+    group system uhid input
     writepid /dev/cpuset/system-background/tasks
 
 on post-fs-data
