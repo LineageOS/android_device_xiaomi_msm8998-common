@@ -77,8 +77,18 @@ function blob_fixup() {
     vendor/lib/libFaceGrade.so)
         patchelf --remove-needed "libandroid.so" "${2}"
         ;;
+    vendor/lib/libMiCameraHal.so)
+        sed -i 's/libicuuc.so/libicuuQ.so/g' "${2}"
+        sed -i 's/libminikin.so/libminikiQ.so/g' "${2}"
+        ;;
     vendor/lib/libarcsoft_beauty_shot.so)
         patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
+    vendor/lib/libicuuQ.so)
+        sed -i 's/libicuuc.so/libicuuQ.so/g' "${2}"
+        ;;
+    vendor/lib/libminikiQ.so)
+        sed -i 's/libminikin.so/libminikiQ.so/g' "${2}"
         ;;
     vendor/lib/libmmcamera2_stats_modules.so)
         patchelf --remove-needed "libandroid.so" "${2}"

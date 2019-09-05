@@ -64,6 +64,8 @@ product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
+lib/libicuuc.so:vendor/lib/libicuuQ.so
+lib/libminikin.so:vendor/lib/libminikiQ.so
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so
