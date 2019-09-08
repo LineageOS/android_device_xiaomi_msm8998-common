@@ -206,11 +206,13 @@ vendor/lib/libois_bu63164.so
 # Charger
 vendor/bin/hvdcp_opti
 
+# CNEService - from mata QP1A.190711.107
+-priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
+
 # CNE
 lib64/vendor.qti.hardware.data.latency@1.0.so:vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 lib64/vendor.qti.latency@2.0.so:vendor/lib64/vendor.qti.latency@2.0.so
--priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
 vendor/lib64/com.quicinc.cne.api@1.0.so
 vendor/lib64/com.quicinc.cne.api@1.1.so
