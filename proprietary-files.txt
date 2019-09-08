@@ -372,7 +372,7 @@ lib64/com.qualcomm.qti.imscmservice@2.0.so:vendor/lib64/com.qualcomm.qti.imscmse
 lib64/com.qualcomm.qti.imscmservice@2.1.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
 lib64/com.qualcomm.qti.uceservice@2.0.so:vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
 lib64/lib-imscamera.so:product/lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so
+lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so|4694f33165d84a65caaf9ae3f612bab6fe86051f
 lib64/lib-imsvt.so:product/lib64/lib-imsvt.so
 lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so
 lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so
