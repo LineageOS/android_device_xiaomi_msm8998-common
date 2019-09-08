@@ -228,7 +228,8 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml
+    ims_ext_common.xml \
+    libui_shim
 
 # IRQ
 PRODUCT_COPY_FILES += \
