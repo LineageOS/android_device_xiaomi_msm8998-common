@@ -212,7 +212,6 @@ vendor/bin/hvdcp_opti
 lib64/vendor.qti.hardware.data.latency@1.0.so:vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 lib64/vendor.qti.latency@2.0.so:vendor/lib64/vendor.qti.latency@2.0.so
--priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
 vendor/lib64/com.quicinc.cne.api@1.0.so
 vendor/lib64/com.quicinc.cne.api@1.1.so
@@ -231,6 +230,9 @@ vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
+
+# CNE - from mata QP1A.190711.107
+-priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
 
 # DPM
 bin/dpmd
@@ -378,7 +380,6 @@ lib64/vendor.qti.hardware.radio.ims@1.0.so:vendor/lib64/vendor.qti.hardware.radi
 lib64/vendor.qti.ims.callinfo@1.0.so:vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 lib64/vendor.qti.ims.rcsconfig@1.0.so:vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 lib64/vendor.qti.imsrtpservice@1.0.so
--priv-app/ims/ims.apk|71b2daa01887c75301f8b73ad47317c29392d383
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -398,6 +399,9 @@ vendor/lib64/lib-siputility.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so
+
+# IMS - from mata QP1A.190711.107
+-app/ims/ims.apk|0f1e907bb3a0c2631f54310860711aa955710bfc
 
 # IPA
 vendor/firmware/ipa_fws.b00
@@ -572,6 +576,7 @@ vendor/radio/qcril_database/qcril.db
 vendor/radio/qcril_database/upgrade/0_initial.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/5_version_intro.sql
+
 
 # Sensors
 vendor/bin/sensors.qti
