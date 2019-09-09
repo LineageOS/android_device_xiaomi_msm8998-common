@@ -48,6 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.track.enable=false \
     vendor.audio.parser.ip.buffer.size=0 \
     vendor.audio.safx.pbe.enabled=false \
+    vendor.audio.spkr_prot.tx.sampling_rate=48000 \
     vendor.audio.tunnel.encode=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
