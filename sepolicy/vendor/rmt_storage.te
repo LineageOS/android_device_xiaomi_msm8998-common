@@ -1,1 +1,2 @@
-allow rmt_storage debugfs_rmts:file rw_file_perms;
+r_dir_file(rmt_storage, sysfs_data)
+r_dir_file(rmt_storage, sysfs_ssr)
