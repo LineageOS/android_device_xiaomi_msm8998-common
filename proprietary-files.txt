@@ -236,7 +236,7 @@ vendor/lib64/libwqe.so
 # DPM
 bin/dpmd
 etc/dpm/dpm.conf
-etc/init/dpmd.rc
+etc/init/dpmd.rc|1d4a509a2846750b92caa78b224ee72e585d73f2
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar
