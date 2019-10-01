@@ -25,9 +25,6 @@
 /(vendor|system/vendor)/bin/mtd@1.2                           u:object_r:hal_mtdservice_default_exec:s0
 /(vendor|system/vendor)/bin/tidad@1.1                         u:object_r:hal_tidaservice_default_exec:s0
 
-# Remote storage
-/sys/kernel/debug/rmt_storage/rmts                            u:object_r:debugfs_rmts:s0
-
 # Sensors
 /(vendor|system/vendor)/bin/init\.panel_info\.sh              u:object_r:qti_init_shell_exec:s0
 /(mnt/vendor)/persist/PRSensorData\.txt                       u:object_r:sensors_persist_file:s0
