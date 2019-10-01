@@ -1,1 +1,0 @@
-allow hal_gnss_qti location_data_file:dir create_file_perms;
