@@ -59,6 +59,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+    lib64/libwfdnative.so)
+        patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
     vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-service.rc)
         sed -i '/group/ i\    user system' "${2}"
         ;;
@@ -67,6 +70,9 @@ function blob_fixup() {
         ;;
     vendor/etc/permissions/qcrilhook.xml)
         sed -i 's|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g' "${2}"
+        ;;
+    vendor/lib/hw/camera.msm8998.so)
+        patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
     vendor/lib/libFaceGrade.so)
         patchelf --remove-needed "libandroid.so" "${2}"
