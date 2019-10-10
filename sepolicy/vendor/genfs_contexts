@@ -1,4 +1,0 @@
-# Graphics
-genfscon sysfs /devices/soc/8c0000.qcom,msm-cam               u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/soc/caa0000.qcom,jpeg                 u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/soc/caa4000.qcom,fd                   u:object_r:sysfs_graphics:s0
