@@ -342,15 +342,15 @@ vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libRSDriver_adreno.so
 
-# Graphics (SDM)
-vendor/lib/libqseed3.so
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
--vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Graphics (SDM) - from DRG - QKQ1.190828.002
+vendor/lib/libqseed3.so|f1c5c5e2db7cf1bf1cd6782af3476ec721c525e7
+-vendor/lib/libsdm-disp-vndapis.so|15a98ef885dbd29935b1107d7a2988ae495abb87
+vendor/lib64/libqseed3.so|24ae4dfe5d9fa27a858b64dfafd1c713da6e6fde
+vendor/lib64/libsdm-color.so|ed022cfcc1546c11b82991986e0a938464400858
+vendor/lib64/libsdm-diag.so|6eb99b83036f917070393fa067eaebc50a5ff307
+-vendor/lib64/libsdm-disp-vndapis.so|ba4978c373f9892d884d07c4cf25dba9d73fda1f
+vendor/lib64/libsdmextension.so|264c00a0920d291700b2948b9337037684986921
+vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
 # Graphics firmware
 vendor/firmware/a530_pfp.fw
