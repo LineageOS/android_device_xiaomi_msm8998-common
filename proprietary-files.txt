@@ -246,7 +246,7 @@ lib64/libdpmctmgr.so
 lib64/libdpmfdmgr.so
 lib64/libdpmframework.so
 lib64/libdpmtcm.so
--priv-app/dpmserviceapp/dpmserviceapp.apk
+-priv-app/dpmserviceapp/dpmserviceapp.apk|c7f44a8e0cad1bd37d36034a30fd8514ce825fc0
 vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
