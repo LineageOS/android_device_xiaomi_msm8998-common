@@ -3,6 +3,9 @@ camera.dual.mode                                              u:object_r:camera_
 persist.camera.                                               u:object_r:camera_prop:s0
 persist.vendor.camera.                                        u:object_r:camera_prop:s0
 
+# cnss-daemon
+persist.vendor.wigig.npt.enable   u:object_r:cnss_prop:s0
+
 # Fingerprint
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
