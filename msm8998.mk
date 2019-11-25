@@ -369,10 +369,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
