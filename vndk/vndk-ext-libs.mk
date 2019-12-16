@@ -20,17 +20,25 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libaudiomanager \
     libaudiopolicy \
     libbinder \
+    libbinderthreadstate \
+    libbufferhub \
+    libbufferhubqueue \
     libcamera_client \
     libft2 \
+    libgui \
     libharfbuzz_ng \
     libheif \
     libicuuc \
+    libinput \
     libmedia \
     libmediametrics \
     libmediautils \
     libmemunreachable \
     libminikin \
     libnblog \
+    libpackagelistparser \
+    libpdx_default_transport \
+    libselinux \
     libsonivox \
     libvibrator
 
