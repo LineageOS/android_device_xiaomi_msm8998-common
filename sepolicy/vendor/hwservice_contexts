@@ -7,6 +7,7 @@ com.fingerprints.extension::IFingerprintCalibration           u:object_r:hal_fin
 com.fingerprints.extension::IFingerprintSenseTouch            u:object_r:hal_fingerprint_hwservice:s0
 
 # NFC
+vendor.nxp.nxpese::INxpEse                                    u:object_r:nxpese_hwservice:s0
 vendor.nxp.nxpnfc::INxpNfc                                    u:object_r:nxpnfc_hwservice:s0
 
 # Mlipay
