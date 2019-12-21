@@ -17,10 +17,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msm8998 u:object_r:hal_light_default_exec:s0
 
 # Mlipay
-/(vendor|system/vendor)/bin/fidoca                            u:object_r:hal_mfidoca_default_exec:s0
 /(vendor|system/vendor)/bin/mlipayd@1.1                       u:object_r:hal_mlipay_default_exec:s0
-/(vendor|system/vendor)/bin/mtd@1.2                           u:object_r:hal_mtdservice_default_exec:s0
-/(vendor|system/vendor)/bin/tidad@1.1                         u:object_r:hal_tidaservice_default_exec:s0
 
 # Root extra symlink
 /persist                                                      u:object_r:mnt_vendor_file:s0

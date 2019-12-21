@@ -62,9 +62,6 @@ function blob_fixup() {
     lib64/libwfdnative.so)
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
-    vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-service.rc)
-        sed -i '/group/ i\    user system' "${2}"
-        ;;
     vendor/etc/permissions/qti_libpermissions.xml)
         sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
         ;;
