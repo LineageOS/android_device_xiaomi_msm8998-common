@@ -1,5 +1,2 @@
 # HALs
-hal_attribute(mfidoca)
 hal_attribute(mlipay)
-hal_attribute(mtdservice)
-hal_attribute(tidaservice)
