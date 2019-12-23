@@ -149,6 +149,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk )
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
