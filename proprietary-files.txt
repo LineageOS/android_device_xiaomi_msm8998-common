@@ -605,7 +605,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
+-vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 
