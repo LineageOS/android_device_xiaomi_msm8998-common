@@ -1,2 +1,0 @@
-# DPM
-/system/bin/dpmd                                u:object_r:dpmd_exec:s0
