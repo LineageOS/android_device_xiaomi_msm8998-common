@@ -1,4 +1,7 @@
 set_prop(rild, system_radio_prop);
 
-dontaudit rild tombstone_data_file:dir search;
-dontaudit rild vendor_file:file ioctl;
+typeattribute rild data_between_core_and_vendor_violators;
+allow rild tombstone_data_file:dir rw_dir_perms;
+allow rild tombstone_data_file:file rw_file_perms;
+
+allow rild vendor_file:file ioctl;
