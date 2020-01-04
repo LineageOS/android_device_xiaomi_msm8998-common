@@ -1,1 +1,0 @@
-dontaudit hal_memtrack_default sysfs_kgsl:lnk_file read;
