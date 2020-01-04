@@ -8,6 +8,7 @@ allow thermal-engine thermal_data_file:file create_file_perms;
 allow thermal-engine thermal_decrypt_file:file create_file_perms;
 
 allow thermal-engine self:capability { chown fowner };
+dontaudit thermal-engine self:capability dac_override;
 
 set_prop(thermal-engine, thermal_prop);
 
