@@ -132,8 +132,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.dpm.feature=1 \
-    persist.vendor.dpm.nsrm.bkg.evt=3955
+    persist.vendor.dpm.feature=0
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
