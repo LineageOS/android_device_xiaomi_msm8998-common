@@ -1,8 +1,8 @@
 #!/vendor/bin/sh
 
 # data format:
-# wlan0=a89cedb9c066
-WLAN_MAC_DATA_PATH="/data/vendor/mac_addr/wlan_mac.bin"
+# hex binary file containing the mac
+WLAN_MAC_HEX_PATH="/mnt/vendor/persist/wlan_bt/wlan.mac"
 
 # data format:
 # Intf0MacAddress=00AA00BB00CC
@@ -10,33 +10,12 @@ WLAN_MAC_DATA_PATH="/data/vendor/mac_addr/wlan_mac.bin"
 # END
 WLAN_MAC_PERSIST_PATH="/mnt/vendor/persist/wlan_mac.bin"
 
-function wait_for_file() {
-    file="${1}"
-    max_retries=10
-    retries=0
-
-    while [ ! -f "${file}" ]; do
-        retries=$((retries + 1))
-
-        if [ "${retries}" -eq "${max_retries}" ]; then
-            return 1
-        fi
-
-        sleep 1
-    done
-
-    return 0
-}
-
-if ! wait_for_file "${WLAN_MAC_DATA_PATH}"; then
+if [ ! -s "${WLAN_MAC_HEX_PATH}" ]; then
     exit
 fi
 
-# Read file contents
-raw_mac_data=$(cat "${WLAN_MAC_DATA_PATH}")
-
-# Strip wlan0= from the string
-raw_mac="${raw_mac_data#*=}"
+# Read the mac from persist
+raw_mac=$(xxd -p $WLAN_MAC_HEX_PATH)
 
 # Convert to decimal
 dec_mac=$(printf "%d" "0x$raw_mac")
