@@ -11,11 +11,3 @@ on post-fs-data
     mkdir /data/vendor/goodix 0770 system system
     mkdir /mnt/vendor/persist/fpc 0770 system system
     chown system system /data/vendor
-    start vendor.move_fingerprint_data
-
-service vendor.move_fingerprint_data /system/bin/move_fingerprint_data.sh
-    class main
-    user system
-    group system
-    disabled
-    oneshot
