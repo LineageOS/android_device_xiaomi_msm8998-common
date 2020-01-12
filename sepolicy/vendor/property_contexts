@@ -5,8 +5,14 @@ camera.dual.mode                                              u:object_r:camera_
 camera.facebeauty.                                            u:object_r:camera_prop:s0
 camera.IMX298.actuator.                                       u:object_r:camera_prop:s0
 camera.s5k3m3.actuator.                                       u:object_r:camera_prop:s0
+cameradaemon.SaveMemAtBoot                                    u:object_r:camera_prop:s0
+cpp.set.clock                                                 u:object_r:camera_prop:s0
+disable.cpp.power.collapse                                    u:object_r:camera_prop:s0
 persist.camera.                                               u:object_r:camera_prop:s0
 persist.vendor.camera.                                        u:object_r:camera_prop:s0
+ubwc.no.compression                                           u:object_r:camera_prop:s0
+vidc.enc.dcvs.extra-buff-count                                u:object_r:camera_prop:s0
+video.disable.ubwc                                            u:object_r:camera_prop:s0
 
 # cnss-daemon
 persist.vendor.wigig.npt.enable                               u:object_r:cnss_prop:s0
