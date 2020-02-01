@@ -47,9 +47,6 @@ vendor/lib/libhwdaphal.so
 vendor/lib/libqtigef.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdirac.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
 
 # Bluetooth
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
