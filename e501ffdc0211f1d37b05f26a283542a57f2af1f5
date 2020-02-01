@@ -22,6 +22,30 @@
       "revId": "e501ffdc0211f1d37b05f26a283542a57f2af1f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d3b03c1_8db80b7f",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2020-02-01T13:46:29Z",
+      "side": 0,
+      "message": "oh, right. libgf_hal.so still references that.",
+      "parentUuid": "081314cd_934b974f",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 98
+      },
+      "revId": "e501ffdc0211f1d37b05f26a283542a57f2af1f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
