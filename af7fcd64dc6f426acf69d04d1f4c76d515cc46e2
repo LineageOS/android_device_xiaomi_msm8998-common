@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a84e6320_0cebf8ab",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 18061
+      },
+      "writtenOn": "2020-02-02T16:58:27Z",
+      "side": 1,
+      "message": "Should \"/system/priv-app/SystemUI/SystemUI.apk\" be \"/product/priv-app/SystemUI/SystemUI.apk\" here?",
+      "revId": "af7fcd64dc6f426acf69d04d1f4c76d515cc46e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
