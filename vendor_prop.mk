@@ -23,8 +23,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
     audio.offload.min.duration.secs=15 \
     audio.offload.video=true \
-    audio.sys.noisy.broadcast.delay=600 \
-    audio.sys.offload.pstimeout.secs=3 \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
@@ -98,18 +96,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee \
-    ro.bluetooth.hfp.ver=1.6
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.xm.green.b=0.96 \
     persist.camera.xm.green.r=0.97 \
-    persist.ts.rtmakeup=false \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.set.afd=4 \
     persist.vendor.dualcam.lpm.enable=1 \
-    vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
     vidc.enc.dcvs.extra-buff-count=2
 
 # CNE
@@ -209,10 +204,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
-
-# WFD
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.wfd.virtual=0
 
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
