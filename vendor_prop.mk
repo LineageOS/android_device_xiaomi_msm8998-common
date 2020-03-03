@@ -98,14 +98,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee \
-    ro.bluetooth.hfp.ver=1.6
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.xm.green.b=0.96 \
     persist.camera.xm.green.r=0.97 \
-    persist.ts.rtmakeup=false \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.set.afd=4 \
     persist.vendor.dualcam.lpm.enable=1 \
