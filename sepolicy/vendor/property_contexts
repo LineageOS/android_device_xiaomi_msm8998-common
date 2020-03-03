@@ -14,8 +14,8 @@ ro.boot.fpsensor                                              u:object_r:vendor_
 persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
 
 # Radio
-ril.fake_bs_flag0                                             u:object_r:system_radio_prop:s0
-ril.fake_bs_flag1                                             u:object_r:system_radio_prop:s0
+ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
+ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
 
 # Sensors
 sys.panel.                                                    u:object_r:sensors_panel_prop:s0
