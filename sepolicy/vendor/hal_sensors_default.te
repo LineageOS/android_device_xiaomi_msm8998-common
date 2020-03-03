@@ -1,0 +1,1 @@
+set_prop(hal_sensors_default, vendor_sensors_prop);

@@ -1,12 +1,18 @@
 # Camera
+camera.boke.                                                  u:object_r:camera_prop:s0
+camera.cts.                                                   u:object_r:camera_prop:s0
 camera.dual.mode                                              u:object_r:camera_prop:s0
+camera.facebeauty.                                            u:object_r:camera_prop:s0
+camera.IMX298.actuator.                                       u:object_r:camera_prop:s0
+camera.s5k3m3.actuator.                                       u:object_r:camera_prop:s0
 persist.camera.                                               u:object_r:camera_prop:s0
 persist.vendor.camera.                                        u:object_r:camera_prop:s0
 
 # cnss-daemon
-persist.vendor.wigig.npt.enable   u:object_r:cnss_prop:s0
+persist.vendor.wigig.npt.enable                               u:object_r:cnss_prop:s0
 
 # Fingerprint
+gf.debug.                                                     u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
 
@@ -14,12 +20,21 @@ ro.boot.fpsensor                                              u:object_r:vendor_
 persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
 
 # Radio
+ro.build.software.version                                     u:object_r:qcom_ims_prop:s0
 ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
 ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
 
 # Sensors
+persist.sys.sensors.                                          u:object_r:vendor_sensors_prop:s0
+ro.xiaomi.sar_fusion                                          u:object_r:vendor_sensors_prop:s0
 sys.panel.                                                    u:object_r:sensors_panel_prop:s0
 
 # Thermal engine
 persist.sys.thermal.                                          u:object_r:thermal_prop:s0
 sys.thermal.                                                  u:object_r:thermal_prop:s0
+
+# vendor_default_prop
+# default_prop isn't accessible from vendor components.
+# So vendor_default_prop should be marked.
+gpu.stats.debug.level                                         u:object_r:vendor_default_prop:s0
+sdm.                                                          u:object_r:vendor_default_prop:s0
