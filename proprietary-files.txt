@@ -360,7 +360,7 @@ vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
 # IMS
--app/uceShimService/uceShimService.apk|b08e5b896f8238d4c417ffb542deb21a51ab388d
+-app/uceShimService/uceShimService.apk|0e749475132f37919b39cc71ad2c3381b4066bf2
 lib64/com.qualcomm.qti.imscmservice@2.0.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
 lib64/com.qualcomm.qti.imscmservice@2.1.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
 lib64/com.qualcomm.qti.uceservice@2.0.so:vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
