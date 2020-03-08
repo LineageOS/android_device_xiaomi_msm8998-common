@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b2fc80a_602a2418",
+        "filename": "sepolicy/vendor/property_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2020-03-08T11:14:39Z",
+      "side": 1,
+      "message": "missing gf.debug.dump_data",
+      "revId": "988ace107f2048764cb43ed47ee2aa8261cf510d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
