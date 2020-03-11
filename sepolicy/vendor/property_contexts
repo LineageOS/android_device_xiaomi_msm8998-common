@@ -18,6 +18,7 @@ video.disable.ubwc                                            u:object_r:camera_
 persist.vendor.wigig.npt.enable                               u:object_r:cnss_prop:s0
 
 # Fingerprint
+fpc_kpi                                                       u:object_r:vendor_fp_prop:s0
 gf.debug.                                                     u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
