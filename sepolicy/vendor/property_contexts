@@ -30,6 +30,10 @@ ro.build.software.version                                     u:object_r:qcom_im
 ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
 ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
 
+# Recovery
+ro.build.expect.firmware                                      u:object_r:exported_default_prop:s0
+ro.build.expect.trustzone                                     u:object_r:exported_default_prop:s0
+
 # Sensors
 persist.sys.sensors.                                          u:object_r:vendor_sensors_prop:s0
 ro.xiaomi.sar_fusion                                          u:object_r:vendor_sensors_prop:s0
