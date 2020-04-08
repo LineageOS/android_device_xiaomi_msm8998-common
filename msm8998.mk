@@ -109,9 +109,9 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio@6.0-impl:32 \
-    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@6.0-impl:32 \
+    android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl:32
 
 PRODUCT_PACKAGES += \
