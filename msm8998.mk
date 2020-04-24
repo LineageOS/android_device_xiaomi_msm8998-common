@@ -384,6 +384,7 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libwpa_client \
     hostapd \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
