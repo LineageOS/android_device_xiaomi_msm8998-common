@@ -294,6 +294,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat
+
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
 include $(LOCAL_PATH)/vendor_prop.mk
