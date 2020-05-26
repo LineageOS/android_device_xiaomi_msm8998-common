@@ -142,7 +142,7 @@ on init
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
 on fs
-    mount_all /vendor/etc/fstab.qcom --early
+    mount_all /vendor/etc/fstab.qcom
     swapon_all /vendor/etc/fstab.qcom
 
     restorecon_recursive /mnt/vendor/persist
@@ -177,13 +177,6 @@ on late-fs
     write /sys/block/sde/queue/iostats 0
     write /sys/block/sde/queue/nr_requests 256
     setprop sys.io.scheduler "cfq"
-
-    # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
-    # In such case, init won't responce the property_set from hwservicemanager and then
-    # cause services for bootanim not running.
-    wait_for_prop hwservicemanager.ready true
-    # Mount RW partitions which need run fsck
-    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
     # Create directory for thermal engine
