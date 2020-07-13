@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-BOARD_VENDOR := xiaomi
-
 PLATFORM_PATH := device/xiaomi/msm8998-common
 
 # Architecture
