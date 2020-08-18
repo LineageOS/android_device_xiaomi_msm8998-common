@@ -1,11 +1,11 @@
 # cnss-daemon
-type cnss_prop, property_type;
+vendor_internal_prop(cnss_prop)
 
 # Fingerprint
-type vendor_fp_prop, property_type;
+vendor_public_prop(vendor_fp_prop)
 
 # Sensors
-type sensors_panel_prop, property_type;
+vendor_internal_prop(sensors_panel_prop)
 
 # Thermal engine
-type thermal_prop, property_type;
+vendor_internal_prop(thermal_prop)
