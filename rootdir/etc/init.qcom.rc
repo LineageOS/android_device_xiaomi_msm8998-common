@@ -69,6 +69,10 @@ on post-fs-data
     # Create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
 
+    # Create NFC storage
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
+
     # Create QTI dir for logs
     mkdir /data/vendor/dataqti 0770 radio radio
 
