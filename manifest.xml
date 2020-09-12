@@ -549,7 +549,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <version>26.0</version>
-    </sepolicy>
 </manifest>
