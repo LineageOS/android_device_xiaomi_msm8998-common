@@ -67,8 +67,6 @@
         </interface>
         <fqname>@1.1::ICryptoFactory/widevine</fqname>
         <fqname>@1.1::IDrmFactory/widevine</fqname>
-        <fqname>@1.3::ICryptoFactory/clearkey</fqname>
-        <fqname>@1.3::IDrmFactory/clearkey</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
