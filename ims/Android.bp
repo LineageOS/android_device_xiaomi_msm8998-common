@@ -15,7 +15,7 @@
 //
 
 java_library {
-    name: "ims-ext-common_system",
+    name: "ims-ext-common_system.xiaomi_msm8998",
     installable: true,
     static_libs: [
         "ims-ext-common",

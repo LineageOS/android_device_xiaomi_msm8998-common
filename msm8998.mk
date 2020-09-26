@@ -220,10 +220,10 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common_system
+    ims-ext-common_system.xiaomi_msm8998
 
 PRODUCT_BOOT_JARS += \
-    ims-ext-common_system
+    ims-ext-common_system.xiaomi_msm8998
 
 # IRQ
 PRODUCT_COPY_FILES += \
