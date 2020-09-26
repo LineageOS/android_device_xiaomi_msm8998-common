@@ -1,1 +1,1 @@
-allow msm_irqbalanced self:capability { setuid setgid };
+allow vendor_msm_irqbalanced self:capability { setuid setgid };
