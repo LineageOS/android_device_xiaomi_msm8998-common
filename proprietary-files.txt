@@ -204,8 +204,8 @@ vendor/lib/libois_bu63164.so
 # Charger
 vendor/bin/hvdcp_opti
 
-# CNEService - from mata QP1A.190711.107
--priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
+# CNEService - from mata - QP1A.190711.107
+-priv-app/CNEService/CNEService.apk:product/priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
 
 # CNE
 lib64/vendor.qti.hardware.data.latency@1.0.so:vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
@@ -360,24 +360,24 @@ vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
 # IMS
--app/uceShimService/uceShimService.apk|0e749475132f37919b39cc71ad2c3381b4066bf2
+-app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|0e749475132f37919b39cc71ad2c3381b4066bf2
 lib64/com.qualcomm.qti.imscmservice@2.0.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
 lib64/com.qualcomm.qti.imscmservice@2.1.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
 lib64/com.qualcomm.qti.uceservice@2.0.so:vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libdiag_system.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
+lib64/lib-imscamera.so:product/lib64/lib-imscamera.so
+lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so:product/lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so
+lib64/libdiag_system.so:product/lib64/libdiag_system.so
+lib64/libimscamera_jni.so:product/lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so:product/lib64/libimsmedia_jni.so
+lib64/librcc.so:product/lib64/librcc.so
 lib64/vendor.qti.hardware.radio.ims@1.0.so:vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
 lib64/vendor.qti.ims.callinfo@1.0.so:vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 lib64/vendor.qti.ims.rcsconfig@1.0.so:vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
-lib64/vendor.qti.imsrtpservice@1.0.so
--priv-app/ims/ims.apk|71b2daa01887c75301f8b73ad47317c29392d383
+lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so
+-priv-app/ims/ims.apk:product/priv-app/ims/ims.apk|71b2daa01887c75301f8b73ad47317c29392d383
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -505,11 +505,11 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
 # RIL
--app/datastatusnotification/datastatusnotification.apk:vendor/app/datastatusnotification/datastatusnotification.apk
--app/QtiTelephonyService/QtiTelephonyService.apk:vendor/app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
-framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
-framework/qti-telephony-common.jar
+-app/datastatusnotification/datastatusnotification.apk:product/app/datastatusnotification/datastatusnotification.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk
+etc/permissions/qcrilhook.xml:product/etc/permissions/qcrilhook.xml
+framework/qcrilhook.jar:product/framework/qcrilhook.jar
+framework/qti-telephony-common.jar:product/framework/qti-telephony-common.jar
 lib64/vendor.qti.hardware.radio.am@1.0.so:vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
 lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so:vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 lib64/vendor.qti.hardware.radio.lpa@1.0.so:vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
@@ -519,7 +519,7 @@ lib64/vendor.qti.hardware.radio.uim@1.0.so:vendor/lib64/vendor.qti.hardware.radi
 lib64/vendor.qti.hardware.radio.uim@1.1.so:vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
 lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so:vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so:vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qti
