@@ -20,6 +20,8 @@ package org.lineageos.settings.doze;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.PowerManager;
+import android.os.SystemClock;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
@@ -30,6 +32,7 @@ import static android.provider.Settings.Secure.DOZE_ENABLED;
 
 public final class Utils {
 
+    protected static final String RAISE_TO_WAKE_KEY = "raise_to_wake";
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
@@ -81,13 +84,23 @@ public final class Utils {
 
     protected static void launchDozePulse(Context context) {
         if (DEBUG) Log.d(TAG, "Launch doze pulse");
-        context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
-                new UserHandle(UserHandle.USER_CURRENT));
+
+        if (isRaiseToWakeEnabled(context)) {
+            PowerManager mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+            mPowerManager.wakeUp(SystemClock.uptimeMillis(), PowerManager.WAKE_REASON_GESTURE, TAG);
+        } else {
+            context.sendBroadcastAsUser(
+                    new Intent(DOZE_INTENT), new UserHandle(UserHandle.USER_CURRENT));
+        }
     }
 
     protected static boolean isGestureEnabled(Context context, String gesture) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(gesture, false);
+    }
+
+    protected static boolean isRaiseToWakeEnabled(Context context) {
+        return isGestureEnabled(context, RAISE_TO_WAKE_KEY);
     }
 
     protected static boolean isPickUpEnabled(Context context) {
