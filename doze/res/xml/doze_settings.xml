@@ -16,6 +16,12 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <SwitchPreference
+        android:key="raise_to_wake"
+        android:defaultValue="false"
+        android:title="@string/raise_to_wake_title"
+        android:summary="@string/raise_to_wake_summary" />
+
     <PreferenceCategory
         android:key="tilt_sensor"
         android:title="@string/tilt_sensor_title">
