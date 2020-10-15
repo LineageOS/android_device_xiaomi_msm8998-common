@@ -22,6 +22,29 @@
       "revId": "ef2ff875a5a106f9964447299c5470636f807d44",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34de4541_8f808321",
+        "filename": "doze/src/org/lineageos/settings/doze/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2020-10-15T11:58:02Z",
+      "side": 1,
+      "message": "also m prefix is for private class members.",
+      "range": {
+        "startLine": 89,
+        "startChar": 25,
+        "endLine": 89,
+        "endChar": 38
+      },
+      "revId": "ef2ff875a5a106f9964447299c5470636f807d44",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
