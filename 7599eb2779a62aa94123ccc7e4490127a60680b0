@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea520536_e86449eb",
+        "filename": "doze/src/org/lineageos/settings/doze/Utils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-10-17T14:47:58Z",
+      "side": 1,
+      "message": "Maybe also rename this method? wakeOrLaunchDozePulse?",
+      "range": {
+        "startLine": 85,
+        "startChar": 26,
+        "endLine": 85,
+        "endChar": 41
+      },
+      "revId": "7599eb2779a62aa94123ccc7e4490127a60680b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
