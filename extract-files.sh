@@ -92,6 +92,7 @@ function blob_fixup() {
             ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+            sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
             ;;
         vendor/lib/libFaceGrade.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
