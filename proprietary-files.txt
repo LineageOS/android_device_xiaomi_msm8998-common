@@ -538,7 +538,7 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
 # RIL - from cmi V12.1.2.0.RJACNXM
-system_ext/framework/qti-telephony-common.jar|98951c48563c5846a58c9a3c4c254f32d0741f36
+system_ext/framework/qti-telephony-common.jar|10309d3b13841a5ae581ee2ce92325aa8bd1f8bf
 
 # RIL
 -app/datastatusnotification/datastatusnotification.apk:system_ext/app/datastatusnotification/datastatusnotification.apk
