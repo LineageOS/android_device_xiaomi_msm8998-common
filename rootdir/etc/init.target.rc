@@ -274,14 +274,14 @@ service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user radio
     socket ims_qmid stream 0660 system radio
-    group radio log diag
+    group radio log vendor_qti_diag
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     class main
     user radio
     socket ims_datad stream 0660 system radio
-    group radio wifi inet log diag
+    group radio wifi inet log vendor_qti_diag
     disabled
     writepid /dev/cpuset/system-background/tasks
 
@@ -300,7 +300,7 @@ service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
 service vendor.imsrcsservice /vendor/bin/imsrcsd
     class main
     user radio
-    group radio diag inet log wakelock
+    group radio vendor_qti_diag inet log wakelock
     writepid /dev/cpuset/system-background/tasks
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
