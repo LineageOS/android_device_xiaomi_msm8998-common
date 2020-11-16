@@ -204,49 +204,78 @@ vendor/lib/libois_bu63164.so
 # Charger
 vendor/bin/hvdcp_opti
 
-# CNEService - from mata - QP1A.190711.107
--priv-app/CNEService/CNEService.apk:product/priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
+# CNE - from jasmine V11.0.15.0.QDIMIXM
+etc/cne/Nexus/ATT/ATT_profiles.xml|a0039cb3a4c5a4ca1adf897904b61c91e32d06f7|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
+etc/cne/Nexus/ROW/ROW_profiles.xml|e3907ff71cbbe0f1073ec1bf0223d26c8282aa35|238e785e9674b27c4b2365958d127533d7293132
+etc/cne/Nexus/VZW/VZW_profiles.xml|0d35b3266ea656d8868ae8f5d7e938f4859e9b0a|0f63b632e3a3f114def7aeadaabd13851c8ceec5
+-vendor/app/CneApp/CneApp.apk|2356a0335ab8e0106832a9325f972467654fd1f0
+-vendor/app/IWlanService/IWlanService.apk|450aa6da382446125d06f328f8c1a0e2e33e52bb
+vendor/bin/cnd|ca653a8064fe83a12a12798a73c9cc8c1fecf758
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|fb08e04f57797c5684bf734f7ce4bb4968859b18
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|eb726ad1a42b9b78b9ee3b821fc108611bc9eeac
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|be97b46b0d07ee2f6ebcc677d8099ed2140d5d85
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|e7ca213d0998cb3a6a603ad3eca7bda69830ff55
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml|0130dfd8326ee710bf4e15718ede87c49a85b763
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml|e05b935d7ccf48d306b71c719b2e4df83187d9c0
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml|f1b33204799268eda78dd8314f26abf2e37431e2
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml|19db16f62dabb806a62f192858a9d52b5bc2a064
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml|1fcc57b1fa4dbbc7d250e8dd92acf1527d447eb3
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|169a5209000e357a1a3183e8e5bfdf6fd07c2787
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml|7be0614cf0116c39b736c58fe5eca36838aeb3db
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml|cc62517e6c37e12ee1ebebbb27f9c22878749be3
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|4be4060e8ac2d9fcea490feec7938cadcff46e1f
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml|b87542b9284efe4c2bd0ae868bb9a765c2c3dbc5
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|96101f6b01436a02572c67a469ff67ccfb738874
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|cef14ff8a160c7ad719b85d024a4b3301c3638d0
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|8d6773a4c418d0dcc4dc9096017d2681c7a1defe
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|c89d3c062790b442cbe941cafc641a4e322f2d59
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|ba14a9df975cf872ed0cbe28bee8fac63cd848d4
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c8fb974
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
+vendor/etc/init/cnd.rc|ff205cff8e00ec6805fd1e19f3ca6ff86700cbb6
+vendor/lib64/libcne.so|1344c4749026a55eee9e3a814c7a71b6733e08fb
+vendor/lib64/libcneapiclient.so|a99c0ebb180bca17ed05c2ac348ee8e16227a5a3
+vendor/lib64/libcneoplookup.so|99dbc1b2ae37181ae49a72d581fe53abe8207c42
+vendor/lib64/libcneqmiutils.so|f2fc09230fdf877020f734451c13a6adb749838d
+vendor/lib64/libwms.so|19a39c776120515292dc821599cf504a5fd600b3
+vendor/lib64/libwqe.so|e762bb803cdb4fa55224df58e06c3a5bca5f36a7
+vendor/lib64/libxml.so|9fa23668a2ab5fb0aff7e694fe44fb050b20f83d
+vendor/lib64/vendor.qti.data.factory@2.0.so|428b56ac165ba30c450a1e191db9b386752f653b
+vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so|fc8634f7cf90524c24c45d8771eec888d652db92
+vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so|ffa8e4013bc1bd8bd44e3d64c278be0d36274f6e
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so|f4e1e9991fa90546dfe0d4f9c7da8441b6a0af35
+vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|e2f77b104fbc3abe7423fc24743051b69cc887be
+vendor/lib64/vendor.qti.hardware.data.connection@1.1.so|7b2e00bfbc40280a520dffc3eb99c68c1832761d
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|bf7766fbd49a3aa3426a93ab82bcd825cc72334a
+vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so|c471659fc3fb56dcdcda183e080397a737e4708b
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|ff7a319e51ddd4de14af28a84f7bca5e82547f6e
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|90f1106f7462a9e01721e1159ed3301579adee07
+vendor/lib64/vendor.qti.latency@2.0.so|91a8b05b20485057ee9f42c55ce70207ef6af761
 
-# CNE
-lib64/vendor.qti.hardware.data.latency@1.0.so:vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
-lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
-lib64/vendor.qti.latency@2.0.so:vendor/lib64/vendor.qti.latency@2.0.so
-vendor/bin/cnd
-vendor/lib64/com.quicinc.cne.api@1.0.so
-vendor/lib64/com.quicinc.cne.api@1.1.so
-vendor/lib64/com.quicinc.cne.constants@1.0.so
-vendor/lib64/com.quicinc.cne.constants@2.0.so
-vendor/lib64/com.quicinc.cne.constants@2.1.so
-vendor/lib64/com.quicinc.cne.server@2.0.so
-vendor/lib64/com.quicinc.cne.server@2.1.so
-vendor/lib64/com.quicinc.cne.server@2.2.so
-vendor/lib64/com.quicinc.cne.server@2.3.so
-vendor/lib64/vendor.qti.data.factory@1.0.so
-vendor/lib64/vendor.qti.data.factory@1.1.so
-vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
-vendor/lib64/libcne.so
-vendor/lib64/libcneapiclient.so
-vendor/lib64/libcneoplookup.so
-vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
-
-# DPM
-bin/dpmd
-etc/dpm/dpm.conf
-etc/init/dpmd.rc
-etc/permissions/com.qti.dpmframework.xml
-etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-lib64/com.qualcomm.qti.dpm.api@1.0.so
-lib64/libdpmctmgr.so
-lib64/libdpmfdmgr.so
-lib64/libdpmframework.so
-lib64/libdpmtcm.so
--priv-app/dpmserviceapp/dpmserviceapp.apk|970ea577e00a2f7113deb7be7f0fce003e4ec59e
-vendor/bin/dpmQmiMgr
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
-vendor/lib64/libdpmqmihal.so
+# DPM - from jasmine V11.0.15.0.QDIMIXM
+product/bin/dpmd|49caa8e7d8af8055efdd7ebc0d7f7d67bc600041
+product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
+product/etc/init/dpmd.rc|7f95195a89fddce06b93006a737701270e91f669
+product/etc/permissions/com.qti.dpmframework.xml|4613f8b8629d0b823e6aaab45d399ac30da06c09
+product/etc/permissions/dpmapi.xml|0991b3069308620cfcad53873e9f09af181b981d
+product/framework/com.qti.dpmframework.jar|e39a7e06af2d1e95a3724c19c36b8716277f53a1
+product/framework/dpmapi.jar|4696df9793ad676b305d53b5d7ce65ecf74771ad
+product/lib64/com.qualcomm.qti.dpm.api@1.0.so|a763bb1bbeecb84723bff6f547a3b23fab68dee3
+product/lib64/libdpmctmgr.so|3d4b87a4937caf3a8d276f48a4f0dc2cad246c5b
+product/lib64/libdpmfdmgr.so|e809155312a05d83b323ab0be64cb393d936e52a
+product/lib64/libdpmframework.so|8fd037eb8740a468a67c78e7fa01c69b1ba3fd2a
+product/lib64/libdpmtcm.so|71a3d624602807f6fa6cbdb3a489efe9e93de634
+-product/priv-app/dpmserviceapp/dpmserviceapp.apk|9fd873c5330c03c62dfdeb6540b5984588295319
+vendor/bin/dpmQmiMgr|d536096b310a2d3f30a683c1bdcad8658db1ba52
+vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|fbff6357ee46dd6d62f490a942ff567b6ce955d1
+vendor/lib64/libdpmqmihal.so|30a170684219dd589d05ce5b446e73b7501f13e3
 
 # DRM and SEE
 vendor/bin/qseecomd
@@ -469,6 +498,10 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
+# QMI - from jasmine V11.0.15.0.QDIMIXM
+vendor/lib/libqmi_cci.so|b310d02f4e997a8867dc78bf5628db21ea61b7d4
+vendor/lib64/libqmi_cci.so|00d7bfe2ca99b9ec477235b39cb3b7b3bb501930
+
 # QMI
 etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
@@ -482,7 +515,6 @@ vendor/lib/libidl.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
@@ -496,7 +528,6 @@ vendor/lib64/libidl.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
-vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
