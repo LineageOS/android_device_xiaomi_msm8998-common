@@ -27,7 +27,11 @@ ro.boot.fpsensor                                              u:object_r:vendor_
 persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
 
 # Radio
+persist.sys.labtest_flag                                      u:object_r:exported_radio_prop:s0
 ro.build.software.version                                     u:object_r:qcom_ims_prop:s0
+ro.carrier.name                                               u:object_r:exported_radio_prop:s0
+ro.miui.                                                      u:object_r:exported_radio_prop:s0
+ro.product.mod_device                                         u:object_r:exported_radio_prop:s0
 ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
 ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
 
