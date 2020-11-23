@@ -65,10 +65,15 @@ function blob_fixup() {
     lib64/libwfdnative.so)
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
-    product/etc/permissions/qcrilhook.xml)
-        sed -i 's|/system/framework/qcrilhook.jar|/system/product/framework/qcrilhook.jar|g' "${2}"
+    system_ext/etc/permissions/com.qti.dpmframework.xml)
+        ;&
+    system_ext/etc/permissions/dpmapi.xml)
+        sed -i "s/\/system\/product\/framework\//\/system\/system_ext\/framework\//g" "${2}"
         ;;
-    product/lib64/lib-imsvideocodec.so)
+    system_ext/etc/permissions/qcrilhook.xml)
+        sed -i 's|/system/framework/qcrilhook.jar|/system/system_ext/framework/qcrilhook.jar|g' "${2}"
+        ;;
+    system_ext/lib64/lib-imsvideocodec.so)
         patchelf --add-needed "libui_shim.so" "${2}"
         ;;
     vendor/etc/permissions/qti_libpermissions.xml)
