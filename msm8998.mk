@@ -407,10 +407,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 
-# TextClassifier smart selection model files
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
-
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
