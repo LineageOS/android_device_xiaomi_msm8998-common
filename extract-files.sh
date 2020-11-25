@@ -71,7 +71,7 @@ function blob_fixup() {
         sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
         ;;
     system_ext/etc/permissions/qcrilhook.xml)
-        sed -i 's|/system/framework/qcrilhook.jar|/system/system_ext/framework/qcrilhook.jar|g' "${2}"
+        sed -i 's|/product/framework/qcrilhook.jar|/system/system_ext/framework/qcrilhook.jar|g' "${2}"
         ;;
     system_ext/lib64/lib-imsvideocodec.so)
         patchelf --add-needed "libui_shim.so" "${2}"
