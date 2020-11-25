@@ -540,11 +540,14 @@ vendor/lib64/libqmiservices.so
 # RIL - from cmi V12.1.2.0.RJACNXM
 system_ext/framework/qti-telephony-common.jar|10309d3b13841a5ae581ee2ce92325aa8bd1f8bf
 
+# RIL - from jasmine V11.0.15.0.QDIMIXM
+product/etc/permissions/qcrilhook.xml:system_ext/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991|4e58dc0e3d4391451fc67ad0d5e9ee5943631e54
+product/framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar|4eece9eb40a8976d2fd9a6a4d5d6dfea0c7674f5
+-product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|20c011ffc54539161fa7cc05c55c9c5ed3f936b4
+
 # RIL
 -app/datastatusnotification/datastatusnotification.apk:system_ext/app/datastatusnotification/datastatusnotification.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/qcrilhook.xml:system_ext/etc/permissions/qcrilhook.xml
-framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar
 lib64/vendor.qti.hardware.radio.am@1.0.so:vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
 lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so:vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 lib64/vendor.qti.hardware.radio.lpa@1.0.so:vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
@@ -554,7 +557,6 @@ lib64/vendor.qti.hardware.radio.uim@1.0.so:vendor/lib64/vendor.qti.hardware.radi
 lib64/vendor.qti.hardware.radio.uim@1.1.so:vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
 lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so:vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so:vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qti
