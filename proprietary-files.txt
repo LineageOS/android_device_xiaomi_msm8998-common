@@ -30,9 +30,9 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 
 # ANT+ - from LA.UM.7.2.r1-06900-sdm660.0
--lib/libantradio.so|b6b7b93dfa155de37d755542a0d66cc9f77e256c
-lib64/com.qualcomm.qti.ant@1.0.so|33d353a1077c70c3d7c013938b092e93a18d5b58
--lib64/libantradio.so|def8c83cab05b53fe70754f23cf475240a8358fd
+-lib/libantradio.so:system_ext/lib/libantradio.so|b6b7b93dfa155de37d755542a0d66cc9f77e256c
+lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so|33d353a1077c70c3d7c013938b092e93a18d5b58
+-lib64/libantradio.so:system_ext/lib64/libantradio.so|def8c83cab05b53fe70754f23cf475240a8358fd
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|5779ba85ae23ede7552a768afb8042d72f71afe2
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|94729946e6ba94dd5d24c0495661efadc7ab782e
 
