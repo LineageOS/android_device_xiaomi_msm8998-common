@@ -508,8 +508,8 @@ vendor/lib/libqmi_cci.so|b310d02f4e997a8867dc78bf5628db21ea61b7d4
 vendor/lib64/libqmi_cci.so|00d7bfe2ca99b9ec477235b39cb3b7b3bb501930
 
 # QMI
-etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
-etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
+etc/permissions/qti_libpermissions.xml:system_ext/etc/permissions/qti_libpermissions.xml
+etc/permissions/qti_permissions.xml:system_ext/etc/permissions/qti_permissions.xml
 lib64/libqminvapi.so:vendor/lib64/libqminvapi.so
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
