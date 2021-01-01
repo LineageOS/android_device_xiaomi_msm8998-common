@@ -98,6 +98,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
 
 PRODUCT_PACKAGES += \
+    audioadsprpcd \
     libaudio-resampler \
     libhfp \
     libqcompostprocbundle \
