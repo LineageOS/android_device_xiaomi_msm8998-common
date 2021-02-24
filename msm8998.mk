@@ -167,8 +167,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
     memtrack.msm8998 \
     libdisplayconfig \
-    libqdMetaData.system \
-    libtinyxml
+    libqdMetaData.system
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
@@ -212,8 +211,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libgnss \
-    libgnsspps \
+    libgnss
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
