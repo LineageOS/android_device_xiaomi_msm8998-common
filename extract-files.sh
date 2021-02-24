@@ -72,6 +72,9 @@ function blob_fixup() {
         system_ext/etc/permissions/qcrilhook.xml)
             sed -i 's|/product/framework/qcrilhook.jar|/system/system_ext/framework/qcrilhook.jar|g' "${2}"
             ;;
+        system_ext/etc/permissions/qti_libpermissions.xml)
+            sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
+            ;;
         system_ext/lib64/lib-imsvideocodec.so)
             for LIBUI_SHIM in $(grep -L "libui_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libui_shim.so" "$LIBUI_SHIM"
@@ -81,9 +84,6 @@ function blob_fixup() {
             for LIBDPM_SHIM in $(grep -L "libshim_dpmframework.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libshim_dpmframework.so" "$LIBDPM_SHIM"
             done
-            ;;
-        vendor/etc/permissions/qti_libpermissions.xml)
-            sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
             ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
