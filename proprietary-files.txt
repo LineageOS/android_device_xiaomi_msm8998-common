@@ -563,12 +563,6 @@ vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/lib/libconfigdb.so
-vendor/lib/libmdmdetect.so
-vendor/lib/libnetmgr_common.so
-vendor/lib/libnetmgr.so
-vendor/lib/libnlnetmgr.so
-vendor/lib/libxml.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
