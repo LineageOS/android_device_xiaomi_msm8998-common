@@ -211,7 +211,6 @@ etc/cne/Nexus/ATT/ATT_profiles.xml|a0039cb3a4c5a4ca1adf897904b61c91e32d06f7|33e5
 etc/cne/Nexus/ROW/ROW_profiles.xml|e3907ff71cbbe0f1073ec1bf0223d26c8282aa35|238e785e9674b27c4b2365958d127533d7293132
 etc/cne/Nexus/VZW/VZW_profiles.xml|0d35b3266ea656d8868ae8f5d7e938f4859e9b0a|0f63b632e3a3f114def7aeadaabd13851c8ceec5
 -vendor/app/CneApp/CneApp.apk|2356a0335ab8e0106832a9325f972467654fd1f0
--vendor/app/IWlanService/IWlanService.apk|450aa6da382446125d06f328f8c1a0e2e33e52bb
 vendor/bin/cnd|ca653a8064fe83a12a12798a73c9cc8c1fecf758
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
@@ -252,7 +251,6 @@ vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so|fc8634f7cf90524c24
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so|ffa8e4013bc1bd8bd44e3d64c278be0d36274f6e
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so|f4e1e9991fa90546dfe0d4f9c7da8441b6a0af35
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|bf7766fbd49a3aa3426a93ab82bcd825cc72334a
-vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so|c471659fc3fb56dcdcda183e080397a737e4708b
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|ff7a319e51ddd4de14af28a84f7bca5e82547f6e
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|90f1106f7462a9e01721e1159ed3301579adee07
 vendor/lib64/vendor.qti.latency@2.0.so|91a8b05b20485057ee9f42c55ce70207ef6af761
