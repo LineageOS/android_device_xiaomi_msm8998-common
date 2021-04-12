@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        lib/libwfdmmsink.so)
+            "${PATCHELF}" --add-needed "libshim_wfdmmsink.so" "${2}"
+            ;;
         lib64/libwfdnative.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;

@@ -425,6 +425,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libaacwrapper \
     libstagefright_enc_common \
+    libshim_wfdmmsink \
     libnl
 
 PRODUCT_BOOT_JARS += \
