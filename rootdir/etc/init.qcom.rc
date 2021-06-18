@@ -189,7 +189,7 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
@@ -205,17 +205,17 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.dataqti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 diag usb net_admin
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.sensors /vendor/bin/sensors.qti
     class main
@@ -224,14 +224,14 @@ service vendor.sensors /vendor/bin/sensors.qti
     # Grants the ability for this daemon to bind IPC router ports so it can
     # register QMI services
     capabilities NET_BIND_SERVICE
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
     capabilities NET_ADMIN
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:sys.shutdown.requested=*
     stop vendor.cnss-daemon
@@ -240,7 +240,7 @@ service vendor.loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:persist.sys.xtra-daemon.enabled=*
     restart vendor.loc_launcher
@@ -286,7 +286,7 @@ service vendor.time_daemon /vendor/bin/time_daemon
     class main
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
@@ -302,5 +302,5 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
     capabilities BLOCK_SUSPEND SYS_NICE
     ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
