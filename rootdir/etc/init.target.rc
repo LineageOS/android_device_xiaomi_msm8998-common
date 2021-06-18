@@ -259,7 +259,7 @@ service vendor.adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
