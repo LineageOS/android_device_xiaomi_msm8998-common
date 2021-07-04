@@ -327,7 +327,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # QCOM
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/system-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
@@ -421,15 +420,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libaacwrapper \
-    libmediaextractorservice \
-    libnl
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/msm8998-common/msm8998-common-vendor.mk)
