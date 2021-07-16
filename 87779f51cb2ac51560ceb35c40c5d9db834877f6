@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65198a8c_9e8d0139",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-16T11:23:06Z",
+      "side": 1,
+      "message": "It\u0027s re-enabled afterwards.",
+      "revId": "87779f51cb2ac51560ceb35c40c5d9db834877f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

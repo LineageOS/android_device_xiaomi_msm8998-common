@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3cad9eb0_aca9a9c3",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-16T11:23:06Z",
+      "side": 0,
+      "message": "Did you read the comment here?",
+      "revId": "752f89f6eb645a9b6d947da8d0ba4dc5e9a67dba",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
