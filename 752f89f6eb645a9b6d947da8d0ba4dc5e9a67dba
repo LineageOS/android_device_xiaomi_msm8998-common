@@ -16,6 +16,24 @@
       "revId": "752f89f6eb645a9b6d947da8d0ba4dc5e9a67dba",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ed8c280_45187562",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 28981
+      },
+      "writtenOn": "2021-07-16T13:27:33Z",
+      "side": 0,
+      "message": "BCL has been disabled at commit https://github.com/LineageOS/android_kernel_xiaomi_msm8998/commit/75a8ae509d56ca8c1f33c872e551558282e5570b, so leaving it here is of no use",
+      "parentUuid": "3cad9eb0_aca9a9c3",
+      "revId": "752f89f6eb645a9b6d947da8d0ba4dc5e9a67dba",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
