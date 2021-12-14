@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio@2.0-impl:32 \
     audio.bluetooth.default \
     vendor.qti.hardware.btconfigstore@1.0.vendor
@@ -149,6 +150,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.device@3.4:64 \
     android.hardware.camera.device@3.5:64 \
     android.hardware.camera.provider@2.4:64 \
@@ -190,7 +192,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl:64 \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm@1.1.vendor
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
@@ -233,6 +236,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.memory@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
@@ -279,6 +284,7 @@ PRODUCT_COPY_FILES += \
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
+    android.system.net.netd@1.1.vendor \
     libandroid_net \
     netutils-wrapper-1.0
 
@@ -332,7 +338,8 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libjson.vendor
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -355,6 +362,9 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0.vendor \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.secure_element@1.0.vendor \
     CarrierConfigOverlay \
     libril-wrapper \
     librmnetctl
