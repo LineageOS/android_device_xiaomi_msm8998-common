@@ -133,10 +133,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.perf_hint_window=50 \
     vendor.gralloc.enable_fb_ubwc=1
 
-# DPM
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.vendor.dpm.feature=1
-
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp

@@ -17,3 +17,7 @@
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
+
+# DPM
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.dpm.feature=1
