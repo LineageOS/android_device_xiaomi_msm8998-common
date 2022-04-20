@@ -16,15 +16,12 @@
 
 cc_library_shared {
     name: "libui_shim",
-
-    srcs: ["GraphicBuffer.cpp"],
     shared_libs: ["libui"],
-
-    compile_multilib: "64",
+    srcs: ["GraphicBuffer.cpp"],
+    system_ext_specific: true,
 }
 
-// libgui
-cc_library {
+cc_library_shared {
     name: "libgui_shim",
     shared_libs: [
         "libgui",
