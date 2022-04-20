@@ -108,6 +108,7 @@ function blob_fixup() {
             ;;
         vendor/lib/libminikin-v28.so)
             "${PATCHELF}" --set-soname "libminikin-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
             ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i 's|/data/misc/camera/camera_lsc_caldata.txt|/data/vendor/camera/camera_lsc_calib.txt|g' "${2}"
