@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a525c048_ed85d9bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2022-04-20T21:59:47Z",
+      "side": 1,
+      "message": "without this the camera operates very slow and logs indicate that it waits for display.qservice.",
+      "revId": "533708b6491586de027e57dd1b6efea69bde6d9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
