@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "494125ed_d5cc996a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16779
+      },
+      "writtenOn": "2022-04-21T00:38:55Z",
+      "side": 1,
+      "message": "This prop defaults to true\n\nhttps://github.com/LineageOS/android_frameworks_base/blob/af01fc24bb52e2aa46f626aad6f995eb10f9b852/libs/hwui/renderthread/RenderThread.cpp#L286",
+      "revId": "a4623d5ca31adeff4868680b40d6c7c4afa0b509",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
