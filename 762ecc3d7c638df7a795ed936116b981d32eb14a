@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4ea0d54_8b0608ea",
+        "filename": "msm8998.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2022-04-21T10:13:52Z",
+      "side": 1,
+      "message": "duplication",
+      "range": {
+        "startLine": 368,
+        "startChar": 4,
+        "endLine": 368,
+        "endChar": 48
+      },
+      "revId": "762ecc3d7c638df7a795ed936116b981d32eb14a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
