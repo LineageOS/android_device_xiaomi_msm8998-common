@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e7e3ac8_7346a28e",
+        "filename": "doze/src/org/lineageos/settings/doze/ProximitySensor.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-04-23T08:36:36Z",
+      "side": 0,
+      "message": "could use epsilon equals, but it seems the difference between the 2 floats isn\u0027t small enough so this fine.\nmaybe use Math.round?",
+      "revId": "b05eb8777af62dd9457653f61cdd34a17bf5a267",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
