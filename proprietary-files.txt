@@ -433,7 +433,6 @@ vendor/lib/libvqzip.so
 vendor/lib64/libgpustats.so
 
 # Mlipay
-lib64/vendor.xiaomi.hardware.mtdservice@1.0.so:vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/lib64/libmlipay@1.1.so
