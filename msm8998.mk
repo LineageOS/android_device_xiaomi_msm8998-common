@@ -414,6 +414,9 @@ PRODUCT_PACKAGES += \
     mediametricsservice-aidl-cpp.vendor \
     vndk-ext
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libpiex.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpiex-v29.so
+
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
