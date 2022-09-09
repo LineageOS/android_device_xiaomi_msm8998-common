@@ -26,7 +26,7 @@ def IncrementalOTA_Assertions(info):
   return
 
 def AddTrustZoneAssertion(info, input_zip):
-  android_info = info.input_zip.read("OTA/android-info.txt")
+  android_info = info.input_zip.read("OTA/android-info.txt").decode('UTF-8')
   t = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info)
   f = re.search(r'require\s+version-firmware\s*=\s*(.+)', android_info)
   if t and f:
