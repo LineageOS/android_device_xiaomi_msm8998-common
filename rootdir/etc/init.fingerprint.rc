@@ -1,8 +1,8 @@
-service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8998
-    class late_start
-    user system
-    group system input uhid
-    writepid /dev/cpuset/system-background/tasks
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
@@ -10,4 +10,3 @@ on post-fs-data
     chmod 0600 /data/vendor/fpc/calibration_image.pndat
     mkdir /data/vendor/goodix 0770 system system
     mkdir /mnt/vendor/persist/fpc 0770 system system
-    chown system system /data/vendor
