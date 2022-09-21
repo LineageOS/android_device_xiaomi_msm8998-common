@@ -15,13 +15,6 @@
 //
 
 cc_library {
-    name: "libui_shim",
-    shared_libs: ["libui"],
-    srcs: ["GraphicBuffer.cpp"],
-    system_ext_specific: true,
-}
-
-cc_library {
     name: "libgui_shim",
     shared_libs: [
         "libgui",

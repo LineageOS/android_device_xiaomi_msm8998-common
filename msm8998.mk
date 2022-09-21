@@ -251,7 +251,7 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     libgui_shim \
-    libui_shim
+    libui_shim:64
 
 # IRQ
 PRODUCT_COPY_FILES += \
