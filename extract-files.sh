@@ -86,8 +86,8 @@ function blob_fixup() {
             done
             ;;
         system_ext/lib64/libdpmframework.so)
-            for LIBDPM_SHIM in $(grep -L "libshim_dpmframework.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libshim_dpmframework.so" "$LIBDPM_SHIM"
+            for LIBDPM_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBDPM_SHIM"
             done
             ;;
         vendor/lib/hw/camera.msm8998.so)
