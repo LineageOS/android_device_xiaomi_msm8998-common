@@ -1,0 +1,5 @@
+cc_library_shared {
+    name: "libheif_shim",
+    srcs: ["heif.cpp"],
+    vendor: true,
+}
