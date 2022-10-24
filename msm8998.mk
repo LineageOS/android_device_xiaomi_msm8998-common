@@ -333,8 +333,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson \
-    libjson.vendor
+    libjson
 
 # Ramdisk
 PRODUCT_PACKAGES += \
