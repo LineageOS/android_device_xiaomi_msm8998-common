@@ -4,3 +4,6 @@ ro.charger.enable_suspend=true
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
+
+# IMS
+ro.telephony.block_binder_thread_on_incoming_calls=false
