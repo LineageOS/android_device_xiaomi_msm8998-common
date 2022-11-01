@@ -100,7 +100,7 @@ function blob_fixup() {
         vendor/lib/libMiCameraHal.so)
             "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
             "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
-            "${PATCHELF}" --add-needed "libpiex-v29.so" "${2}"
+            grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/lib/libarcsoft_beauty_shot.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
