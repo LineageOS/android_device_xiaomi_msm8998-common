@@ -1,0 +1,5 @@
+# Camera
+vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
+
+# DPM
+persist.vendor.dpm.feature=1
