@@ -3,8 +3,8 @@ vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
-vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
@@ -31,12 +31,14 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 
 # ANT+ - from jasmine V11.0.15.0.QDIMIXM
 -lib/libantradio.so:system_ext/lib/libantradio.so|37c36369eeab19d5e6266d9d25ae0de9bb59502d
-product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
 -lib64/libantradio.so:system_ext/lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|181a8ab9b1d40705d3151821b53732c5566a2848
+product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|aa08f9ec51392ed841f60ad08b7f083312c8c5ee
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|181a8ab9b1d40705d3151821b53732c5566a2848
 
 # Audio libraries
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libdirac.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -44,8 +46,6 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdirac.so
 
 # Bluetooth - from jasmine V11.0.15.0.QDIMIXM
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|57a0a575a2b1b96176fda1bcb84ea8371c4070d1
@@ -65,6 +65,9 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 lib/libicuuc.so:vendor/lib/libicuuc-v28.so
 lib/libminikin.so:vendor/lib/libminikin-v28.so
 vendor/lib/hw/camera.msm8998.so
+vendor/lib/libFaceGrade.so
+vendor/lib/libMiCameraHal.so
+vendor/lib/libXMFD_AgeGender.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so
 vendor/lib/libarcsoft_beauty_shot.so
@@ -74,14 +77,12 @@ vendor/lib/libarcsoft_beautyshot_video_algorithm.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_refocus.so
-vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libhal_dbg.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmibokeh_835.so
-vendor/lib/libMiCameraHal.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
@@ -146,7 +147,6 @@ vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libremosaic_daemon.so
-vendor/lib/libXMFD_AgeGender.so
 
 # Camera eeprom
 vendor/lib/libSonyIMX386PdafLibrary.so
@@ -276,11 +276,11 @@ vendor/lib64/libdpmqmihal.so|30a170684219dd589d05ce5b446e73b7501f13e3
 
 # DRM and SEE
 vendor/bin/qseecomd
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
@@ -310,41 +310,41 @@ vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libQTapGLES.so
+vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/hw/vulkan.msm8998.so
+vendor/lib/libC2D2.so
+vendor/lib/libCB.so
+vendor/lib/libOpenCL.so
+vendor/lib/libRSDriver_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
-vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
-vendor/lib/libRSDriver_adreno.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/hw/vulkan.msm8998.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
-vendor/lib64/libC2D2.so
 vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libCB.so
 vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
-vendor/lib64/libOpenCL.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
-vendor/lib64/libRSDriver_adreno.so
 
 # Graphics (SDM) - from DRG - QKQ1.190828.002
 -vendor/lib/libsdm-disp-vndapis.so|15a98ef885dbd29935b1107d7a2988ae495abb87
@@ -366,9 +366,9 @@ vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
 # IMS - from jasmine V11.0.15.0.QDIMIXM
-product/priv-app/ims/ims.apk:system_ext/priv-app/ims/ims.apk|fe11b3fe75a52e586ca6390adbd1b234f4f565ed
 product/lib64/libimscamera_jni.so:system_ext/lib64/libimscamera_jni.so|7cb89110cca94d37d68c705f12a7a5a4ee106139
 product/lib64/libimsmedia_jni.so:system_ext/lib64/libimsmedia_jni.so|3540752cc3658261ea3c909f03018eea4398f84e
+product/priv-app/ims/ims.apk:system_ext/priv-app/ims/ims.apk|fe11b3fe75a52e586ca6390adbd1b234f4f565ed
 
 # IMS
 app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk|0e749475132f37919b39cc71ad2c3381b4066bf2
@@ -412,8 +412,8 @@ vendor/firmware/ipa_fws.b01
 vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -426,9 +426,9 @@ vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 
 # Media
-vendor/lib/libgpustats.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxVpp.so
+vendor/lib/libgpustats.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
@@ -539,14 +539,14 @@ vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
-vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcmaputils.so
-vendor/lib64/libqsocket.so
 vendor/lib64/libqrtr.so
+vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
@@ -554,10 +554,10 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
-vendor/radio/qcril_database/qcril.db
 vendor/radio/qcril_database/upgrade/0_initial.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/5_version_intro.sql
+vendor/radio/qcril_database/qcril.db
 
 # Sensors
 vendor/bin/sensors.qti
@@ -574,10 +574,10 @@ vendor/lib64/sensors.ssc.so
 
 # Soter
 app/SoterService/SoterService.apk
+lib64/vendor.qti.hardware.soter@1.0.so:vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
-lib64/vendor.qti.hardware.soter@1.0.so:vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal
 vendor/bin/thermal-engine
