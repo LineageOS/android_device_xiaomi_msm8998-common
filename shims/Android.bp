@@ -1,0 +1,12 @@
+cc_library_shared {
+    name: "libcamera_shim",
+    srcs: [
+        "libheif.cpp",
+        "libicuuc.cpp",
+        "libminikin.cpp",
+    ],
+    whole_static_libs: [
+        "libft2.nodep",
+    ],
+    vendor: true,
+}
