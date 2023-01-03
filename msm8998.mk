@@ -197,9 +197,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8998
 
-PRODUCT_PACKAGES += \
-    android.hardware.power-V3-cpp.vendor
-
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -403,17 +400,9 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     android.hardware.power-V2-cpp.vendor \
-    audioclient-types-aidl-cpp.vendor \
-    audioflinger-aidl-cpp.vendor \
-    audiopolicy-aidl-cpp.vendor \
-    av-types-aidl-cpp.vendor \
-    libandroid_runtime_lazy.vendor \
-    libaudioclient_aidl_conversion.vendor \
-    libaudiofoundation.vendor \
+    android.hardware.power-V3-cpp.vendor \
     libdng_sdk.vendor_32 \
-    libstdc++.vendor \
-    mediametricsservice-aidl-cpp.vendor \
-    vndk-ext
+    libstdc++.vendor
 
 # Trust HAL
 PRODUCT_PACKAGES += \
