@@ -84,31 +84,30 @@ function blob_fixup() {
             ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+            "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
             sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
             ;;
         vendor/lib/libFaceGrade.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
         vendor/lib/libMiCameraHal.so)
-            "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
-            "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
+            "${PATCHELF}" --remove-needed "libft2.so" "${2}"
+            "${PATCHELF}" --remove-needed "libharfbuzz_ng.so" "${2}"
+            "${PATCHELF}" --remove-needed "libheif.so" "${2}"
+            "${PATCHELF}" --remove-needed "libicuuc.so" "${2}"
+            "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
+            "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
             grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/lib/libarcsoft_beauty_shot.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
-            ;;
-        vendor/lib/libicuuc-v28.so)
-            "${PATCHELF}" --set-soname "libicuuc-v28.so" "${2}"
-            ;;
-        vendor/lib/libminikin-v28.so)
-            "${PATCHELF}" --set-soname "libminikin-v28.so" "${2}"
-            "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
             ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i 's|/data/misc/camera/camera_lsc_caldata.txt|/data/vendor/camera/camera_lsc_calib.txt|g' "${2}"
             ;;
         vendor/lib/libmmcamera2_stats_modules.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --remove-needed "libgui.so" "${2}"
             ;;
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
