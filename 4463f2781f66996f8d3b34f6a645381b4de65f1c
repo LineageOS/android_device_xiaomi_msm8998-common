@@ -22,6 +22,30 @@
       },
       "revId": "4463f2781f66996f8d3b34f6a645381b4de65f1c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68e8f1a5_70a3e204",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-03T18:50:11Z",
+      "side": 1,
+      "message": "looks like 2 of the devices I brought up had this issue - not certain if it came from elsewhere or if it was me, but if it was me - sorry about that. 9 of the devices I picked this to don\u0027t have that issue, weirdly.",
+      "parentUuid": "253f9698_04980d87",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 16
+      },
+      "revId": "4463f2781f66996f8d3b34f6a645381b4de65f1c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
