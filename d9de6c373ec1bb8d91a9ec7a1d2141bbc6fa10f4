@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7523641_e6ca293c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-01-03T01:33:51Z",
+      "side": 1,
+      "message": "Pick/apply this first: https://github.com/LineageOS/android_device_xiaomi_sdm845-common/commit/447c785d000c628c00935b8ed201c5d104e222fa",
+      "revId": "d9de6c373ec1bb8d91a9ec7a1d2141bbc6fa10f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
