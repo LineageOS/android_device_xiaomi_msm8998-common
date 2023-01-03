@@ -196,6 +196,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8998
 
+PRODUCT_PACKAGES += \
+    android.hardware.power-V3-cpp.vendor
+
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
