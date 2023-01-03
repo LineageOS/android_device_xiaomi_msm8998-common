@@ -46,6 +46,30 @@
       },
       "revId": "4463f2781f66996f8d3b34f6a645381b4de65f1c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74e18818_69d547f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-03T18:51:04Z",
+      "side": 1,
+      "message": "here\u0027s the first one: https://review.lineageos.org/c/LineageOS/android_device_motorola_sm7325-common/+/340074",
+      "parentUuid": "68e8f1a5_70a3e204",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 16
+      },
+      "revId": "4463f2781f66996f8d3b34f6a645381b4de65f1c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
