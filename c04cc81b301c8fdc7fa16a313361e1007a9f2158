@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "faebadf9_abc497fa",
+        "filename": "shims/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-04T19:58:08Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "a757a6b4_19e3ba47",
+      "revId": "c04cc81b301c8fdc7fa16a313361e1007a9f2158",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b7e1aaa2_5167ff8d",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-01-03T15:16:16Z",
       "side": 0,
       "message": "Unrelated?",
+      "revId": "c04cc81b301c8fdc7fa16a313361e1007a9f2158",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35173ac0_b60e6aec",
+        "filename": "shims/heif.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-04T19:58:08Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "b7e1aaa2_5167ff8d",
       "revId": "c04cc81b301c8fdc7fa16a313361e1007a9f2158",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
