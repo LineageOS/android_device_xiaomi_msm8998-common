@@ -44,7 +44,6 @@ on init
     write /sys/block/sda/queue/nr_requests 256
     write /sys/block/sde/queue/iostats 0
     write /sys/block/sde/queue/nr_requests 256
-    setprop sys.io.scheduler "cfq"
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
@@ -185,7 +184,6 @@ on property:sys.boot_completed=1
     write /sys/block/sde/queue/iostats 1
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/read_ahead_kb 128
-    setprop sys.io.scheduler "bfq"
 
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-3,6-7
