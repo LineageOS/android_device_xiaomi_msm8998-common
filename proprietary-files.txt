@@ -450,10 +450,10 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
-# Peripheral manager - from jasmine V11.0.28.0.QDIMIXM
-vendor/bin/pm-proxy|bc4e972e3fe595b973197efe5114da8ff4339a59
-vendor/bin/pm-service|b0f77edfe04a3cc6284738196c0044e676d5eeb3|ea63802cf0483ee4ed2a6611ba7f1d0f36970c06
-vendor/lib64/libperipheral_client.so|a0dd574c8af3135adae10ef49065fa765906db7a
+# Peripheral manager - from sld_sprout RKQ1.210607.001-00WW_3_490
+vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
+vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
+vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Power-off alarm - from caymanslm - SKQ1.211103.001
 product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|f0a86fc11b38c059912303857bc4c79155430bcc
