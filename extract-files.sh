@@ -85,9 +85,6 @@ function blob_fixup() {
         system_ext/lib64/vendor.qti.imsrtpservice@1.0.so)
            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
            ;;
-        vendor/bin/pm-service)
-            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
-            ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
