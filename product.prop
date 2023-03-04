@@ -1,3 +1,6 @@
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
+
+# Telephony
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
