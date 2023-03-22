@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9dce9e69_60281574",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2023-03-22T13:25:37Z",
+      "side": 1,
+      "message": "https://github.com/LineageOS/android_device_xiaomi_msm8998-common/commit/e0a0aaafe497b513cc642adff927f559daf95393",
+      "revId": "db6975491a5bc6d4c7f5e88693971ec01fdac6ef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
