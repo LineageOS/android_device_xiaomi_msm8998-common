@@ -159,6 +159,9 @@ firmware_directories /vendor/firmware_mnt/image/
 # KGSL
 /sys/class/kgsl/kgsl-3d0    perfcounter              0660    root    shell
 
+# socinfo
+/sys/devices/soc0           serial_number            0000    root    root
+
 # Sys-fs display
 /sys/class/graphics/fb*     dynamic_fps              0664    system  graphics
 /sys/class/graphics/fb*     lineptr_value            0664    system  graphics
