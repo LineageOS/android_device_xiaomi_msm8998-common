@@ -39,7 +39,6 @@ extern "C" {
 #endif
 
 #include <cutils/properties.h>
-#include <cutils/threads.h>
 #include <cutils/sched_policy.h>
 
 #define LOC_PATH_GPS_CONF_STR      "/vendor/etc/gps.conf"
