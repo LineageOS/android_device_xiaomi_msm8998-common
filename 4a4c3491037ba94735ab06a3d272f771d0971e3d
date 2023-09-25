@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0df1900e_81540f10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2023-09-25T10:13:24Z",
+      "side": 1,
+      "message": "Not verified physically yet. Will give V+1 later on, however Xiaomi fastboot implementation seems to have issues on AMD Ryzen-based PCs while using USB3, so having fastbootd would be nice, especiallly when it doesn\u0027t break anything.",
+      "revId": "4a4c3491037ba94735ab06a3d272f771d0971e3d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
