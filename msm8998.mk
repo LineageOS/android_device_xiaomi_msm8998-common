@@ -414,7 +414,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service
+    android.hardware.wifi@1.0-service.legacy
 
 PRODUCT_PACKAGES += \
     wifi-mac-generator
