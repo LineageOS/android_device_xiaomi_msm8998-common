@@ -82,6 +82,9 @@ function blob_fixup() {
         system_ext/lib64/libdpmframework.so)
             grep -q "libcutils_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
             ;;
+        system_ext/lib64/vendor.qti.imsrtpservice@1.0.so)
+           "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}" 
+           ;;
         vendor/bin/pm-service)
             grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
@@ -120,6 +123,9 @@ function blob_fixup() {
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|vendor/lib64/vendor.qti.hardware.soter@1.0.so|vendor/lib64/vendor.qti.ims.callinfo@1.0.so|vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|vendor/lib64/vendor.qti.imsrtpservice@1.0.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
     esac
 }
