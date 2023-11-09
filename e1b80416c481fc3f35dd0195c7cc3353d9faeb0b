@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdf9e036_932d5287",
+        "filename": "doze/src/org/lineageos/settings/doze/DozeSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-11-09T12:22:27Z",
+      "side": 1,
+      "message": "Should probably use a different name since this is no longer a fragment.",
+      "range": {
+        "startLine": 108,
+        "startChar": 20,
+        "endLine": 108,
+        "endChar": 28
+      },
+      "revId": "e1b80416c481fc3f35dd0195c7cc3353d9faeb0b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
