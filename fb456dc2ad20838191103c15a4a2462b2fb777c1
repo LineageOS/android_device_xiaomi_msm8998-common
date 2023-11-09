@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ab1d211_82b163dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2023-11-09T09:35:54Z",
+      "side": 1,
+      "message": "For this, we either need https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sm6150-common/+/373017/3 or make the class public.",
+      "revId": "fb456dc2ad20838191103c15a4a2462b2fb777c1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
