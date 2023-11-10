@@ -22,6 +22,30 @@
       },
       "revId": "e1b80416c481fc3f35dd0195c7cc3353d9faeb0b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2562b93_7a0b269d",
+        "filename": "doze/src/org/lineageos/settings/doze/DozeSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 32181
+      },
+      "writtenOn": "2023-11-10T08:50:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bdf9e036_932d5287",
+      "range": {
+        "startLine": 108,
+        "startChar": 20,
+        "endLine": 108,
+        "endChar": 28
+      },
+      "revId": "e1b80416c481fc3f35dd0195c7cc3353d9faeb0b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
