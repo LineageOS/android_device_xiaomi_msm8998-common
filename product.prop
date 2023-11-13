@@ -1,6 +1,3 @@
-# Charger
-ro.charger.enable_suspend=true
-
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
