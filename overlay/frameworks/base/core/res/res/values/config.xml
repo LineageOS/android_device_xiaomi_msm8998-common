@@ -267,11 +267,6 @@
         <item>8</item>
     </integer-array>
 
-    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
-    <integer-array name="config_keyboardTapVibePattern">
-        <item>28</item>
-    </integer-array>
-
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Menu key
