@@ -110,6 +110,7 @@ persist.vendor.cne.feature=1
 debug.renderengine.backend=skiaglthreaded
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
+ro.hardware.egl=adreno
 ro.opengles.version=196610
 vendor.display.disable_partial_split=1
 vendor.display.disable_rotator_downscale=1
