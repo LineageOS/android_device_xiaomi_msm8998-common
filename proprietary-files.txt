@@ -25,12 +25,10 @@ vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 -lib/libantradio.so:system_ext/lib/libantradio.so|37c36369eeab19d5e6266d9d25ae0de9bb59502d
 -lib64/libantradio.so:system_ext/lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
 product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|aa08f9ec51392ed841f60ad08b7f083312c8c5ee
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|181a8ab9b1d40705d3151821b53732c5566a2848
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|aa08f9ec51392ed841f60ad08b7f083312c8c5ee
 
 # Audio libraries
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdirac.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -38,6 +36,8 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libdirac.so
 
 # Bluetooth - from jasmine V11.0.15.0.QDIMIXM
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|57a0a575a2b1b96176fda1bcb84ea8371c4070d1
@@ -545,10 +545,10 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
+vendor/radio/qcril_database/qcril.db
 vendor/radio/qcril_database/upgrade/0_initial.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/5_version_intro.sql
-vendor/radio/qcril_database/qcril.db
 
 # Sensors
 vendor/bin/sensors.qti
