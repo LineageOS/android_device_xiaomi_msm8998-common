@@ -386,7 +386,7 @@ vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/lib64/libmlipay@1.1.so
 
 # NFC firmware
-vendor/lib/libpn553_fw.so
+vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # PD mapper - from sld_sprout RKQ1.210607.001/00WW_3_71E
 vendor/bin/pd-mapper|8eb9717d2ee4da59c64ec89a85bf4e384663322b
