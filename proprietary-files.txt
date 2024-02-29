@@ -561,12 +561,14 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/sensors.ssc.so
 
+# Soter - from jasmine V11.0.28.0.QDIMIXM
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb1ed442e21fd3
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|9cf774301dfb59173cc2a6871ff851ea6b546f39
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|5815859dc07d3181901596d06612b379e86fe6fd
+
 # Soter
 app/SoterService/SoterService.apk
-lib64/vendor.qti.hardware.soter@1.0.so:vendor/lib64/vendor.qti.hardware.soter@1.0.so
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 
 # Thermal
 vendor/bin/thermal-engine
