@@ -52,6 +52,24 @@
       "parentUuid": "3321d7f9_6c350a0c",
       "revId": "f7a95b711c8b86ebc3f1aff0d7d999d1e73507d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3e8e81e_cd84d289",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32181
+      },
+      "writtenOn": "2024-03-01T15:03:29Z",
+      "side": 1,
+      "message": "No, I haven\u0027t encountered the problem you mentioned. Video playback is fine here. I just noticed an error message related to this commit in the logcat when using YouTube.",
+      "parentUuid": "dd3f3e3a_5f35d965",
+      "revId": "f7a95b711c8b86ebc3f1aff0d7d999d1e73507d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
