@@ -63,6 +63,30 @@
       },
       "revId": "b8a13ba4a6df51ee638236db7ebb9d20143ffe43",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcccbc03_5fe96fee",
+        "filename": "doze/src/org/lineageos/settings/doze/DozeSettingsFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 32181
+      },
+      "writtenOn": "2024-03-20T10:22:44Z",
+      "side": 1,
+      "message": "Sorry, it was my fault. Currently, I have only selected the useful ones and I am a bit confused. Thank you for pointing it out.",
+      "parentUuid": "4ced3135_8f2d65d3",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 60
+      },
+      "revId": "b8a13ba4a6df51ee638236db7ebb9d20143ffe43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
