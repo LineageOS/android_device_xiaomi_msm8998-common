@@ -186,6 +186,10 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 # Time services
 persist.vendor.delta_time.enable=true
 
+# USB
+vendor.usb.controller=a800000.dwc3
+vendor.usb.device=a800000.ssusb
+
 # WFD
 persist.sys.wfd.virtual=0
 
