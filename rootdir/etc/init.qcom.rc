@@ -171,6 +171,9 @@ on boot
     start vendor.qcrild2
     start vendor.dataqti
 
+on property:init.svc.vendor.qcrild=stopped
+    stop vendor.radio-config-1-1-wrapper
+
 on property:sys.boot_completed=1
     # Used by sound trigger HAL
     chown media audio /sys/kernel/wdsp0/boot
