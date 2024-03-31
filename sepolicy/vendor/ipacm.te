@@ -1,0 +1,2 @@
+allow ipacm ipacm_socket:sock_file write;
+allow ipacm ipacm-diag:unix_dgram_socket sendto;
