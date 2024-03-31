@@ -131,6 +131,9 @@ persist.dbg.wfc_avail_ovr=1
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 
+# Network manager
+persist.vendor.data.iwlan.enable=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.qti.core_ctl_max_cpu=4
@@ -142,6 +145,7 @@ persist.radio.multisim.config=dsds
 persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.enableadvancedscan=false
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.mt_sms_ack=30
 persist.vendor.radio.rat_on=combine
@@ -152,8 +156,10 @@ ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=22,22
 ro.vendor.use_data_netmgrd=true
 telephony.lteOnCdmaDevice=1
-vendor.rild.libpath=/vendor/lib64/libril-wrapper.so
 vendor.voice.path.for.pcm.voip=true
+
+# RCS
+persist.rcs.supported=1
 
 # Sensors
 ro.vendor.sdk.sensors.gestures=false

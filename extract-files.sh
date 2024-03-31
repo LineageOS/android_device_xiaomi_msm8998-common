@@ -60,31 +60,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        system_ext/etc/init/dpmd.rc)
-            sed -i "s|/system/product/bin/|/system/system_ext/bin/|g" "${2}"
-            ;;
-        system_ext/etc/permissions/com.qti.dpmframework.xml | system_ext/etc/permissions/dpmapi.xml)
-            sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
-            ;;
-        system_ext/etc/permissions/qcrilhook.xml)
-            sed -i 's|/product/framework/qcrilhook.jar|/system_ext/framework/qcrilhook.jar|g' "${2}"
-            ;;
-        system_ext/etc/permissions/qti_libpermissions.xml)
-            sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
-            ;;
-        system_ext/lib64/lib-imscamera.so)
-            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-            ;;
         system_ext/lib64/lib-imsvideocodec.so)
             grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-            grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
             ;;
-        system_ext/lib64/libdpmframework.so)
-            grep -q "libcutils_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
-            ;;
-        system_ext/lib64/vendor.qti.imsrtpservice@1.0.so)
-           "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
-           ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
@@ -120,9 +99,6 @@ function blob_fixup() {
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;
-        vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|vendor/lib64/vendor.qti.ims.callinfo@1.0.so|vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|vendor/lib64/vendor.qti.imsrtpservice@1.0.so)
-            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
     esac
 }
