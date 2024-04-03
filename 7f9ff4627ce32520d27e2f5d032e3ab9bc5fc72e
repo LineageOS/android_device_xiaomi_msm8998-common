@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a56f974_da460600",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32181
+      },
+      "writtenOn": "2024-04-03T16:11:27Z",
+      "side": 1,
+      "message": "https://github.com/Nanhumly/proprietary_vendor_xiaomi_msm8998-common/commit/26a1971c4c608b410bcdd2a4915ebe0a0f198e03",
+      "revId": "7f9ff4627ce32520d27e2f5d032e3ab9bc5fc72e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
