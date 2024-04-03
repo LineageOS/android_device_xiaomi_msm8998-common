@@ -93,7 +93,7 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
-vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 persist.camera.stats.test=5
@@ -133,6 +133,7 @@ debug.stagefright.omx_default_rank=0
 
 # Network manager
 persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -145,7 +146,6 @@ persist.radio.multisim.config=dsds
 persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
-persist.vendor.radio.enableadvancedscan=false
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.mt_sms_ack=30
 persist.vendor.radio.rat_on=combine

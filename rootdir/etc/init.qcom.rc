@@ -169,6 +169,7 @@ on boot
 
     start vendor.qcrild
     start vendor.qcrild2
+    start vendor.dataqti
 
 on property:sys.boot_completed=1
     # Used by sound trigger HAL

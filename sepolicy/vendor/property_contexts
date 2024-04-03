@@ -1,3 +1,6 @@
+# Bluetooth
+persist.vendor.bt.address                                     u:object_r:vendor_bluetooth_prop:s0
+
 # Camera
 camera.boke.                                                  u:object_r:camera_prop:s0
 camera.cts.                                                   u:object_r:camera_prop:s0
