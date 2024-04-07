@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abed895e_27f2a077",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-04-07T21:56:10Z",
+      "side": 1,
+      "message": "soooo I\u0027d vote this gets it\u0027s own change-id.\n\nThis isn\u0027t Id272a09338b285d419f8f012cfc6b62a7f8ef50c which uses FP3 blobs, and isn\u0027t I10e23a3982ddeee4ddbbe03509cba704410b52bc  which uses daisy blobs.\n\nThis is quite notably, a 3rd way.\n\nCurious why you went sld_sprout route? Is this for 4.19 compat or something?",
+      "revId": "a42ccc79a275a56bf989f96149d99c5551e59510",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
