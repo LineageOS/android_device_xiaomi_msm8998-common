@@ -16,6 +16,24 @@
       "message": "soooo I\u0027d vote this gets it\u0027s own change-id.\n\nThis isn\u0027t Id272a09338b285d419f8f012cfc6b62a7f8ef50c which uses FP3 blobs, and isn\u0027t I10e23a3982ddeee4ddbbe03509cba704410b52bc  which uses daisy blobs.\n\nThis is quite notably, a 3rd way.\n\nCurious why you went sld_sprout route? Is this for 4.19 compat or something?",
       "revId": "a42ccc79a275a56bf989f96149d99c5551e59510",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98d38001_eaa31653",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32181
+      },
+      "writtenOn": "2024-04-08T04:26:26Z",
+      "side": 1,
+      "message": "Hi, thank you for your correction. Initially, I used the OnePlus 8998 as a reference for this work, but at that time they had not yet switched to FP3 blobs. At the top of the chain, I also switched to FP3, but I have not yet had time to actually build and test it.",
+      "parentUuid": "abed895e_27f2a077",
+      "revId": "a42ccc79a275a56bf989f96149d99c5551e59510",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
