@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "619ad03c_4d2d5ce3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-06-17T20:10:35Z",
+      "side": 1,
+      "message": "Can\u0027t you use Xiaomi\u0027s aidl?",
+      "revId": "6278e1dbd9e4bdbfeb864271b3782e4288b75a6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
