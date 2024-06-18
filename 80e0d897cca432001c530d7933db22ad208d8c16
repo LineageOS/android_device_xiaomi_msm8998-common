@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18109ca5_c55dda1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32181
+      },
+      "writtenOn": "2024-06-18T05:16:36Z",
+      "side": 1,
+      "message": "missing libpower.so?\n\nW/android.hardware.sensors@1.0-service: dlerror(): dlopen failed: library \"libpower.so\" not found: needed by /vendor/lib64/sensors.ssc.so in namespace (default)",
+      "revId": "80e0d897cca432001c530d7933db22ad208d8c16",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
