@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4223bf95_7b2dfbd6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-06-28T05:18:26Z",
+      "side": 1,
+      "message": "Those could be dependency of IMS VT blobs, since they doesn\u0027t get built into vendor",
+      "revId": "a89da0ebaa11a4210c156f041d1271f1f5514ea5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
