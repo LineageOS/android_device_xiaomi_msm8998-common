@@ -1,3 +1,13 @@
+# Current blobs with ELF checks disabled:
+# libOmxVpp depends on libmm-omxcore, which is a gnu makefile target
+# libcne, libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
+# libMiCameraHal, libarcsoft_dualcam_optical_zoom, libmmcamera2_cpp_module, libmmcamera2_iface_modules,
+# libmmcamera2_imglib_modules, libmmcamera2_isp_modules, libmmcamera2_mct, libmmcamera2_sensor_modules,
+# libmmcamera_interface, libmmjpeg_interface depend on intrinsic symbols which changed namespace (__aeabi_uldivmod, __aeabi_ldivmod, etc.), which are difficult to shim (TODO)
+# libmmcamera_faceproc depends on unresolved symbols __aeabi_memcpy@LIBC_PRIVATE, __aeabi_memset@LIBC_PRIVATE, __gnu_Unwind_Find_exidx@LIBC_PRIVATE
+# libril-qc-hal-qmi depends on android.hardware.radio.c_shim@1.{0..2} which are gnu makefile targets
+# libril-qcril-hook-oem depends on libril, which is a gnu makefile target
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
@@ -50,7 +60,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|a7c3fdcdfdf2d982b04baa89e0e4dc5f5d505
 # Camera
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/libFaceGrade.so
-vendor/lib/libMiCameraHal.so
+vendor/lib/libMiCameraHal.so;DISABLE_CHECKELF
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so
@@ -58,7 +68,7 @@ vendor/lib/libarcsoft_beauty_shot.so
 vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_beautyshot_image_algorithm.so
 vendor/lib/libarcsoft_beautyshot_video_algorithm.so
-vendor/lib/libarcsoft_dualcam_optical_zoom.so
+vendor/lib/libarcsoft_dualcam_optical_zoom.so;DISABLE_CHECKELF
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libflash_pmic.so
@@ -69,18 +79,18 @@ vendor/lib/libjpegehw.so
 vendor/lib/libmibokeh_835.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_cpp_module.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_iface_modules.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera2_imglib_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_isp_modules.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera2_mct.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_mct_shimlayer.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_stats_modules.so
@@ -93,14 +103,14 @@ vendor/lib/libmmcamera_eebinparse.so
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_eztune_module.so
 vendor/lib/libmmcamera_facedetection_lib.so
-vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hvx_add_constant.so
 vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
-vendor/lib/libmmcamera_interface.so
+vendor/lib/libmmcamera_interface.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
@@ -114,7 +124,7 @@ vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmmjpeg_interface.so
+vendor/lib/libmmjpeg_interface.so;DISABLE_CHECKELF
 vendor/lib/libmmlib2d_interface.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
@@ -219,11 +229,11 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bcc
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
-vendor/lib64/libcne.so|f7565b0b97975e7021bd007b8387ccc839a8dad9
+vendor/lib64/libcne.so;DISABLE_CHECKELF|f7565b0b97975e7021bd007b8387ccc839a8dad9
 vendor/lib64/libcneapiclient.so|b6479678e5b0e8b46d8df5eb8bd610aa17be00d0
 vendor/lib64/libcneoplookup.so|3ce1039ad657d889f90140cb630eb487d2e711df
 vendor/lib64/libwms.so|1b91f43e9e9a8f143cddd1d945c63d384c65541c
-vendor/lib64/libwqe.so|5561170b3ee4d9233a0e4f384be08e2e1d01f0f5
+vendor/lib64/libwqe.so;DISABLE_CHECKELF|5561170b3ee4d9233a0e4f384be08e2e1d01f0f5
 vendor/lib64/libxml.so|f9b20632e9fd324810caf865faea93e4ff505d91
 vendor/lib64/vendor.qti.data.factory@2.0.so|748bfbaa57a409b8962e2b1725e1415e423a7315
 vendor/lib64/vendor.qti.data.factory@2.1.so|bb1f3fa22563282ee24bf03ca681fdc45551feef
@@ -285,7 +295,7 @@ vendor/lib64/hw/gatekeeper.msm8998.so
 
 # GPS
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/xtra-daemon
 vendor/lib64/libdataitems.so
 vendor/lib64/libflp.so
@@ -373,7 +383,7 @@ vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 
 # Media
-vendor/lib/libOmxVpp.so
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libgpustats.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvpplibrary.so
@@ -500,10 +510,10 @@ vendor/lib64/libqcmaputils.so|62530da64451f1386630084dc4bd08dd1d7c266e
 vendor/lib64/libqcrilFramework.so|64386a08a3d8c85cd2117575e7d863a24a8b8850
 vendor/lib64/libqrtr.so|2e4d6aa5344159c36ccd34cc341ee29d6f0424a1
 vendor/lib64/libqsocket.so|0817c4699f08d2595971f8103776a369bd15580d
-vendor/lib64/libril-qc-hal-qmi.so|cc70a2e8e2435dee4cb396dadbcd7c4c244287bd|f679e715373bb60322aa397a074e8c02a5328665
+vendor/lib64/libril-qc-hal-qmi.so;DISABLE_CHECKELF|cc70a2e8e2435dee4cb396dadbcd7c4c244287bd|f679e715373bb60322aa397a074e8c02a5328665
 vendor/lib64/libril-qc-ltedirectdisc.so|75e95bf6521f7840890caa1ddb003c6391ae2c6f
 vendor/lib64/libril-qc-radioconfig.so|907c3208a63e4525015cc86940d8b70bc303d999
-vendor/lib64/libril-qcril-hook-oem.so|e1a2e172b9800b93c8835de783440d56b5ccad70
+vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF|e1a2e172b9800b93c8835de783440d56b5ccad70
 vendor/lib64/librilqmiservices.so|e2714b4ca1792ea210899250414682c58e066f7d
 vendor/lib64/libsettings.so|e83d93aa0bf78ae4887d78cb766ede5a9cf8b75f
 vendor/lib64/libsystem_health_mon.so|d40c48c91ea120583316efea358cb400a23c81cf
@@ -552,7 +562,7 @@ system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/li
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|4cf9e97f526c6278c5e2136e00d1fb800fb941aa
 system_ext/priv-app/ims/ims.apk|16b82e1e0113beb7fb3a62a9a5513b317675d96e
 vendor/bin/ims_rtp_daemon|32a3ce381b0f85f53a2e9afd7215b3585afef0d6
-vendor/bin/imsdatadaemon|3f044f84eb4049f1ce8a26af6a6026c1776d22dd
+vendor/bin/imsdatadaemon;DISABLE_CHECKELF|3f044f84eb4049f1ce8a26af6a6026c1776d22dd
 vendor/bin/imsqmidaemon|756dcc2d6c7fa26916bc28dedf0c513b1d5e5bfe
 vendor/bin/imsrcsd|bf29aac14856f29268c01599e5f6c7c6ae520685
 vendor/etc/init/ims_rtp_daemon_legacy.rc|104b2a879db4d3dd44e74a3d7f6e69f6972c9129
