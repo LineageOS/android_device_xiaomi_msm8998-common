@@ -133,6 +133,10 @@ function blob_fixup() {
                 sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"
             done
             ;;
+        vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
