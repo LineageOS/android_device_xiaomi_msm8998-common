@@ -188,7 +188,8 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.1.vendor
+    android.hardware.drm@1.1.vendor \
+    libcrypto_shim
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
