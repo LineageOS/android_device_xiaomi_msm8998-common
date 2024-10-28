@@ -8,7 +8,7 @@ vendor/lib64/libadsprpc.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/dirac_resource.so
+vendor/lib/rfsa/adsp/dirac_resource.so;MODULE_SUFFIX=_vendor
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
 vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
