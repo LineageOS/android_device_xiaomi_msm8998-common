@@ -45,7 +45,6 @@ lib_fixups: lib_fixups_user_type = {
         'android.hardware.radio.c_shim@1.1',
         'android.hardware.radio.c_shim@1.2',
         'libmm-omxcore',
-        'libril',
         'libwpa_client',
     ): lib_fixup_remove,
 }

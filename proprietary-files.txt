@@ -5,7 +5,6 @@
 # libmmcamera2_isp_modules, libmmcamera2_mct, libmmcamera2_sensor_modules, libmmcamera_interface
 # libmmjpeg_interface depend on intrinsic symbols which changed namespace (__aeabi_uldivmod, __aeabi_ldivmod, etc.), which are difficult to shim (TODO)
 # libril-qc-hal-qmi depends on android.hardware.radio.c_shim@1.{0..2} which are gnu makefile targets
-# libril-qcril-hook-oem depends on libril, which is a gnu makefile target
 
 # ADSP
 vendor/bin/adsprpcd
@@ -512,7 +511,7 @@ vendor/lib64/libqsocket.so|0817c4699f08d2595971f8103776a369bd15580d
 vendor/lib64/libril-qc-hal-qmi.so;DISABLE_CHECKELF|cc70a2e8e2435dee4cb396dadbcd7c4c244287bd|f679e715373bb60322aa397a074e8c02a5328665
 vendor/lib64/libril-qc-ltedirectdisc.so|75e95bf6521f7840890caa1ddb003c6391ae2c6f
 vendor/lib64/libril-qc-radioconfig.so|907c3208a63e4525015cc86940d8b70bc303d999
-vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF|e1a2e172b9800b93c8835de783440d56b5ccad70
+vendor/lib64/libril-qcril-hook-oem.so|e1a2e172b9800b93c8835de783440d56b5ccad70
 vendor/lib64/librilqmiservices.so|e2714b4ca1792ea210899250414682c58e066f7d
 vendor/lib64/libsettings.so|e83d93aa0bf78ae4887d78cb766ede5a9cf8b75f
 vendor/lib64/libsystem_health_mon.so|d40c48c91ea120583316efea358cb400a23c81cf
