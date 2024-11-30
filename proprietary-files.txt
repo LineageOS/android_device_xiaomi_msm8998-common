@@ -21,7 +21,7 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# ANT+ - from from FP3 - 6.A.025.0
+# ANT+ - from from FP3 - 6.A.031.2
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|6e2b594b44552b42000164c091af5cf7a4c508f5
 
 # Audio libraries
@@ -35,7 +35,7 @@ vendor/lib/libqtigef.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdirac.so
 
-# Bluetooth - from from FP3 - 6.A.025.0
+# Bluetooth - from from FP3 - 6.A.031.2
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|73d7132773572d87bdac6b5e454573e79d35316c
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1e238b1e84d889f424001f5134f0d2994d13251a
@@ -190,7 +190,7 @@ vendor/lib/libois_bu63164.so
 # Charger
 vendor/bin/hvdcp_opti
 
-# CNE - from FP3 - 6.A.025.0
+# CNE - from FP3 - 6.A.031.2
 vendor/app/CneApp/CneApp.apk|551d0e3251eeda3af8dfa8bb55cd83b858365db8
 vendor/app/IWlanService/IWlanService.apk|a8bdac9638bc711e23269d2eead3f46a7b3b6a25
 vendor/bin/cnd|78d2771551abf43a093a0fbe0aba933c9f6a8097
@@ -250,7 +250,7 @@ vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|c041dbfc99643e791e52c4e7f3a
 vendor/lib64/vendor.qti.latency@2.0.so|82196d2863e012ad2b6e1b9af9d9ce7c611f64be
 vendor/lib64/vendor.qti.latency@2.1.so|d279c5e456bb3e546130df3cd6f398cea6b48eaf
 
-# DPM - from FP3 - 6.A.025.0
+# DPM - from FP3 - 6.A.031.2
 system_ext/bin/dpmd|dc94ffe90c6658b0bc99c64f68517c4048d0321a
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
@@ -434,7 +434,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|f2b57130987c65a1dc596bf83a2b09e086df9286
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|74675e4f720d75db031a0db4ca21463ebd331f34
 
-# QMI - from FP3 - 6.A.025.0
+# QMI - from FP3 - 6.A.031.2
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 system_ext/lib64/libdiag_system.so|ead4f1d1065abca6ef47b522c1934eb7623c1813
@@ -469,7 +469,7 @@ vendor/lib64/libqmi_encdec.so|8a365cf7472c187c02fa0649e09fee529ded7563
 vendor/lib64/libqmiservices.so|2e259463cbeb329caec303b642ab4068c8d10be5
 vendor/lib64/libril-qc-logger.so|7f80da37d120faffd72838b76d74102c7321e3a3
 
-# RIL - from FP3 - 6.A.025.0
+# RIL - from FP3 - 6.A.031.2
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|341ac4f8b754883df97f2e9920f1e9a255a6a160
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/framework/qcrilhook.jar|2851c62bf5d823c4228bfc6c56613934517ffdee
@@ -546,7 +546,7 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|5d080c737f7aa
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql|a0603a5c46e8e67f78bdb42f2b246ecc6a37cecd
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql|4701219a79190995eda651e5c45e11c9b111a478
 
-# Radio - IMS - from FP3 - 6.A.025.0
+# Radio - IMS - from FP3 - 6.A.031.2
 system_ext/lib64/lib-imscamera.so|8170256dbf9120ff05f193ba937c718d9c580881
 system_ext/lib64/lib-imsvideocodec.so|3e364441c9dce63d74fbc78c4781a84080513d8a|e09b2bba52d2de6975772228745203d8691e06b8
 system_ext/lib64/lib-imsvt.so|4f96cc5f27551d0b6cb11ad6447d9ce8829dde47
