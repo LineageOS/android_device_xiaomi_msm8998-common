@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: 2024 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+sh_binary {
+    name: "wifi-mac-generator",
+    src: "wifi-mac-generator.sh",
+    init_rc: ["wifi-mac-generator.rc"],
+    vendor: true,
+}
