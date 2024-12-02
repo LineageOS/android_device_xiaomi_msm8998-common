@@ -1,0 +1,13 @@
+//
+// SPDX-FileCopyrightText: 2024 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    srcs: ["recovery_updater.cpp"],
+    name: "librecovery_updater_xiaomi",
+    static_libs: [
+        "libedify",
+        "libotautil",
+    ],
+}
