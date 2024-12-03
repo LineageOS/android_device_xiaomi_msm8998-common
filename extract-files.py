@@ -23,6 +23,9 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so')
         .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
+    'vendor/bin/hw/android.hardware.drm@1.1-service.widevine': blob_fixup()
+        .replace_needed('libhidltransport.so', 'libhidlbase.so')
+        .remove_needed('libhwbinder.so'),
     'vendor/lib/hw/camera.msm8998.so': blob_fixup()
         .binary_regex_replace(b'service.bootanim.exit', b'service.bootanim.zzzz')
         .remove_needed('android.hidl.base@1.0.so')
