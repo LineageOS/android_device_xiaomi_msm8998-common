@@ -1,9 +1,9 @@
 # Current blobs with ELF checks disabled:
 # libOmxVpp depends on libmm-omxcore, which is a gnu makefile target
 # libcne, libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
-# libMiCameraHal, libarcsoft_dualcam_optical_zoom, libmmcamera2_cpp_module, libmmcamera2_iface_modules,
-# libmmcamera2_imglib_modules, libmmcamera2_isp_modules, libmmcamera2_mct, libmmcamera2_sensor_modules,
-# libmmcamera_interface, libmmjpeg_interface depend on intrinsic symbols which changed namespace (__aeabi_uldivmod, __aeabi_ldivmod, etc.), which are difficult to shim (TODO)
+# libarcsoft_dualcam_optical_zoom, libmmcamera2_cpp_module, libmmcamera2_iface_modules, libmmcamera2_imglib_modules,
+# libmmcamera2_isp_modules, libmmcamera2_mct, libmmcamera2_sensor_modules, libmmcamera_interface
+# libmmjpeg_interface depend on intrinsic symbols which changed namespace (__aeabi_uldivmod, __aeabi_ldivmod, etc.), which are difficult to shim (TODO)
 # libmmcamera_faceproc depends on unresolved symbols __aeabi_memcpy@LIBC_PRIVATE, __aeabi_memset@LIBC_PRIVATE, __gnu_Unwind_Find_exidx@LIBC_PRIVATE
 # libril-qc-hal-qmi depends on android.hardware.radio.c_shim@1.{0..2} which are gnu makefile targets
 # libril-qcril-hook-oem depends on libril, which is a gnu makefile target
@@ -60,7 +60,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|a7c3fdcdfdf2d982b04baa89e0e4dc5f5d505
 # Camera
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/libFaceGrade.so
-vendor/lib/libMiCameraHal.so;DISABLE_CHECKELF
+vendor/lib/libMiCameraHal.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/lib_lowlight.so
 vendor/lib/lib_lowlight_dxo.so
