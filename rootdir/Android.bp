@@ -1,0 +1,80 @@
+//
+// SPDX-FileCopyrightText: 2024 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Init configuration files
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "etc/fstab.qcom",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.fingerprint.rc",
+    src: "etc/init.fingerprint.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "etc/init.qcom.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "etc/init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.qcom.rc",
+    src: "etc/init.recovery.qcom.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.qcom.rc",
+    vendor: true,
+}
+
+// Init scripts
+
+sh_binary {
+    name: "init.panel_info.sh",
+    src: "bin/init.panel_info.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "bin/init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "bin/init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "bin/init.qcom.sh",
+    vendor: true,
+}
