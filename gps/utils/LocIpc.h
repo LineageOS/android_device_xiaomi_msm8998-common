@@ -116,7 +116,7 @@ public:
     }
 
     inline ~LocIpcSender() {
-        if (nullptr != mSocket && mSocket.unique()) {
+        if (nullptr != mSocket && mSocket.use_count() == 1) {
             ::close(*mSocket);
         }
     }
