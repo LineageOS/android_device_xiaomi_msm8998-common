@@ -378,7 +378,6 @@ vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 
 # Media
-vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libgpustats.so
 vendor/lib/libvpphvx.so
