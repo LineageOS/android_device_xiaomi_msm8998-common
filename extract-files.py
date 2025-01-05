@@ -32,7 +32,6 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libminikin.so'),
     (
      'vendor/lib/lib_lowlight.so',
-     'vendor/lib/lib_lowlight_dxo.so',
      'vendor/lib/libSonyIMX386PdafLibrary.so',
      'vendor/lib/libXMFD_AgeGender.so',
      'vendor/lib/libarcsoft_beautyshot.so',
@@ -41,10 +40,12 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib/libarcsoft_dualcam_optical_zoom.so',
      'vendor/lib/libarcsoft_dualcam_optical_zoom_control.so',
      'vendor/lib/libarcsoft_dualcam_refocus.so',
-     'vendor/lib/libmmcamera_hdr_gb_lib.so',
      'vendor/lib/libmorpho_easy_hdr.so',
      'vendor/lib/libmorpho_hdr_checker.so',
     ): blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/lib_lowlight_dxo.so': blob_fixup()
+        .fix_soname()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib/libFaceGrade.so': blob_fixup()
         .remove_needed('libandroid.so')
@@ -60,6 +61,15 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libarcsoft_beauty_shot.so': blob_fixup()
         .remove_needed('libandroid.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libmmcamera_hdr_gb_lib.so': blob_fixup()
+        .add_needed('liblog.so')
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    (
+     'vendor/lib/libmmcamera_pdaf.so',
+     'vendor/lib/libmmcamera_pdafcamif.so',
+     'vendor/lib/libmmcamera_tintless_bg_pca_algo.so',
+    ): blob_fixup()
+        .add_needed('liblog.so'),
     'vendor/lib/libmmcamera2_sensor_modules.so': blob_fixup()
         .binary_regex_replace(b'/data/misc/camera/camera_lsc_caldata.txt', b'/data/vendor/camera/camera_lsc_calib.txt'),
     'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
