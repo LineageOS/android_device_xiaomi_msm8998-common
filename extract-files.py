@@ -97,6 +97,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libarcsoft_beauty_shot.so': blob_fixup()
         .remove_needed('libandroid.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
+        .clear_symbol_version('__aeabi_memcpy')
+        .clear_symbol_version('__aeabi_memset')
+        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     'vendor/lib/libmmcamera_hdr_gb_lib.so': blob_fixup()
         .add_needed('liblog.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),

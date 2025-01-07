@@ -4,7 +4,6 @@
 # libarcsoft_dualcam_optical_zoom, libmmcamera2_cpp_module, libmmcamera2_iface_modules, libmmcamera2_imglib_modules,
 # libmmcamera2_isp_modules, libmmcamera2_mct, libmmcamera2_sensor_modules, libmmcamera_interface
 # libmmjpeg_interface depend on intrinsic symbols which changed namespace (__aeabi_uldivmod, __aeabi_ldivmod, etc.), which are difficult to shim (TODO)
-# libmmcamera_faceproc depends on unresolved symbols __aeabi_memcpy@LIBC_PRIVATE, __aeabi_memset@LIBC_PRIVATE, __gnu_Unwind_Find_exidx@LIBC_PRIVATE
 # libril-qc-hal-qmi depends on android.hardware.radio.c_shim@1.{0..2} which are gnu makefile targets
 # libril-qcril-hook-oem depends on libril, which is a gnu makefile target
 
@@ -103,7 +102,7 @@ vendor/lib/libmmcamera_eebinparse.so
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_eztune_module.so
 vendor/lib/libmmcamera_facedetection_lib.so
-vendor/lib/libmmcamera_faceproc.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hvx_add_constant.so
